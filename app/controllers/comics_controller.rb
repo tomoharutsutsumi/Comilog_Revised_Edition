@@ -63,8 +63,8 @@ class ComicsController < ApplicationController
 
 
   def like
-    
-
+    like = Like.create(comic_id: params[:id], user_id: params[:user_id])
+    like.save
   end
 
 

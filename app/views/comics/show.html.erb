@@ -85,6 +85,6 @@
   <%= @comic.agetarget %>
 </p>
 
-<%= link_to 'Edit', edit_user_comic_path(@comic, current_user.id) %> |
+<%= link_to 'Edit', edit_user_comic_path(current_user.id,@comic) %> |
 <%= link_to 'Back', root_path %>
-<%= link_to 'いいね', like_user_comic_path(@comic, current_user.id), :method => 'post' %>
+<%= link_to 'いいね', like_user_comic_path(current_user.id, @comic), :method => 'post' %>
