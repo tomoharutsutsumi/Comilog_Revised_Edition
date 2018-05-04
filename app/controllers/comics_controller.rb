@@ -4,7 +4,7 @@ class ComicsController < ApplicationController
   # GET /comics
   # GET /comics.json
   def index
-    @comics = Comic.all
+    @comics = Comic.order('id DESC')
   end
 
   # GET /comics/1
