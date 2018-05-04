@@ -1,0 +1,102 @@
+<%= form_with(model: comic, local: true) do |form| %>
+  <% if comic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comic.errors.count, "error") %> prohibited this comic from being saved:</h2>
+
+      <ul>
+      <% comic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :comic_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :front_cover %>
+    <%= form.text_field :front_cover, id: :comic_front_cover %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price, id: :comic_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sns_first %>
+    <%= form.text_field :sns_first, id: :comic_sns_first %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sns_second %>
+    <%= form.text_field :sns_second, id: :comic_sns_second %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sns_third %>
+    <%= form.text_field :sns_third, id: :comic_sns_third %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sns_fourth %>
+    <%= form.text_field :sns_fourth, id: :comic_sns_fourth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :introduction %>
+    <%= form.text_area :introduction, id: :comic_introduction %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content_first %>
+    <%= form.text_field :content_first, id: :comic_content_first %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content_second %>
+    <%= form.text_field :content_second, id: :comic_content_second %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content_third %>
+    <%= form.text_field :content_third, id: :comic_content_third %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content_fourth %>
+    <%= form.text_field :content_fourth, id: :comic_content_fourth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content_fifth %>
+    <%= form.text_field :content_fifth, id: :comic_content_fifth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type, id: :comic_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :day %>
+    <%= form.number_field :day, id: :comic_day %>
+  </div>
+
+  <div class="field">
+    <%= form.label :origin_title %>
+    <%= form.text_field :origin_title, id: :comic_origin_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agetarget %>
+    <%= form.number_field :agetarget, id: :comic_agetarget %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

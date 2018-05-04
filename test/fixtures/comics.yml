@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  front_cover: MyString
+  price: 1
+  sns_first: MyString
+  sns_second: MyString
+  sns_third: MyString
+  sns_fourth: 
+  introduction: MyText
+  content_first: MyString
+  content_second: 
+  content_third: MyString
+  content_fourth: MyString
+  content_fifth: MyString
+  type: 
+  day: 1
+  origin_title: MyString
+  agetarget: 1
+
+two:
+  title: MyString
+  front_cover: MyString
+  price: 1
+  sns_first: MyString
+  sns_second: MyString
+  sns_third: MyString
+  sns_fourth: 
+  introduction: MyText
+  content_first: MyString
+  content_second: 
+  content_third: MyString
+  content_fourth: MyString
+  content_fifth: MyString
+  type: 
+  day: 1
+  origin_title: MyString
+  agetarget: 1
