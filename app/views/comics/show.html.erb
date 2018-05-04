@@ -85,5 +85,6 @@
   <%= @comic.agetarget %>
 </p>
 
-<%= link_to 'Edit', edit_comic_path(@comic) %> |
-<%= link_to 'Back', comics_path %>
+<%= link_to 'Edit', edit_user_comic_path(@comic, current_user.id) %> |
+<%= link_to 'Back', root_path %>
+<%= link_to 'いいね', like_user_comic_path(@comic, current_user.id) %>
