@@ -25,6 +25,7 @@ class ComicsController < ApplicationController
   # POST /comics.json
   def create
     @comic = Comic.new(comic_params)
+    @comic.user_id = current_user.id
 
     respond_to do |format|
       if @comic.save
@@ -63,7 +64,7 @@ class ComicsController < ApplicationController
 
 
   def like
-    like = Like.create(comic_id: params[:id], user_id: params[:user_id])
+    like = Like.create(comic_id: params[:id], user_id: current_user.id)
     like.save
   end
 
