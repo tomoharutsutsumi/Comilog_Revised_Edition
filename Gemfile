@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+#add###########
 gem 'devise' #ユーザーモデルログイン
 gem 'omniauth-twitter' #Twitter連携
 group :development, :test do
