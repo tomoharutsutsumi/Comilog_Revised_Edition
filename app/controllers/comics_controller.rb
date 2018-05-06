@@ -1,5 +1,6 @@
 class ComicsController < ApplicationController
   before_action :set_comic, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:show, :edit, :destroy, :like, :unlike]
 
   # GET /comics
   # GET /comics.json
