@@ -66,6 +66,15 @@ class ComicsController < ApplicationController
   def like
     like = Like.create(comic_id: params[:id], user_id: current_user.id)
     like.save
+    redirect_to :action => "show"
+  end
+
+
+  def unlike
+    unlike = Like.find_by(comic_id: params[:id], user_id: current_user.id)
+    unlike.destroy
+    unlike.save
+    redirect_to :action => "show"
   end
 
 

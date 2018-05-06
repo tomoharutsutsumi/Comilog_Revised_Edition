@@ -85,6 +85,31 @@
   <%= @comic.agetarget %>
 </p>
 
-<%= link_to 'Edit', edit_user_comic_path(current_user.id,@comic) %> |
+<%= link_to 'Edit', edit_comic_path(@comic) %> |
 <%= link_to 'Back', root_path %>
-<%= link_to 'いいね', like_user_comic_path(current_user.id, @comic), :method => 'post' %>
+
+<% if @comic.liked?(current_user.id) %>
+  <%= link_to '買うかもリストから外す', unlike_comic_path(@comic), :method => 'post' %>
+<% else %>
+  <%= link_to '買うかもリストに追加する', like_comic_path(@comic), :method => 'post' %>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
