@@ -46,9 +46,8 @@
         <td><%= comic.day %></td>
         <td><%= comic.origin_title %></td>
         <td><%= comic.agetarget %></td>
-        <td><%= link_to 'Show', user_comic_path(current_user.id, comic) %></td>
-        <td><%= link_to 'Edit', edit_user_comic_path( current_user.id, comic) %></td>
-        <td><%= link_to 'Destroy', user_comic_path(current_user.id, comic), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', comic_path(comic) %></td>
+        <td><%= link_to 'Destroy', comic_path(comic), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -56,4 +55,4 @@
 
 <br>
 
-<%= link_to 'New Comic', new_user_comic_path(current_user.id) %>
+<%= link_to 'New Comic', new_comic_path %>
