@@ -2,4 +2,12 @@
 
 <%= render 'form', comic: @comic %>
 
+
+
+<% @my_posted_comics.each do |my_posted_comic| %>
+
+  <%= my_posted_comic.title %>
+
+<% end %>
+
 <%= link_to 'Back', comics_path %>

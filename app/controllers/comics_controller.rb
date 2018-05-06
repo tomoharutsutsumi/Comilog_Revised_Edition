@@ -1,6 +1,6 @@
 class ComicsController < ApplicationController
   before_action :set_comic, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:show, :edit, :destroy, :like, :unlike]
+  before_action :authenticate_user!, only: [:show, :new, :edit, :destroy, :like, :unlike]
 
   # GET /comics
   # GET /comics.json
@@ -16,6 +16,8 @@ class ComicsController < ApplicationController
   # GET /comics/new
   def new
     @comic = Comic.new
+    user = User.find_by(id: current_user.id)
+    @my_posted_comics = user.comics
   end
 
   # GET /comics/1/edit
