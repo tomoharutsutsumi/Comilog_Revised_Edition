@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   root 'comics#index'
   resources :users
   resources :comics do
+    collection do
+        get 'rank'
+    end
     member do
         post 'like'
         post 'unlike'
