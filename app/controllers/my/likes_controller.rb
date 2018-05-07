@@ -1,4 +1,4 @@
-class LikesController < ApplicationController
+class My::LikesController < ApplicationController
 
   def liked
     like_ids = Like.where(user_id: current_user.id).pluck(:comic_id)
