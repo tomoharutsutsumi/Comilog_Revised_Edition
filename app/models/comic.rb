@@ -10,6 +10,6 @@ class Comic < ApplicationRecord
 
 
   def liked_by(user)
-    Like.create(user_id: user, comic_id: self.id)
+    user.likes.create(comic: self)
   end
 end
