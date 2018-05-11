@@ -80,6 +80,10 @@ class ComicsController < ApplicationController
     redirect_to :action => "show"
   end
 
+  def search
+    @search_result = Comic.where(title: params[:title]).or(Comic.where(type: params[:type])).or(Comic.where(day: params[:day])).or(Comic.where(origin_title: params[:origin_title])).or(Comic.where(agetarget: params[:agetarget]))
+  end
+
 
 
   private
