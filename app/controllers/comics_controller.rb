@@ -67,8 +67,8 @@ class ComicsController < ApplicationController
 
 
   def like
-    like = Like.create(comic_id: params[:id], user_id: current_user.id)
-    like.save
+    comic = Comic.find(params[:id])
+    comic.liked_by(current_user.id)
     redirect_to :action => "show"
   end
 
@@ -80,7 +80,9 @@ class ComicsController < ApplicationController
     redirect_to :action => "show"
   end
 
-
+  def rank
+#中身はスコープ化できるかも
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
