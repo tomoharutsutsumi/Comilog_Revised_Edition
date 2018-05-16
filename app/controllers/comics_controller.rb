@@ -81,7 +81,24 @@ class ComicsController < ApplicationController
   end
 
   def search
-    @search_result = Comic.where(title: params[:title]).or(Comic.where(type: params[:type])).or(Comic.where(day: params[:day])).or(Comic.where(origin_title: params[:origin_title])).or(Comic.where(agetarget: params[:agetarget]))
+
+    #@search_result = Comic.where(title: params[:title])
+
+    #@search_result = @search_result.or(Comic.where(type: params[:type]))
+    # if params[:type].blank?
+      # @search_result = Comic.where(day: params[:day])
+    # else
+     #  @search_result = @search_result.or(Comic.where(day: params[:day]))
+    ## if params[:day].blank?
+     #  @search_result = Comic.where(origin_title: params[:origin_title])
+    # else
+    #   @search_result = @search_result.or(Comic.where(origin_title: params[:origin_title]))
+    # end
+  #   if params[:origin_title].blank?
+       #@search_result = @search_result.or(Comic.where(agetarget: params[:agetarget]))
+    #binding.pry
+    @search_result = Comic.where(title: params[:title]).where(type: params[:type]).where(day: params[:day]).where(origin_title: params[:origin_title]).where(agetarget: params[:agetarget])
+
   end
 
 
