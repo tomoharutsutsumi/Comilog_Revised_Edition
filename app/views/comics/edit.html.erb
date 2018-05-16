@@ -4,3 +4,10 @@
 
 <%= link_to 'Show', comic_path(@comic) %> |
 <%= link_to 'Back', root_path %>
+
+
+<% if @comic.status == "release" %>
+  <%= link_to '非公開にする', nonrelease_comic_path(@comic), :method => 'patch' %>
+<% else %>
+  <%= link_to '公開する', release_comic_path(@comic), :method => 'patch' %>
+<% end %>
