@@ -81,6 +81,13 @@ class ComicsController < ApplicationController
   end
 
 
+  def rank
+    rank_ids = Like.group(:comic_id).count.sort_by{ | k,v | v }.reverse.to_h.keys
+    @ranked_comics = Comic.joins({:likes => :user}).sort_by{|comic| rank_ids.index(comic.id)}.uniq
+  end
+
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
