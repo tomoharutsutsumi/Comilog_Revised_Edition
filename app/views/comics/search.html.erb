@@ -33,7 +33,12 @@
 
 
 <h1>検索結果</h1>
-
+  <% if @search_result.blank? %>
+    検索結果はありませんでした
+  <% else %>
     <% @search_result.each do |comic| %>
       <%= comic.title %>
     <% end %>
+  <% end %>
+
+<%= link_to 'Back', root_path %>
