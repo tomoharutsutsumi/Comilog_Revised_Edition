@@ -82,8 +82,7 @@ class ComicsController < ApplicationController
 
 
   def rank
-    rank_ids = Like.group(:comic_id).count.sort_by{ | k,v | v }.reverse.to_h.keys
-    @ranked_comics = Comic.joins({:likes => :user}).sort_by{|comic| rank_ids.index(comic.id)}.uniq
+    @ranked_comics = Comic.order('likes_count DESC')
   end
 
 
