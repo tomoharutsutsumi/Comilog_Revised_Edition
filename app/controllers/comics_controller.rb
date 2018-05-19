@@ -5,7 +5,7 @@ class ComicsController < ApplicationController
   # GET /comics
   # GET /comics.json
   def index
-    @comics = Comic.where(status: 0).order('id DESC')
+    @comics = Comic.where(status: 1).order('id DESC')
   end
 
   # GET /comics/1
@@ -86,13 +86,13 @@ class ComicsController < ApplicationController
 
   def release
     comic =  Comic.find(params[:id])
-    comic.release! unless comic.status == 0
+    comic.released! unless comic.status == 1
     redirect_to edit_comic_path, notice: 'この作品を公開しました'
   end
 
   def nonrelease
     comic =  Comic.find(params[:id])
-    comic.nonrelease! unless comic.status == 1
+    comic.nonreleased! unless comic.status == 0
     redirect_to edit_comic_path, notice: 'この作品を非公開にしました'
   end
 
