@@ -82,7 +82,7 @@ class ComicsController < ApplicationController
 
   def search
     @search_result = Comic.all
-    @search_result = Comic.where(title: params[:title]) unless params[:title].blank?
+    @search_result = @search_result.where(title: params[:title]) unless params[:title].blank?
     @search_result = @search_result.where(type: params[:type]) unless params[:type].blank?
     @search_result = @search_result.where(day: params[:day]) unless params[:day].blank?
     @search_result = @search_result.where(origin_title: params[:origin_title]) unless params[:origin_title].blank?

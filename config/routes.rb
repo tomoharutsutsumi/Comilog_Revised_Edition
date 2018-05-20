@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users
   resources :comics do
     collection do
-        get 'search'
+        get :search
     end
     member do
         post 'like'
