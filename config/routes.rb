@@ -1,4 +1,3 @@
-
 Rails.application.routes.draw do
   devise_for :users
   root 'comics#index'
@@ -13,7 +12,7 @@ Rails.application.routes.draw do
     end
   end
   namespace :my do
-    get '/likes',:to => "likes#liked"
+    get '/likes',:to => 'likes#liked'
   end
 
 
