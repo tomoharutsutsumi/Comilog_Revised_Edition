@@ -5,7 +5,7 @@ class ComicsController < ApplicationController
   # GET /comics
   # GET /comics.json
   def index
-    @comics = Comic.order('id DESC')
+    @comics = Comic.released.order('id DESC')
   end
 
   # GET /comics/1
@@ -89,7 +89,17 @@ class ComicsController < ApplicationController
     @search_result = @search_result.where(agetarget: params[:agetarget]) unless params[:agetarget].blank?
   end
 
+  def release
+    comic =  Comic.find(params[:id])
+    comic.released! unless comic.released?
+    redirect_to edit_comic_path, notice: 'この作品を公開しました'
+  end
 
+  def nonrelease
+    comic =  Comic.find(params[:id])
+    comic.nonreleased! unless comic.nonreleased?
+    redirect_to edit_comic_path, notice: 'この作品を非公開にしました'
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
