@@ -6,5 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 13.times do |i|
-  Comic.create(title: "テスト#{i}")
+  Comic.create(title: "テスト#{i}", price: 100, status: 0, user_id: 1)
 end
