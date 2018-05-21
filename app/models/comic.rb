@@ -12,4 +12,8 @@ class Comic < ApplicationRecord
   def liked_by(user)
     user.likes.create(comic: self) unless liked?(user)
   end
+
+
+
+  scope :sum_price, -> { sum(:price) }
 end
