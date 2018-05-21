@@ -67,8 +67,8 @@ class ComicsController < ApplicationController
 
 
   def like
-    comic = Comic.find(params[:id])
-    comic.liked_by(current_user.id)
+    like = Like.create(comic_id: params[:id], user_id: current_user.id)
+    like.save
     redirect_to :action => "show"
   end
 
@@ -80,8 +80,13 @@ class ComicsController < ApplicationController
     redirect_to :action => "show"
   end
 
-  def rank
-#中身はスコープ化できるかも
+  def search
+    @search_result = Comic.all
+    @search_result = @search_result.where(title: params[:title]) unless params[:title].blank?
+    @search_result = @search_result.where(type: params[:type]) unless params[:type].blank?
+    @search_result = @search_result.where(day: params[:day]) unless params[:day].blank?
+    @search_result = @search_result.where(origin_title: params[:origin_title]) unless params[:origin_title].blank?
+    @search_result = @search_result.where(agetarget: params[:agetarget]) unless params[:agetarget].blank?
   end
 
   def release
@@ -95,8 +100,6 @@ class ComicsController < ApplicationController
     comic.nonreleased! unless comic.nonreleased?
     redirect_to edit_comic_path, notice: 'この作品を非公開にしました'
   end
-
-
 
   private
     # Use callbacks to share common setup or constraints between actions.

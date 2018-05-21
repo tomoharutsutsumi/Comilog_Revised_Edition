@@ -1,10 +1,11 @@
+
 Rails.application.routes.draw do
   devise_for :users
   root 'comics#index'
   resources :users
   resources :comics do
     collection do
-        get 'rank'
+        get :search
     end
     member do
         post 'like'
@@ -14,7 +15,7 @@ Rails.application.routes.draw do
     end
   end
   namespace :my do
-    get '/likes',:to => 'likes#liked'
+    get '/likes',:to => "likes#liked"
   end
 
 
