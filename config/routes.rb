@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     member do
         post 'like'
         post 'unlike'
+        patch 'release'
+        patch 'nonrelease'
     end
   end
   namespace :my do
