@@ -80,6 +80,7 @@ class ComicsController < ApplicationController
     redirect_to :action => "show"
   end
 
+
   def search
     @search_result = Comic.all
     @search_result = @search_result.where(title: params[:title]) unless params[:title].blank?
@@ -99,7 +100,13 @@ class ComicsController < ApplicationController
     comic =  Comic.find(params[:id])
     comic.nonreleased! unless comic.nonreleased?
     redirect_to edit_comic_path, notice: 'この作品を非公開にしました'
+
+  def rank
+    @ranked_comics = Comic.order('likes_count DESC')
   end
+
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
