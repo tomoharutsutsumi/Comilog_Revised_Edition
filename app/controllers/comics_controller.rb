@@ -100,7 +100,8 @@ class ComicsController < ApplicationController
     comic =  Comic.find(params[:id])
     comic.nonreleased! unless comic.nonreleased?
     redirect_to edit_comic_path, notice: 'この作品を非公開にしました'
-
+  end
+  
   def rank
     @ranked_comics = Comic.order('likes_count DESC')
   end
