@@ -86,13 +86,17 @@
 </p>
 
 
-<%= link_to 'Back', root_path %>
+
 
 <% if @comic.liked?(current_user.id) %>
   <%= link_to '買うかもリストから外す', unlike_comic_path(@comic), :method => 'post' %>
 <% else %>
   <%= link_to '買うかもリストに追加する', like_comic_path(@comic), :method => 'post' %>
 <% end %>
+
+
+<%= render partial: "layouts/footer" %>
+
 
 
 
