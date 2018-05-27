@@ -1,84 +1,67 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<div class="show_upper">
+  <div class="frontcover_and_likes_count">
+    <%= image_tag @comic.front_cover.to_s %>
+      <div class="likes_count">
+        <%= @comic.likes_count %>
+      </div>
+  </div>
+
+  <div class="contents_picture">
+    <%= image_tag @comic.content_first.to_s %>
+    <%= image_tag @comic.content_second.to_s %>
+    <%= image_tag @comic.content_third.to_s %>
+    <%= image_tag @comic.content_fourth.to_s %>
+  </div>
+
+  <div class="introduction">
+    <strong>作品説明</strong>
+    <%= @comic.introduction %>
+  </div>
+</div>
+
+
+
+
+<div class="show_lower">
   <strong>タイトル</strong>
   <%= @comic.title %>
-</p>
 
-<p>
-  <strong>表紙</strong>
-  <%= @comic.front_cover %>
-</p>
-
-<p>
   <strong>価格</strong>
   <%= @comic.price %>円
-</p>
 
-<p>
+
   <strong>SNSリンク１</strong>
   <%= @comic.sns_first %>
-</p>
 
-<p>
+
   <strong>SNSリンク２</strong>
   <%= @comic.sns_second %>
-</p>
 
-<p>
+
   <strong>SNSリンク３</strong>
   <%= @comic.sns_third %>
-</p>
 
-<p>
+
   <strong>SNSリンク４</strong>
   <%= @comic.sns_fourth %>
-</p>
 
-<p>
-  <strong>作品説明</strong>
-  <%= @comic.introduction %>
-</p>
 
-<p>
-  <strong>チラ見せ１</strong>
-  <%= @comic.content_first %>
-</p>
 
-<p>
-  <strong>チラ見せ２</strong>
-  <%= @comic.content_second %>
-</p>
 
-<p>
-  <strong>チラ見せ３</strong>
-  <%= @comic.content_third %>
-</p>
-
-<p>
-  <strong>チラ見せ４</strong>
-  <%= @comic.content_fourth %>
-</p>
-
-<p>
-  <strong>チラ見せ５</strong>
-  <%= @comic.content_fifth %>
-</p>
-
-<p>
   <strong>カテゴリー</strong>
   <%= @comic.category %>
-</p>
 
-<p>
+
   <strong>出展日</strong>
   <%= @comic.day %>
-</p>
 
-<p>
+
   <strong>元ネタ</strong>
   <%= @comic.origin_title %>
-</p>
+</div>
+
 
 <%= link_to 'Back', root_path %>
 

@@ -3,6 +3,10 @@ class Comic < ApplicationRecord
   belongs_to :user
 
   mount_uploader :front_cover, FrontcoverUploader
+  mount_uploader :content_first, ContentfirstUploader
+  mount_uploader :content_second, ContentsecondUploader
+  mount_uploader :content_third, ContentthirdUploader
+  mount_uploader :content_fourth, ContentfourthUploader
 
   enum status:{nonreleased: 0, released: 1}
 

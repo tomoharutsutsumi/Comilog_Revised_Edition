@@ -91,21 +91,32 @@ h2 {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //search.html.erb end//
+
+
+
+
+
+
+
+
+//show.html.erb//
+
+//show_upperとshow_lowerは画面のいいね数を境界として、上下で分けている//
+.show_upper {
+  .frontcover_and_likes_count {
+  margin-left: 10px;
+    .likes_count {
+    position: absolute;
+    margin-left: 100px;
+    }
+  }
+}
+
+
+.show_lower {
+}
+
+
+
+//show.htmkl.erb end//
