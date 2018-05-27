@@ -5,12 +5,22 @@
 
 //index.html.erb//
 
+h1 {
+  width: 900px;
+  height: 30px;
+  font-size: 32px;
+  padding: 7px 0px 0px 30px;
+  font-family: "Lucida Grande", "segoe UI", "ヒラギノ角ゴ Std", "Hiragino Maru Gothic ProN", Meiryo, Arial, sans-serif;
+  border-bottom: solid 7px;
+  border-color: #fd6458;
+}
+
 #new_comics {
-  
 }
 
 .new_comic img{
-  margin-left:36px;
+  margin-top: 10px;
+  margin-left: 36px;
 }
 
 //index.html.erb end //
