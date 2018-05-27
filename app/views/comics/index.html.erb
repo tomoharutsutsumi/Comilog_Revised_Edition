@@ -7,17 +7,13 @@
 </div>
 <div id="new_comics">
  <h1>新着作品</h1>
-
- <table>
+  <div class="new_comic">
     <% @comics.each do |comic| %>
-      <tr>
-        <td><%= link_to comic_path(comic) do %>
+        <%= link_to comic_path(comic) do %>
          <%= image_tag comic.front_cover.to_s %>
-        <% end %></td>
-      </tr>
+        <% end %>
     <% end %>
- </table>
-
+  </div>
 </div>
 
 <br>
