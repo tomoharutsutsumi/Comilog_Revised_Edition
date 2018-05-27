@@ -1,44 +1,51 @@
-<h1>検索</h1>
+<h1>検索する</h1>
 
-<%= form_tag(search_comics_path, method: :get) do  %>
+
+<div class="search_form">
+ <%= form_tag(search_comics_path, method: :get) do  %>
   <div class="field">
-    <%= label_tag :title %>
+    <%= label_tag :タイトル %>
     <%= text_field_tag :title %>
   </div>
 
   <div class="field">
-    <%= label_tag :type %>
-    <%= text_field_tag :type %>
+    <%= label_tag :カテゴリー %>
+    <%= text_field_tag :category %>
   </div>
 
   <div class="field">
-    <%= label_tag :day %>
+    <%= label_tag :出展日 %>
     <%= number_field_tag :day %>
   </div>
 
   <div class="field">
-    <%= label_tag :origin_title %>
+    <%= label_tag :元ネタ %>
     <%= text_field_tag :origin_title %>
   </div>
 
   <div class="field">
-    <%= label_tag :agetarget %>
+    <%= label_tag :年齢対象 %>
     <%= number_field_tag :agetarget %>
   </div>
 
   <div class="actions">
     <%= submit_tag :検索する %>
   </div>
-<% end %>
+ <% end %>
+</div>
 
 
-<h1>検索結果</h1>
+<div class="search_result">
+ <h1>検索結果</h1>
   <% if @search_result.blank? %>
     検索結果はありませんでした
   <% else %>
     <% @search_result.each do |comic| %>
-      <%= comic.title %>
+      <%= link_to comic_path(comic) do %>
+         <%= image_tag comic.front_cover.to_s %>
+        <% end %>
     <% end %>
   <% end %>
+</div>
 
 <%= link_to 'Back', root_path %>
