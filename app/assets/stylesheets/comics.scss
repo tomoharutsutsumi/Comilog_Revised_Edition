@@ -9,7 +9,8 @@ h1 {
   width: 900px;
   height: 30px;
   font-size: 32px;
-  padding: 7px 0px 0px 30px;
+  padding-top: 7px;
+  padding-left: 30px;
   font-family: "Lucida Grande", "segoe UI", "ヒラギノ角ゴ Std", "Hiragino Maru Gothic ProN", Meiryo, Arial, sans-serif;
   border-bottom: solid 7px;
   border-color: #fd6458;
@@ -46,7 +47,7 @@ h1 {
 
 
 .field {
-  width:300px;
+  width: 300px;
   margin: 0px auto
 }
 
@@ -60,5 +61,51 @@ h1 {
 
 
 //search.html.erb//
+
+h2 {
+  margin-left: 5px;
+}
+
+.search_form {
+  float: left;
+  height: 500px;
+  border: solid 3px;
+  margin-left: 15px;
+  margin-right: 5px;
+
+  .field {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 15px;
+  }
+
+}
+
+.search_result img {
+  width: 180px;
+  margin-left: 15px;
+  margin-top: 5px;
+
+  h3 {
+  margin-left: 5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //search.html.erb end//
