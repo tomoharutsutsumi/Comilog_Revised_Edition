@@ -28,6 +28,44 @@ h1 {
 
 
 //new.html.erb//
+.my_posted_comics {
+  position: relative;
+  margin-bottom: 50px;
+    .my_posted_comics_info {
+     display: inline;
+    }
+}
+
+
+
+
+.my_posted_comics img {
+  width: 250px;
+}
+
+.my_posted_comics_info ul {
+  list-style: none;
+  top: 60px;
+  left: 400px;
+  position: absolute;
+}
+
+.my_posted_comics_info li {
+  display: block;
+  padding-bottom: 30px;
+}
+
+.my_posted_comic_edit_button {
+  display: inline-block;
+  margin-left: 300px;
+}
+
+.my_posted_comic_delete_button {
+   display: inline-block;
+   margin-left: 300px
+}
+
+
 
 
 //new.html.erb end//
@@ -97,26 +135,86 @@ h2 {
 
 
 
-
-
-
 //show.html.erb//
 
 //show_upperとshow_lowerは画面のいいね数を境界として、上下で分けている//
 .show_upper {
   .frontcover_and_likes_count {
   margin-left: 10px;
+  margin-right: 32px;
+  float: left;
     .likes_count {
     position: absolute;
     margin-left: 100px;
     }
   }
+  .contents_picture img{
+  width: 150px;
+  margin-left: 10px;
+  }
+
+  .introduction {
+  display: inline-block;
+  height:150px;
+  width: 500px;
+  padding-left:15px;
+  padding-top:15px;
+  margin-top:10px;
+  margin-left:10px;
+  border: solid 5px;
+  border-color: #fd6458;
+  }
 }
 
 
 .show_lower {
+position: absolute;
+top:500px;
+}
+
+.show_lower ul {
+list-style: none;
+padding-left:100px;
+}
+
+.show_lower li {
+  width: 800px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left:10px;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  font-size:15px;
+  background-color: #C0C0C0;
+}
+
+.show_lower strong {
+margin-right:100px;
 }
 
 
-
 //show.htmkl.erb end//
+
+
+
+
+
+//rank.html.erb//
+
+.ranked_comics {
+ margin-top: 10px;
+ .ranked_comics_info {
+  display: inline;
+  position: relative;
+  right:230px;
+  font-size: 20px;
+  }
+}
+
+.ranked_comics img {
+  width: 241px;
+  margin: 35px;
+}
+
+
+//rank.html.erb end //

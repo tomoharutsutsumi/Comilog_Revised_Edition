@@ -18,6 +18,7 @@ class ComicsController < ApplicationController
     @comic = Comic.new
     user = User.find_by(id: current_user.id)
     @my_posted_comics = user.comics
+    @authorname = user.authorname
   end
 
   # GET /comics/1/edit
