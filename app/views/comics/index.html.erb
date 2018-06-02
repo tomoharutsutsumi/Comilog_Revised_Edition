@@ -1,59 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Comics</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Front cover</th>
-      <th>Price</th>
-      <th>Sns first</th>
-      <th>Sns second</th>
-      <th>Sns third</th>
-      <th>Sns fourth</th>
-      <th>Introduction</th>
-      <th>Content first</th>
-      <th>Content second</th>
-      <th>Content third</th>
-      <th>Content fourth</th>
-      <th>Content fifth</th>
-      <th>Type</th>
-      <th>Day</th>
-      <th>Origin title</th>
-      <th>Agetarget</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+<div id="top_three_ranking_comics">
+  <%# コミックランキングtop3をここに入れる %>
+</div>
+<div id="new_comics">
+ <h1>新着作品</h1>
+
+ <table>
     <% @comics.each do |comic| %>
       <tr>
-        <td><%= comic.title %></td>
-        <td><%= comic.front_cover %></td>
-        <td><%= comic.price %></td>
-        <td><%= comic.sns_first %></td>
-        <td><%= comic.sns_second %></td>
-        <td><%= comic.sns_third %></td>
-        <td><%= comic.sns_fourth %></td>
-        <td><%= comic.introduction %></td>
-        <td><%= comic.content_first %></td>
-        <td><%= comic.content_second %></td>
-        <td><%= comic.content_third %></td>
-        <td><%= comic.content_fourth %></td>
-        <td><%= comic.content_fifth %></td>
-        <td><%= comic.category %></td>
-        <td><%= comic.day %></td>
-        <td><%= comic.origin_title %></td>
-        <td><%= comic.agetarget %></td>
-        <td><%= link_to 'Show', comic_path(comic) %></td>
-       
+        <td><%= link_to comic_path(comic) do %>
+         <%= image_tag comic.front_cover.to_s %>
+        <% end %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+ </table>
+
+</div>
 
 <br>
 
-<%= render partial: "layouts/footer" %>
+
 

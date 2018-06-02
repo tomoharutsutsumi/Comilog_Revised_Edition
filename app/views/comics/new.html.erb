@@ -1,15 +1,16 @@
-<h1>New Comic</h1>
+<h1>出展する</h1>
 
 <%= render 'form', comic: @comic %>
 
 
 
-<% @my_posted_comics.each do |my_posted_comic| %>
+<div class="my_posted_comics">
+ <% @my_posted_comics.each do |my_posted_comic| %>
 
   <%= my_posted_comic.title %>
   <%= link_to 'Edit', edit_comic_path(my_posted_comic) %> |
   <%= link_to 'Destroy', comic_path(my_posted_comic), method: :delete, data: { confirm: 'Are you sure?' } %>
 
-<% end %>
+ <% end %>
+</div>
 
-<%= render partial: "layouts/footer" %>

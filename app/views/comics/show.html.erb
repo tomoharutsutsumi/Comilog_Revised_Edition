@@ -1,91 +1,84 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>タイトル</strong>
   <%= @comic.title %>
 </p>
 
 <p>
-  <strong>Front cover:</strong>
+  <strong>表紙</strong>
   <%= @comic.front_cover %>
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @comic.price %>
+  <strong>価格</strong>
+  <%= @comic.price %>円
 </p>
 
 <p>
-  <strong>Sns first:</strong>
+  <strong>SNSリンク１</strong>
   <%= @comic.sns_first %>
 </p>
 
 <p>
-  <strong>Sns second:</strong>
+  <strong>SNSリンク２</strong>
   <%= @comic.sns_second %>
 </p>
 
 <p>
-  <strong>Sns third:</strong>
+  <strong>SNSリンク３</strong>
   <%= @comic.sns_third %>
 </p>
 
 <p>
-  <strong>Sns fourth:</strong>
+  <strong>SNSリンク４</strong>
   <%= @comic.sns_fourth %>
 </p>
 
 <p>
-  <strong>Introduction:</strong>
+  <strong>作品説明</strong>
   <%= @comic.introduction %>
 </p>
 
 <p>
-  <strong>Content first:</strong>
+  <strong>チラ見せ１</strong>
   <%= @comic.content_first %>
 </p>
 
 <p>
-  <strong>Content second:</strong>
+  <strong>チラ見せ２</strong>
   <%= @comic.content_second %>
 </p>
 
 <p>
-  <strong>Content third:</strong>
+  <strong>チラ見せ３</strong>
   <%= @comic.content_third %>
 </p>
 
 <p>
-  <strong>Content fourth:</strong>
+  <strong>チラ見せ４</strong>
   <%= @comic.content_fourth %>
 </p>
 
 <p>
-  <strong>Content fifth:</strong>
+  <strong>チラ見せ５</strong>
   <%= @comic.content_fifth %>
 </p>
 
 <p>
-  <strong>Type:</strong>
+  <strong>カテゴリー</strong>
   <%= @comic.category %>
 </p>
 
 <p>
-  <strong>Day:</strong>
+  <strong>出展日</strong>
   <%= @comic.day %>
 </p>
 
 <p>
-  <strong>Origin title:</strong>
+  <strong>元ネタ</strong>
   <%= @comic.origin_title %>
 </p>
-
-<p>
-  <strong>Agetarget:</strong>
-  <%= @comic.agetarget %>
-</p>
-
-
 
 
 <% if @comic.liked?(current_user.id) %>
@@ -95,7 +88,7 @@
 <% end %>
 
 
-<%= render partial: "layouts/footer" %>
+
 
 
 

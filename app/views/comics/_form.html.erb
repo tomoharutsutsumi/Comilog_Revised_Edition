@@ -12,88 +12,89 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :タイトル %>
     <%= form.text_field :title, id: :comic_title %>
   </div>
 
   <div class="field">
-    <%= form.label :front_cover %>
-    <%= form.text_field :front_cover, id: :comic_front_cover %>
+    <%= form.label :表紙 %>
+    <%= form.file_field :front_cover, id: :comic_front_cover %>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
+    <%= form.label :価格 %>
     <%= form.number_field :price, id: :comic_price %>
   </div>
 
   <div class="field">
-    <%= form.label :sns_first %>
+    <%= form.label :SNSリンク１ %>
     <%= form.text_field :sns_first, id: :comic_sns_first %>
   </div>
 
   <div class="field">
-    <%= form.label :sns_second %>
+    <%= form.label :SNSリンク２ %>
     <%= form.text_field :sns_second, id: :comic_sns_second %>
   </div>
 
   <div class="field">
-    <%= form.label :sns_third %>
+    <%= form.label :SNSリンク３ %>
     <%= form.text_field :sns_third, id: :comic_sns_third %>
   </div>
 
   <div class="field">
-    <%= form.label :sns_fourth %>
+    <%= form.label :SNSリンク４ %>
     <%= form.text_field :sns_fourth, id: :comic_sns_fourth %>
   </div>
 
   <div class="field">
-    <%= form.label :introduction %>
+    <%= form.label :作品説明 %>
     <%= form.text_area :introduction, id: :comic_introduction %>
   </div>
 
   <div class="field">
-    <%= form.label :content_first %>
-    <%= form.text_field :content_first, id: :comic_content_first %>
+    <%= form.label :チラ見せ１ %>
+    <%= form.file_field :content_first, id: :comic_content_first %>
   </div>
 
   <div class="field">
-    <%= form.label :content_second %>
-    <%= form.text_field :content_second, id: :comic_content_second %>
+    <%= form.label :チラ見せ２ %>
+    <%= form.file_field :content_second, id: :comic_content_second %>
   </div>
 
   <div class="field">
-    <%= form.label :content_third %>
-    <%= form.text_field :content_third, id: :comic_content_third %>
+    <%= form.label :チラ見せ３ %>
+    <%= form.file_field :content_third, id: :comic_content_third %>
   </div>
 
   <div class="field">
-    <%= form.label :content_fourth %>
-    <%= form.text_field :content_fourth, id: :comic_content_fourth %>
+    <%= form.label :チラ見せ４ %>
+    <%= form.file_field :content_fourth, id: :comic_content_fourth %>
   </div>
 
   <div class="field">
-    <%= form.label :content_fifth %>
-    <%= form.text_field :content_fifth, id: :comic_content_fifth %>
+    <%= form.label :チラ見せ５ %>
+    <%= form.file_field :content_fifth, id: :comic_content_fifth %>
   </div>
 
   <div class="field">
-    <%= form.label :type %>
-    <%= form.text_field :type, id: :comic_type %>
+    <%= form.label :カテゴリー %>
+    <%= form.select :category, [["BL", "BL"], ["百合", "百合"], ["NL", "NL"], ["その他", "その他"]], id: :comic_type %>
   </div>
 
   <div class="field">
-    <%= form.label :day %>
+    <%= form.label :出展日 %>
     <%= form.number_field :day, id: :comic_day %>
   </div>
 
   <div class="field">
-    <%= form.label :origin_title %>
+    <%= form.label :元ネタ名 %>
     <%= form.text_field :origin_title, id: :comic_origin_title %>
   </div>
 
   <div class="field">
-    <%= form.label :agetarget %>
-    <%= form.number_field :agetarget, id: :comic_agetarget %>
+    <%= form.label :年齢対象 %>
+    <%= form.radio_button :agetarget, "全年齢", id: :comic_agetarget %>全年齢
+    <%= form.radio_button :agetarget, "18歳以上", id: :comic_agetarget %>18歳以上
   </div>
 
   <div class="actions">
