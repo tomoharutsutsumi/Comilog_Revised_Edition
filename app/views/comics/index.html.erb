@@ -3,7 +3,14 @@
 
 
 <div id="top_three_ranking_comics">
-  <%# コミックランキングtop3をここに入れる %>
+ <h1>ランキング</h1>
+  <div class="top_three_ranking_comic">
+    <% @comic_top_three.each do |comic| %>
+        <%= link_to comic_path(comic) do %>
+         <%= image_tag comic.front_cover.to_s %>
+        <% end %>
+    <% end %>
+  </div>
 </div>
 <div id="new_comics">
  <h1>新着作品</h1>

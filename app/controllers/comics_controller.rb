@@ -6,6 +6,8 @@ class ComicsController < ApplicationController
   # GET /comics.json
   def index
     @comics = Comic.released.order('id DESC')
+    rank
+    @comic_top_three = @ranked_comics.first(3)
   end
 
   # GET /comics/1
@@ -102,7 +104,7 @@ class ComicsController < ApplicationController
     comic.nonreleased! unless comic.nonreleased?
     redirect_to edit_comic_path, notice: 'この作品を非公開にしました'
   end
-  
+
   def rank
     @ranked_comics = Comic.order('likes_count DESC')
   end

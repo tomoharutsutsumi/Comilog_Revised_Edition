@@ -16,6 +16,7 @@
     <%= has_content?(@comic.content_fourth.to_s) %>
   </div>
 
+
   <div class="introduction">
     <strong>作品説明</strong>
     <%= @comic.introduction %>
@@ -26,7 +27,7 @@
 
 
 <div class="show_lower">
-  <ul>
+  <table>
    <li><strong>タイトル</strong><%= @comic.title %></li>
    <li><strong>価格</strong><%= @comic.price %>円</li>
    <li><strong>SNSリンク１</strong><%= @comic.sns_first %></li>
@@ -36,7 +37,7 @@
    <li><strong>カテゴリー</strong><%= @comic.category %></li>
    <li><strong>出展日</strong><%= @comic.day %></li>
    <li><strong>元ネタ</strong><%= @comic.origin_title %></li>
-  </ul>
+  </table>
 </div>
 
 
