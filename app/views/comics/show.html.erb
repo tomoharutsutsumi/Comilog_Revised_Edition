@@ -5,14 +5,15 @@
     <%= image_tag @comic.front_cover.to_s %>
       <div class="likes_count">
         <%= @comic.likes_count %>
+        <%= image_tag 'likedstar.png', class: :show_likedstar %>
       </div>
   </div>
 
   <div class="contents_picture">
-    <%= image_tag @comic.content_first.to_s %>
-    <%= image_tag @comic.content_second.to_s %>
-    <%= image_tag @comic.content_third.to_s %>
-    <%= image_tag @comic.content_fourth.to_s %>
+    <%= has_content?(@comic.content_first.to_s) %>
+    <%= has_content?(@comic.content_second.to_s) %>
+    <%= has_content?(@comic.content_third.to_s) %>
+    <%= has_content?(@comic.content_fourth.to_s) %>
   </div>
 
   <div class="introduction">
