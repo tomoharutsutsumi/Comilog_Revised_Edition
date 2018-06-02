@@ -28,15 +28,43 @@
 
 <div class="show_lower">
   <table>
-   <li><strong>タイトル</strong><%= @comic.title %></li>
-   <li><strong>価格</strong><%= @comic.price %>円</li>
-   <li><strong>SNSリンク１</strong><%= @comic.sns_first %></li>
-   <li><strong>SNSリンク２</strong><%= @comic.sns_second %></li>
-   <li><strong>SNSリンク３</strong><%= @comic.sns_third %></li>
-   <li><strong>SNSリンク４</strong> <%= @comic.sns_fourth %></li>
-   <li><strong>カテゴリー</strong><%= @comic.category %></li>
-   <li><strong>出展日</strong><%= @comic.day %></li>
-   <li><strong>元ネタ</strong><%= @comic.origin_title %></li>
+    <tr>
+      <td><strong>タイトル</strong></td>
+      <td><%= @comic.title %></td>
+    </tr>
+    <tr>
+      <td><strong>価格</strong></td>
+      <td><%= @comic.price %>円</td>
+    </tr>
+    <tr>
+      <td><strong>SNSリンク１</strong></td>
+      <td><%= @comic.sns_first %></td>
+    </tr>
+    <tr>
+      <td><strong>SNSリンク２</strong></td>
+      <td><%= @comic.sns_second %></td>
+    </tr>
+    <tr>
+      <td><strong>SNSリンク３</strong></td>
+      <td><%= @comic.sns_third %></td>
+    </tr>
+    <tr>
+      <td><strong>SNSリンク４</strong></td> 
+      <td><%= @comic.sns_fourth %></td>
+    </tr>
+    <tr>
+      <td><strong>カテゴリー</strong></td>
+      <td><%= @comic.category %></td>
+    </tr>
+    <tr>
+      <td><strong>出展日</strong></td>
+      <td><%= @comic.day %></td>
+    </tr>
+    <tr>
+      <td><strong>元ネタ</strong></td>
+      <td><%= @comic.origin_title %></td>
+    </tr>
+ 
   </table>
 </div>
 
