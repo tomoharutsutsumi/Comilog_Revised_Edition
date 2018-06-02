@@ -6,4 +6,25 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :lockable, :timeoutable, :omniauthable, omniauth_providers: [:twitter]
+
+
+  def self.from_omniauth(auth)
+    find_or_create_by(
+        uid:      auth.uid,
+        provider: auth.provider,
+        username: auth.info.nickname,
+        email:    User.dummy_email(auth),
+        password: Devise.friendly_token[0, 20]
+      )
+  end
+
+  def self.new_with_session(params, session)
+    if session["devise.user_attributes"]
+      new(session["devise.user_attributes"]) do |user|
+        user.attributes = params
+      end
+    else
+      super
+    end
+  end
 end
