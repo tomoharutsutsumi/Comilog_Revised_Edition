@@ -27,7 +27,7 @@
 
 
 <div class="show_lower">
-  <table>
+  <table class="show_lower_table">
     <tr>
       <td><strong>タイトル</strong></td>
       <td><%= @comic.title %></td>
@@ -64,18 +64,19 @@
       <td><strong>元ネタ</strong></td>
       <td><%= @comic.origin_title %></td>
     </tr>
- 
   </table>
 </div>
 
 
-<%= link_to 'Back', root_path %>
 
-<% if @comic.liked?(current_user.id) %>
-  <%= link_to '買うかもリストから外す', unlike_comic_path(@comic), :method => 'post' %>
-<% else %>
-  <%= link_to '買うかもリストに追加する', like_comic_path(@comic), :method => 'post' %>
-<% end %>
+<div >
+ <% if @comic.liked?(current_user.id) %>
+  <%= button_to '買うかもリストから外す', unlike_comic_path(@comic), :method => 'post', class: :show_like_button %>
+ <% else %>
+  <%= button_to '買うかもリストに追加する', like_comic_path(@comic), :method => 'post', class: :show_like_button %>
+  <%= image_tag 'likedstar.png', class: :show_like_button_likedstar %>
+ <% end %>
+</div>
 
 
 

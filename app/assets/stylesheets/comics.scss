@@ -189,22 +189,24 @@ h2 {
 
 
 .show_lower {
-  position: absolute;
-  top:500px;
+  position: relative;
+  top: 80px;
+  right: 100px;
 }
 
-.show_lower tr {
-  list-style: none;
-  padding-left:100px;
+.show_lower_table {
+  table-layout: fixed;
+  width: 100px;
+  margin-left: 130px;
+
 }
 
 .show_lower td {
-  width: 800px;
+  width: 450px;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left:10px;
-  border-top: solid 1px;
-  border-bottom: solid 1px;
+  border: solid 1px;
   font-size:15px;
   background-color: #C0C0C0;
 }
@@ -212,6 +214,28 @@ h2 {
 .show_lower strong {
   margin-right:100px;
 }
+
+
+.show_like_button {
+  display: inline-block;
+  position: relative;
+  height: 70px;
+  width: 320px;
+  padding-left: 10px;
+  margin-top: 150px;
+  margin-left: 350px;
+  background-color: #fd6458;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  }
+
+.show_like_button_likedstar {
+  position: relative;
+  left: 360px;
+  bottom: 49px;
+  }
+
 
 
 //show.htmkl.erb end//
