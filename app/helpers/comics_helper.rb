@@ -1,5 +1,5 @@
 module ComicsHelper
-  def has_content?(content)
+  def safe_image_tag(content)
      if content.blank?
         image_tag 'noimage_tag.png'
      else

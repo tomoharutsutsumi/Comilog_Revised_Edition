@@ -10,10 +10,10 @@
   </div>
 
   <div class="contents_picture">
-    <%= has_content?(@comic.content_first.to_s) %>
-    <%= has_content?(@comic.content_second.to_s) %>
-    <%= has_content?(@comic.content_third.to_s) %>
-    <%= has_content?(@comic.content_fourth.to_s) %>
+    <%= safe_image_tag(@comic.content_first.to_s) %>
+    <%= safe_image_tag(@comic.content_second.to_s) %>
+    <%= safe_image_tag(@comic.content_third.to_s) %>
+    <%= safe_image_tag(@comic.content_fourth.to_s) %>
   </div>
 
 
