@@ -1,38 +1,32 @@
 // Place all the styles related to the comics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-
 //index.html.erb//
-
 h1 {
-  width: 900px;
-  height: 30px;
-  font-size: 32px;
-  padding-top: 7px;
-  padding-left: 30px;
-  font-family: "Lucida Grande", "segoe UI", "ヒラギノ角ゴ Std", "Hiragino Maru Gothic ProN", Meiryo, Arial, sans-serif;
-  border-bottom: solid 7px;
-  border-color: #fd6458;
+    width: 900px;
+    height: 30px;
+    font-size: 32px;
+    padding-top: 7px;
+    padding-left: 30px;
+    font-family: "Lucida Grande", "segoe UI", "ヒラギノ角ゴ Std", "Hiragino Maru Gothic ProN", Meiryo, Arial, sans-serif;
+    border-bottom: solid 7px;
+    border-color: #fd6458;
 }
 
-#new_comics {
-}
+#new_comics {}
 
-.new_comic img{
-  margin-top: 10px;
-  margin-left: 36px;
+.new_comic img {
+    margin-top: 10px;
+    margin-left: 36px;
 }
 
 //index.html.erb end //
-
-
 //new.html.erb//
 .my_posted_comics {
-  position: relative;
-  margin-bottom: 50px;
+    position: relative;
+    margin-bottom: 50px;
     .my_posted_comics_info {
-     display: inline;
+        display: inline;
     }
 }
 
@@ -40,255 +34,223 @@ h1 {
 
 
 .my_posted_comics img {
-  width: 250px;
+    width: 250px;
 }
 
 .my_posted_comics_info ul {
-  list-style: none;
-  top: 60px;
-  left: 400px;
-  position: absolute;
+    list-style: none;
+    top: 60px;
+    left: 400px;
+    position: absolute;
 }
 
 .my_posted_comics_info li {
-  display: block;
-  padding-bottom: 30px;
-  font-size: 15px;
+    display: block;
+    padding-bottom: 30px;
+    font-size: 15px;
 }
 
 .my_posted_comic_edit_button {
-  display: inline-block;
-  margin-left: 300px;
+    display: inline-block;
+    margin-left: 300px;
 }
 
 .my_posted_comic_delete_button {
-   display: inline-block;
-   margin-left: 300px
+    display: inline-block;
+    margin-left: 300px
 }
 
 
 
 
 //new.html.erb end//
-
-
-
-
 //edit.html.erb//
-
 //edit.html.erb end//
-
-
-
-
-
 //_form.html.erb//
-
-
 .field {
-  width: 300px;
-  margin: 0px auto;
-  font-size: 15px;
+    width: 300px;
+    margin: 0px auto;
+    font-size: 15px;
 }
 
 
 .info_of_required {
-  display:inline-block;
-  width:35px;
-  color: white;
-  background-color:#fd6458;
-  text-align:center;
-  padding:1px;
-  position: relative;
-  top: -20px;
-  left: 251px;
+    display: inline-block;
+    width: 35px;
+    color: white;
+    background-color: #fd6458;
+    text-align: center;
+    padding: 1px;
+    position: relative;
+    top: -20px;
+    left: 251px;
 }
 
 //_form.html.erb end//
-
-
 //liked.html.erb//
-
 //liked.html.erb end//
-
-
 //search.html.erb//
-
 h2 {
-  margin-left: 5px;
+    margin-left: 5px;
 }
 
 .search_form {
-  float: left;
-  height: 500px;
-  border: solid 3px;
-  margin-left: 15px;
-  margin-right: 5px;
+    float: left;
+    height: 500px;
+    border: solid 3px;
+    margin-left: 15px;
+    margin-right: 5px;
 
-  .field {
-  margin-top: 20px;
-  margin-left: 10px;
-  font-size: 15px;
-  }
-
+    .field {
+        margin-top: 20px;
+        margin-left: 10px;
+        font-size: 15px;
+    }
 }
 
 .search_result img {
-  width: 180px;
-  margin-left: 15px;
-  margin-top: 5px;
+    width: 180px;
+    margin-left: 15px;
+    margin-top: 5px;
 
-  h3 {
-   margin-left: 5px;
-  }
+    h3 {
+        margin-left: 5px;
+    }
 }
 
 //search.html.erb end//
-
-
-
-
-
 //show.html.erb//
-
 //show_upperとshow_lowerは画面のいいね数を境界として、上下で分けている//
 .show_upper {
-  .frontcover_and_likes_count {
-    margin-left: 10px;
-    margin-right: 32px;
-    float: left;
-    .likes_count {
-      position: relative;
-      top: 10px;
-      left: 140px;
-      font-size: 20px;
-        .show_likedstar{
-        position: absolute;
-        top: -5px;
-        right: 290px;
-      }
+    .frontcover_and_likes_count {
+        margin-left: 10px;
+        margin-right: 32px;
+        float: left;
+        .likes_count {
+            position: relative;
+            top: 10px;
+            left: 140px;
+            font-size: 20px;
+            .show_likedstar {
+                position: absolute;
+                top: -5px;
+                right: 290px;
+            }
+        }
     }
-  }
-  .contents_picture img{
-  width: 150px;
-  margin-left: 10px;
-  }
+    .contents_picture img {
+        width: 150px;
+        margin-left: 10px;
+    }
 
-  .introduction {
-  display: inline-block;
-  height:150px;
-  width: 500px;
-  padding-left:15px;
-  padding-top:15px;
-  margin-top:10px;
-  margin-left:10px;
-  border: solid 5px;
-  border-color: #fd6458;
-  }
+    .introduction {
+        display: inline-block;
+        height: 150px;
+        width: 500px;
+        padding-left: 15px;
+        padding-top: 15px;
+        margin-top: 10px;
+        margin-left: 10px;
+        border: solid 5px;
+        border-color: #fd6458;
+    }
 }
 
 
 .show_lower {
-  position: relative;
-  top: 80px;
-  right: 100px;
+    position: relative;
+    top: 80px;
+    right: 100px;
 }
 
 .show_lower_table {
-  table-layout: fixed;
-  width: 100px;
-  margin-left: 130px;
-
+    table-layout: fixed;
+    width: 100px;
+    margin-left: 130px;
 }
 
 .show_lower td {
-  width: 450px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left:10px;
-  border: solid 1px;
-  font-size:15px;
-  background-color: #C0C0C0;
+    width: 450px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    border: solid 1px;
+    font-size: 15px;
+    background-color: #C0C0C0;
 }
 
 .show_lower strong {
-  margin-right:100px;
+    margin-right: 100px;
 }
 
 
 .show_like_button {
-  display: inline-block;
-  position: relative;
-  height: 70px;
-  width: 320px;
-  padding-left: 10px;
-  margin-top: 150px;
-  margin-left: 350px;
-  background-color: #fd6458;
-  color: white;
-  font-size: 20px;
-  border-radius: 10px;
-  }
+    display: inline-block;
+    position: relative;
+    height: 70px;
+    width: 320px;
+    padding-left: 10px;
+    margin-top: 150px;
+    margin-left: 350px;
+    background-color: #fd6458;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}
 
 .show_like_button_likedstar {
-  position: relative;
-  left: 360px;
-  bottom: 49px;
-  }
+    position: relative;
+    left: 360px;
+    bottom: 49px;
+}
 
 
 
 //show.htmkl.erb end//
-
-
-
-
-
 //rank.html.erb//
-
 .ranked_comics {
- margin-top: -65px;
- .ranked_comics_info {
-  display: inline;
-  position: relative;
-  right:230px;
-  font-size: 20px;
-    .rank_likedstar {
-      position: absolute;
-      width: 30px;
-      top: -40px;
-      left: -71px;
+    margin-top: -65px;
+    .ranked_comics_info {
+        display: inline;
+        position: relative;
+        right: 230px;
+        font-size: 20px;
+        .rank_likedstar {
+            position: absolute;
+            width: 30px;
+            top: -40px;
+            left: -71px;
+        }
+        .authormark {
+            position: absolute;
+            width: 30px;
+            top: -34px;
+            left: 2px;
+        }
     }
-    .authormark {
-     position: absolute;
-     width: 30px;
-     top: -34px;
-     left: 2px;
-    }
-  }
 }
 
 .ranked_comics img {
-  width: 241px;
-  margin: 35px;
+    width: 241px;
+    margin: 35px;
 }
 
 .gold_crown {
-  position: relative;
-  top: -8px;
-  left: 5px;
+    position: relative;
+    top: -8px;
+    left: 5px;
 }
 
 .silver_crown {
-  position: relative;
-  top: -8px;
-  left: 240px;
+    position: relative;
+    top: -8px;
+    left: 240px;
 }
 
 .copper_crown {
-  position: relative;
-  top: -8px;
-  left: 478px;
+    position: relative;
+    top: -8px;
+    left: 478px;
 }
 
 
