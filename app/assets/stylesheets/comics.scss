@@ -8,12 +8,66 @@ h1 {
     font-size: 32px;
     padding-top: 7px;
     padding-left: 30px;
+    margin-left: 15px;
     font-family: "Lucida Grande", "segoe UI", "ヒラギノ角ゴ Std", "Hiragino Maru Gothic ProN", Meiryo, Arial, sans-serif;
     border-bottom: solid 7px;
     border-color: #fd6458;
 }
 
-#new_comics {}
+.index_gold_crown {
+    display: inline-block;
+    position: relative;
+    top: 140px;
+    left: 7px;
+}
+
+
+
+.index_silver_crown {
+    display: inline-block;
+    position: relative;
+    top: 140px;
+    left: 220px;
+}
+
+.index_copper_crown {
+    display: inline-block;
+    position: relative;
+    top: 140px;
+    left: 445px;
+}
+
+
+.top_three_ranking_comic {
+    display: inline-block;
+}
+
+.top_three_ranking_comic img{
+    margin-top: 30px;
+    margin-left: 27px;
+    margin-bottom: 100px;
+}
+
+.index_ranked_comics_info {
+    display: inline;
+    position: relative;
+    font-size: 20px;
+    top: -71px;
+    right: 220px;
+    .index_rank_likedstar {
+        position: absolute;
+        top: -33px;
+        left: -65px;
+    }
+    .index_authormark {
+        position: absolute;
+        top: -32px;
+        left: 25px;
+    }
+}
+
+
+
 
 .new_comic img {
     margin-top: 10px;
