@@ -6,7 +6,7 @@ class ComicsController < ApplicationController
   # GET /comics.json
   def index
     @comics = Comic.released.order('id DESC')
-    rank
+    set_ranked_comics
     @comic_top_three = @ranked_comics.first(3)
   end
 
@@ -106,7 +106,7 @@ class ComicsController < ApplicationController
   end
 
   def rank
-    @ranked_comics = Comic.order('likes_count DESC')
+    set_ranked_comics
   end
 
 
