@@ -6,8 +6,8 @@
 <h1><%= @authorname%>さんの出展作品</h1>
   <% @my_posted_comics.each do |my_posted_comic| %>
     <div class="my_posted_comics">
-        <%= link_to comic_path(my_posted_comic) do %>
-          <%= image_tag my_posted_comic.front_cover.to_s %>
+      <%= link_to comic_path(my_posted_comic) do %>
+        <%= image_tag my_posted_comic.front_cover.to_s %>
         <% end %>
       <div class="my_posted_comics_info">
           <ul>

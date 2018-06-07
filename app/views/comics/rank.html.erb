@@ -7,10 +7,10 @@
     <%= link_to comic_path(comic) do %>
       <%= image_tag comic.front_cover.to_s %>
       <div class="ranked_comics_info">
-       <%= comic.likes_count %>
-       <%= image_tag 'likedstar.png', class: :rank_likedstar %>
-       <%= comic.user.username %>
-       <%= image_tag 'authormark.png', class: :authormark %>
+        <%= comic.likes_count %>
+        <%= image_tag 'likedstar.png', class: :rank_likedstar %>
+        <%= comic.user.username %>
+        <%= image_tag 'authormark.png', class: :authormark %>
      </div>
     <% end %>
   <% end %>
