@@ -1,6 +1,105 @@
 //new.html.erb devise/sessions//
+
+.devise_session_sign_in {
+  position:relative;
+  left:410px;
+  top:150px;
+}
+
+.new_registration_button {
+  display:inline;
+  position:absolute;
+  bottom:-86px;
+  padding: 20px 24px 20px 105px;
+  border: thin solid #808080;
+  background-color:#808080;
+  left:-117px;
+  font-weight:bold;
+  font-size:20px;
+  color: white;
+}
+
+.devise_session_log_in {
+  position:relative;
+  left:410px;
+  top:450px;
+}
+
+.mail_icon {
+  position: absolute;
+  top: 96px;
+  left: -88px;
+}
+
+.twitter_icon_sign_in {
+  position: absolute;
+  width: 50px;
+  top: 215px;
+  left: -90px;
+}
+
+.twitter_icon_log_in {
+  position: absolute;
+  width: 50px;
+  top: 306px;
+  left: -90px;
+}
+
+.devise_twitter_button {
+  display:inline;
+  position:absolute;
+  bottom:-205px;
+  padding: 20px 60px 20px 105px;
+  border: thin solid #06a7e4 ;
+  background-color: #06a7e4 ;
+  color:white;
+  left:-117px;
+  font-weight:bold;
+  font-size:20px;
+  text-align:center;
+}
+
+.login_field {
+  width: 100px;
+}
+
+.login_button {
+  position:absolute;
+  top:200px;
+  right: 746px;
+  font-size:20px;
+  color:white;
+  font-weight:bold;
+  width: 370px;
+  height: 70px;
+  background: #fd6458;
+}
+
 //new.html.erb devise/sessions end//
 
 
 //new.html.erb devise/registrations//
+.devise_registration_sign_up h2 {
+  position: relative;
+  left: 352px;
+}
+
+
+.sign_up_button {
+  position:relative;
+  top:50px;
+  right: -251px;
+  font-size:20px;
+  color:white;
+  font-weight:bold;
+  width: 370px;
+  height: 70px;
+  background: #fd6458;
+}
+
+
+
+
+
+
 //new.html.erb devise/registrations end//
