@@ -16,7 +16,31 @@
 
 
 header {
+  height: 70px;
   background-color: #fd6458;
+}
+
+
+
+
+
+
+.header_search {
+  position: relative;
+  left: 600px;
+}
+
+.header_search img {
+  position: absolute;
+  top: 8px;
+  left: 160px;
+}
+
+.header_search_box {
+  border-radius: 10px;
+  height: 40px;
+  width: 200px;
+  font-size: 15px;
 }
 
 

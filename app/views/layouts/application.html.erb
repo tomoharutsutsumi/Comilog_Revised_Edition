@@ -14,6 +14,12 @@
         <% if user_signed_in? %>
           <%= link_to 'プロフィール変更', edit_user_registration_path %>
           <%= link_to 'ログアウト', destroy_user_session_path, :method => :delete %>
+          <div class="header_search">
+            <%= form_tag(search_comics_path, method: :get) do %>
+             <%= text_field_tag :title, '', class: :header_search_box, placeholder: :サークル名や著者名%>
+             <%= link_to image_tag('glass.png'), search_comics_path %>
+            <% end %>
+          </div>
         <% else %>
           <%= link_to 'サインアップ', new_user_registration_path %>
           <%= link_to 'ログイン', new_user_session_path %>
