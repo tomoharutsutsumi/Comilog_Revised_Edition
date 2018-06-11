@@ -111,9 +111,7 @@
     <%= form.radio_button :agetarget, "全年齢", id: :comic_agetarget %>全年齢
     <%= form.radio_button :agetarget, "18歳以上", id: :comic_agetarget %>18歳以上
   </div>
-  
-<div class="actions">
-  <%= form.submit "出展する" %>
-</div>
+
+  <%= form.submit "上の内容で出展する", class: :form_action %>
 
 <% end %>
