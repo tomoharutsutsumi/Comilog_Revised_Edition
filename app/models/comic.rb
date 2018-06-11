@@ -19,9 +19,6 @@ class Comic < ApplicationRecord
     user.likes.create(comic: self) unless liked?(user)
   end
 
-  def set_ranked_comics
-    @ranked_comics = Comic.order('likes_count DESC')
-  end
 
 
 

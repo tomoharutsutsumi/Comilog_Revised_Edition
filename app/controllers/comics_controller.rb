@@ -110,6 +110,11 @@ class ComicsController < ApplicationController
   end
 
 
+  def set_ranked_comics
+    @ranked_comics = Comic.order('likes_count DESC')
+  end
+
+
 
 
   private
