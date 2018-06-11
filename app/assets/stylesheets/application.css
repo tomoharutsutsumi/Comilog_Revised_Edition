@@ -16,8 +16,18 @@
 
 
 header {
+  position: relative;
   height: 70px;
+  width: 1500px;
   background-color: #fd6458;
+}
+
+nav {
+  position: relative;
+  top: 27px;
+  left: 1200px;
+  font-size: 20px;
+
 }
 
 
@@ -27,20 +37,27 @@ header {
 
 .header_search {
   position: relative;
-  left: 600px;
+  top: -33px;
+  left: -350px;
 }
 
 .header_search img {
   position: absolute;
   top: 8px;
-  left: 160px;
+  left: 210px;
 }
 
 .header_search_box {
   border-radius: 10px;
   height: 40px;
-  width: 200px;
+  width: 250px;
   font-size: 15px;
+}
+
+.logo_pic img{
+  position: absolute;
+  left: -1150px;
+  bottom: 35px;
 }
 
 

@@ -89,6 +89,12 @@ class ComicsController < ApplicationController
     @search_result = @search_result.where(agetarget: params[:agetarget]) unless params[:agetarget].blank?
   end
 
+  def header_search
+    @header_search_result = Comic.all
+    @header_search_result = @header_search_result.where(title: params[:keyword]).or(@header_search_result.where(origin_title: params[:keyword]))
+    redirect_to :action => "search", flash: {:@search_result => @header_search_result}
+  end
+
   def release
     comic =  Comic.find(params[:id])
     comic.released! unless comic.released?
