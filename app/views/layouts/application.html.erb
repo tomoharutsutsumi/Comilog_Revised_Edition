@@ -11,19 +11,19 @@
   <body>
     <header>
       <nav>
-        <%= link_to image_tag('comilog.png'), root_path, class: :logo_pic %>
+        <%= link_to image_tag('comilog.png'), root_path, class: "logo_pic" %>
         <% if user_signed_in? %>
-          <%= link_to 'プロフィール変更', edit_user_registration_path %>
-          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+          <%= button_to 'プロフィール変更', edit_user_registration_path, method: :get, class: "header_left_button" %>
+          <%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class: "header_right_button" %>
           <div class="header_search">
             <%= form_tag(header_search_comics_path, method: :get) do %>
-             <%= text_field_tag :keyword, '', class: :header_search_box, placeholder: :サークル名や著者名%>
+             <%= text_field_tag :keyword, '', class: "header_search_box", placeholder: "サークル名や著者名"%>
              <%= link_to image_tag('glass.png'), search_comics_path %>
             <% end %>
           </div>
         <% else %>
-          <%= link_to 'サインアップ', new_user_registration_path %>
-          <%= link_to 'ログイン', new_user_session_path %>
+          <%= button_to 'サインアップ', new_user_registration_path, method: :get, class: "header_left_button" %>
+          <%= button_to 'ログイン', new_user_session_path, method: :get, class: "header_right_button" %>
         <% end %>
       </nav>
     </header>

@@ -30,14 +30,10 @@ nav {
 
 }
 
-
-
-
-
-
 .header_search {
   position: relative;
-  top: -33px;
+  width: 100px;
+  top: -125px;
   left: -350px;
 }
 
@@ -55,9 +51,35 @@ nav {
 }
 
 .logo_pic img{
-  position: absolute;
+  position: relative;
   left: -1150px;
-  bottom: 35px;
+  bottom: 12px;
+}
+
+.header_left_button {
+  position:  relative;
+  display: inline-block;
+  right: 30px;
+  bottom: 50px;
+  background-color: #fd6458;
+  border-color: #fd6458;
+  color: white;
+  font-size: 20px;
+  text-shadow: black 1px 1px 0px, black -1px 1px 0px,
+               black 1px -1px 0px, black -1px -1px 0px;
+}
+
+.header_right_button {
+  position: relative;
+  display: inline-block;
+  right: -150px;
+  bottom: 85px;
+  background-color: #fd6458;
+  border-color: #fd6458;
+  color: white;
+  font-size: 20px;
+  text-shadow: black 1px 1px 0px, black -1px 1px 0px,
+               black 1px -1px 0px, black -1px -1px 0px;
 }
 
 
