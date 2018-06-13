@@ -80,6 +80,10 @@
   <%= @comic.origin_title %>
 </p>
 
+<p>
+  <%= @comic.tag_list %>
+</p>
+
 <%= link_to 'Back', root_path %>
 
 <% if @comic.liked?(current_user.id) %>

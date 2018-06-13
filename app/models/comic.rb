@@ -2,6 +2,9 @@ class Comic < ApplicationRecord
   has_many :likes
   belongs_to :user
 
+  acts_as_taggable_on :tags
+  acts_as_taggable
+
   mount_uploader :front_cover, FrontcoverUploader
 
   enum status:{nonreleased: 0, released: 1}
