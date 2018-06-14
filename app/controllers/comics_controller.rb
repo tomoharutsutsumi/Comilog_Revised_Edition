@@ -91,12 +91,12 @@ class ComicsController < ApplicationController
   end
 
   def release
-    @comic.released! unless @comic.released?
+    @comic.released!
     redirect_to edit_comic_path, notice: 'この作品を公開しました'
   end
 
   def nonrelease
-    @comic.nonreleased! unless @comic.nonreleased?
+    @comic.nonreleased!
     redirect_to edit_comic_path, notice: 'この作品を非公開にしました'
   end
 
