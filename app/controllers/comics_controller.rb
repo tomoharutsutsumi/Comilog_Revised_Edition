@@ -1,12 +1,12 @@
 class ComicsController < ApplicationController
   before_action :set_comic, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:show, :new, :edit, :destroy, :like, :unlike]
+  before_action :set_ranked_comics, only: [:index, :rank]
 
   # GET /comics
   # GET /comics.json
   def index
     @comics = Comic.released.order('id DESC')
-    set_ranked_comics
     @comic_top_three = @ranked_comics.first(3)
   end
 
@@ -106,13 +106,9 @@ class ComicsController < ApplicationController
   end
 
   def rank
-    set_ranked_comics
   end
 
 
-  def set_ranked_comics
-    @ranked_comics = Comic.order('likes_count DESC')
-  end
 
 
 
@@ -122,6 +118,11 @@ class ComicsController < ApplicationController
     def set_comic
       @comic = Comic.find(params[:id])
     end
+
+    def set_ranked_comics
+      @ranked_comics = Comic.order('likes_count DESC')
+    end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comic_params
