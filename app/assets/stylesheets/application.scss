@@ -18,14 +18,14 @@
 header {
   position: relative;
   height: 70px;
-  width: 1500px;
+  width: 100%;
   background-color: #fd6458;
 }
 
 nav {
   position: relative;
   top: 27px;
-  left: 1200px;
+  left: 600px;
   font-size: 20px;
 
 }
@@ -33,14 +33,13 @@ nav {
 .header_search {
   position: relative;
   width: 100px;
-  top: -125px;
-  left: -350px;
-}
-
-.header_search img {
-  position: absolute;
-  top: 8px;
-  left: 210px;
+  top: -85px;
+  left: -300px;
+  img {
+    position: absolute;
+    top: 8px;
+    left: 210px;
+  }
 }
 
 .header_search_box {
@@ -50,17 +49,22 @@ nav {
   font-size: 15px;
 }
 
-.logo_pic img{
+.logo_pic {
   position: relative;
-  left: -1150px;
+  left: -300px;
   bottom: 12px;
+  img {
+    position: absolute;
+    left: -250px;
+  }
 }
+
 
 .header_left_button {
   position:  relative;
   display: inline-block;
   right: 30px;
-  bottom: 50px;
+  bottom: 10px;
   background-color: #fd6458;
   border-color: #fd6458;
   color: white;
@@ -73,7 +77,7 @@ nav {
   position: relative;
   display: inline-block;
   right: -150px;
-  bottom: 85px;
+  bottom: 45px;
   background-color: #fd6458;
   border-color: #fd6458;
   color: white;
