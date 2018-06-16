@@ -1,13 +1,17 @@
 <h1>自分がいいねした作品一覧</h1>
-
-<p><%= @sum_of_my_liked_comics_price %></p>
+  <div class="sum_of_my_liked_comics_price" >
+    <%= image_tag("budget_money.png") %>
+    購入予定
+    <%= @sum_of_my_liked_comics_price %>
+    円
+  </div>
 
  <% @my_liked_comics.each do |my_liked_comic| %>
   <div class="one_of_my_liked_comics">
-   <%= my_liked_comic.title %>
-   <%= my_liked_comic.day %>
-   <%= my_liked_comic.category %>
-   <%= my_liked_comic.price %>
-   <%= my_liked_comic.introduction %>
+    <%= my_liked_comic.title %>
+    <%= my_liked_comic.day %>
+    <%= my_liked_comic.category %>
+    <%= my_liked_comic.price %>
+    <%= my_liked_comic.introduction %>
   </div>
  <% end %>
