@@ -11,6 +11,6 @@
 end
 
 13.times do |i|
-  Comic.create(title: "テストテストテスト#{i}", price: 200, status: 0, user_id: 0, front_cover: open("#{Rails.root}/app/assets/images/20171216154719.jpg"))
+  Comic.create(title: "テストテストテスト#{i}", price: 200, status: 1, user_id: 0, front_cover: open("#{Rails.root}/app/assets/images/20171216154719.jpg"))
 end
 
