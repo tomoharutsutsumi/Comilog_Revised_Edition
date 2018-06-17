@@ -80,10 +80,11 @@ class ComicsController < ApplicationController
     redirect_to :action => "show"
   end
 
+
   def search
     @search_result = Comic.all
     @search_result = @search_result.where(title: params[:title]) unless params[:title].blank?
-    @search_result = @search_result.where(type: params[:type]) unless params[:type].blank?
+    @search_result = @search_result.where(category: params[:category]) unless params[:category].blank?
     @search_result = @search_result.where(day: params[:day]) unless params[:day].blank?
     @search_result = @search_result.where(origin_title: params[:origin_title]) unless params[:origin_title].blank?
     @search_result = @search_result.where(agetarget: params[:agetarget]) unless params[:agetarget].blank?
@@ -108,6 +109,13 @@ class ComicsController < ApplicationController
     comic.nonreleased! unless comic.nonreleased?
     redirect_to edit_comic_path, notice: 'この作品を非公開にしました'
   end
+  
+  def rank
+    @ranked_comics = Comic.order('likes_count DESC')
+  end
+
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -117,6 +125,6 @@ class ComicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comic_params
-      params.require(:comic).permit(:title, :front_cover, :price, :sns_first, :sns_second, :sns_third, :sns_fourth, :introduction, :content_first, :content_second, :content_third, :content_fourth, :content_fifth, :type, :day, :origin_title, :agetarget)
+      params.require(:comic).permit(:title, :front_cover, :price, :sns_first, :sns_second, :sns_third, :sns_fourth, :introduction, :content_first, :content_second, :content_third, :content_fourth, :content_fifth, :category, :day, :origin_title, :agetarget)
     end
 end

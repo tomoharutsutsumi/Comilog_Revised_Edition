@@ -31,5 +31,12 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+    <footer>
+       <%= link_to 'ホーム', root_path %>
+       <%= link_to '買うかもリスト', my_likes_path %>
+       <%= link_to '出品する', new_comic_path %>
+       <%= link_to '検索する', search_comics_path %>
+       <%= link_to 'ランキング', rank_comics_path %>
+    </footer>
   </body>
 </html>

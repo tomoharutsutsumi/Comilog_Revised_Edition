@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     collection do
         get :search
         get :header_search
+        get :rank
     end
     member do
         post 'like'

@@ -1,4 +1,4 @@
-<h1>Editing Comic</h1>
+<h1>編集する</h1>
 
 <%= render 'form', comic: @comic %>
 
@@ -11,3 +11,5 @@
 <% else %>
   <%= link_to '公開する', release_comic_path(@comic), method: :patch %>
 <% end %>
+
+
