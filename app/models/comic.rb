@@ -21,5 +21,6 @@ class Comic < ApplicationRecord
 
 
 
+
   scope :sum_price, -> { sum(:price) }
 end
