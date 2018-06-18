@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    attributes:
+       comic:
+        title: タイトル
+        front_cover: 表紙
+        price: 価格
+        day: 出展日
+        origin_title: 元ネタ
