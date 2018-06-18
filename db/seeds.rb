@@ -5,6 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-13.times do |i|
-  Comic.create(title: "テスト#{i}", price: 100, status: 0, user_id: 1)
+
+1.times do |i|
+  User.create(id: "#{i}", email: 'testtest@test.com', password: '123456')
 end
+
+13.times do |i|
+  Comic.create(title: "テストテストテスト#{i}", price: 200, status: 1, user_id: 0, front_cover: open("#{Rails.root}/app/assets/images/20171216154719.jpg"))
+end
+
