@@ -24,8 +24,12 @@ footer {
 
 .footer_td {
   padding: 20px 100px;
-  border: solid 1px black;
+  border: solid 1px #DDDDDD;
   background-color: #DDDDDD;
   color: blue;
-  font-size: 13px;
+  font-size: 14px;
+}
+
+.footer_td:hover {
+  background-color: #fd6458; 
 }
