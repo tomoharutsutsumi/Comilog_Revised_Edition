@@ -25,11 +25,15 @@
     <p class="alert"><%= alert %></p>
     <%= yield %>
     <footer>
-       <%= link_to 'ホーム', root_path %>
-       <%= link_to '買うかもリスト', my_likes_path %>
-       <%= link_to '出品する', new_comic_path %>
-       <%= link_to '検索する', search_comics_path %>
-       <%= link_to 'ランキング', rank_comics_path %>
+      <table>
+        <tr>
+          <td><%= button_to 'ホーム', root_path, method: :get, class: "footer_td" %></td>
+          <td><%= button_to '買うかもリスト', my_likes_path, method: :get, class: "footer_td" %></td>
+          <td><%= button_to '出品する', new_comic_path, method: :get, class: "footer_td" %></td>
+          <td><%= button_to '検索する', search_comics_path, method: :get, class: "footer_td" %></td>
+          <td><%= button_to 'ランキング', rank_comics_path, method: :get, class: "footer_td" %></td>
+        <tr>
+      </table>
     </footer>
   </body>
 </html>
