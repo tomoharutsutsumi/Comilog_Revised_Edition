@@ -81,6 +81,12 @@
 </p>
 
 
+<p>
+  <%= @comic.tag_list %>
+</p>
+
+
+
 <% if @comic.liked?(current_user.id) %>
   <%= link_to '買うかもリストから外す', unlike_comic_path(@comic), :method => 'post' %>
 <% else %>
