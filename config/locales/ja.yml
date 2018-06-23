@@ -1,6 +1,15 @@
 ---
 ja:
   activerecord:
+    models:
+      comic: コミック
+    attributes:
+      comic:
+        title: タイトル
+        front_cover: 表紙
+        day: 出展日
+        origin_title: 元ネタ名
+        price: 価格
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
