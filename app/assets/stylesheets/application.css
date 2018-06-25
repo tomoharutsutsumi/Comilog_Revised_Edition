@@ -15,12 +15,15 @@
  */
 
  body {
-  width: 1000px;
-  height: 3000px;
+  height: 100%;
+  width: 100%;
   margin: 0 auto;
  }
 
  html {
+  height: 3000px;
+  width: 1000px;
+  margin: 0 auto;
   background-color: #f1f1f1;
 }
 

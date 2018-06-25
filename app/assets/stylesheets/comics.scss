@@ -201,15 +201,15 @@ h1 {
 
 .one_of_my_liked_comics {
     padding: 20px;
-    margin-left: 30px;
+    margin-left: 60px;
     ul {
        display: inline-block;
-       position: relative;
-       left: 30px;
-       bottom: 150px;
+       padding-left: 100px;
        list-style: none;
        li {
           padding: 15px;
+          padding-bottom: 40px;
+          margin-bottom: 10px;
           font-size: 17px;
           font-weight: bold;
        }
@@ -226,19 +226,20 @@ h2 {
 .search_form {
     float: left;
     height: 500px;
-    border: solid 3px;
+    border: solid 0.1px #d3d3d3;
     margin-left: 15px;
     margin-right: 5px;
+    width: 265px;
 
     .field {
         margin-top: 20px;
-        margin-left: 10px;
+        margin-left: 28px;
         font-size: 15px;
     }
 }
 
 .search_result img {
-    width: 180px;
+    width: 202px;
     margin-left: 15px;
     margin-top: 5px;
 
@@ -249,10 +250,10 @@ h2 {
 
 .search_actions {
     position: relative;
-    top: 60px;
-    left: 28px;
-    width: 250px;
-    height: 70px;
+    top: 74px;
+    left: 45px;
+    width: 177px;
+    height: 58px;
     background-color: #fd6458;
     color: white;
     font-size: 20px;
@@ -289,10 +290,10 @@ h2 {
         width: 500px;
         padding-left: 15px;
         padding-top: 15px;
-        margin-top: 10px;
+        margin-top: 15px;
         margin-left: 10px;
-        border: solid 5px;
         border-color: #fd6458;
+        font-size: 22px;
     }
 }
 
@@ -304,6 +305,8 @@ h2 {
 }
 
 .show_lower_table {
+    position: relative;
+    top: -45px;
     table-layout: fixed;
     width: 100px;
     margin-left: 130px;
@@ -316,7 +319,7 @@ h2 {
     padding-left: 10px;
     border: solid 1px;
     font-size: 15px;
-    background-color: #C0C0C0;
+    background-color: #efeeee;
 }
 
 .show_lower strong {
@@ -330,7 +333,7 @@ h2 {
     height: 70px;
     width: 320px;
     padding-left: 10px;
-    margin-top: 150px;
+    margin-top: 75px;
     margin-left: 350px;
     background-color: #fd6458;
     color: white;
