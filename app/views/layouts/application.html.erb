@@ -10,8 +10,8 @@
 
   <body>
     <header>
+      <%= link_to image_tag('comilog.png'), root_path, class: "logo_pic" %>
       <nav>
-        <%= link_to image_tag('comilog.png'), root_path, class: "logo_pic" %>
         <% if user_signed_in? %>
           <%= button_to 'プロフィール変更', edit_user_registration_path, method: :get, class: "header_left_button" %>
           <%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class: "header_right_button" %>

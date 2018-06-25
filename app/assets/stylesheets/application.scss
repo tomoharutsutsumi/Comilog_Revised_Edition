@@ -20,27 +20,50 @@ header {
   height: 70px;
   width: 100%;
   background-color: #fd6458;
+
 }
 
 nav {
-  position: relative;
+  position: absolute;
   top: 27px;
-  left: 600px;
+  right: 130px;
   font-size: 20px;
-
-}
-
-.header_search {
-  position: relative;
-  width: 100px;
-  top: -85px;
-  left: -300px;
-  .search_glass {
-    position: absolute;
-    top: 8px;
-    left: 210px;
+  .header_left_button {
+    position:  relative;
+    display: inline-block;
+    right: 30px;
+    bottom: 10px;
+    background-color: #fd6458;
+    border-color: #fd6458;
+    color: white;
+    font-size: 20px;
+    text-shadow: black 1px 1px 0px, black -1px 1px 0px, black 1px -1px 0px, black -1px -1px 0px;
+  }
+  .header_right_button {
+    position: relative;
+    display: inline-block;
+    right: -150px;
+    bottom: 45px;
+    background-color: #fd6458;
+    border-color: #fd6458;
+    color: white;
+    font-size: 20px;
+    text-shadow: black 1px 1px 0px, black -1px 1px 0px, black 1px -1px 0px, black -1px -1px 0px;
+  }
+  .header_search {
+    position: relative;
+    width: 100px;
+    top: -85px;
+    left: -300px;
+      .search_glass {
+         position: absolute;
+         top: 8px;
+         left: 210px;
+      }
   }
 }
+
+
 
 .header_search_box {
   border-radius: 10px;
@@ -50,40 +73,15 @@ nav {
 }
 
 .logo_pic {
-  position: relative;
-  left: -300px;
+  margin-left: 30px;
   bottom: 12px;
-  img {
-    position: absolute;
-    left: -250px;
-  }
+    img {
+      margin-top: 15px;
+    }
 }
 
 
-.header_left_button {
-  position:  relative;
-  display: inline-block;
-  right: 30px;
-  bottom: 10px;
-  background-color: #fd6458;
-  border-color: #fd6458;
-  color: white;
-  font-size: 20px;
-  text-shadow: black 1px 1px 0px, black -1px 1px 0px,
-               black 1px -1px 0px, black -1px -1px 0px;
-}
 
-.header_right_button {
-  position: relative;
-  display: inline-block;
-  right: -150px;
-  bottom: 45px;
-  background-color: #fd6458;
-  border-color: #fd6458;
-  color: white;
-  font-size: 20px;
-  text-shadow: black 1px 1px 0px, black -1px 1px 0px,
-               black 1px -1px 0px, black -1px -1px 0px;
-}
+
 
 
