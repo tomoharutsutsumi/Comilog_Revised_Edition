@@ -25,25 +25,16 @@ header {
 
 nav {
   position: absolute;
-  top: 27px;
+  top: 0;
+  bottom: 0;
   right: 130px;
   font-size: 20px;
-  .header_left_button {
-    position:  relative;
-    display: inline-block;
-    right: 30px;
-    bottom: 10px;
-    background-color: #fd6458;
-    border-color: #fd6458;
-    color: white;
-    font-size: 20px;
-    text-shadow: black 1px 1px 0px, black -1px 1px 0px, black 1px -1px 0px, black -1px -1px 0px;
-  }
   .header_right_button {
-    position: relative;
     display: inline-block;
-    right: -150px;
-    bottom: 45px;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 70px;
+    line-height: 70px;
     background-color: #fd6458;
     border-color: #fd6458;
     color: white;
