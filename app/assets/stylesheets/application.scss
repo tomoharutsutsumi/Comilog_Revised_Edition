@@ -20,9 +20,12 @@
 footer {
   position: fixed;
   bottom: 5px;
+    li {
+      display: inline-block;
+    }
 }
 
-.footer_td {
+.footer_item {
   padding: 20px 100px;
   border: solid 1px #DDDDDD;
   background-color: #DDDDDD;
@@ -30,6 +33,6 @@ footer {
   font-size: 14px;
 }
 
-.footer_td:hover {
+.footer_item:hover {
   background-color: #fd6458; 
 }
