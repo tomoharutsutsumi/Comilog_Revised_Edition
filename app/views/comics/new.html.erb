@@ -5,12 +5,10 @@
 
 
 <div class="my_posted_comics">
- <% @my_posted_comics.each do |my_posted_comic| %>
-
-  <%= my_posted_comic.title %>
-  <%= link_to 'Edit', edit_comic_path(my_posted_comic) %> |
-  <%= link_to 'Destroy', comic_path(my_posted_comic), method: :delete, data: { confirm: 'Are you sure?' } %>
-
- <% end %>
+  <% @my_posted_comics.each do |my_posted_comic| %>
+    <%= my_posted_comic.title %>
+    <%= link_to 'Edit', edit_comic_path(my_posted_comic) %>
+    <%= link_to 'Destroy', comic_path(my_posted_comic), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end if @my_posted_comics.present? %>
 </div>
 
