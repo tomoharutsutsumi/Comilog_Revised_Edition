@@ -39,6 +39,7 @@ gem 'omniauth-twitter' #Twitter連携
 gem 'carrierwave'
 gem 'rmagick'
 gem 'rails-i18n'
+gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on', branch: 'master'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

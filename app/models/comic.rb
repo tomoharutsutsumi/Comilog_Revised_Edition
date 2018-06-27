@@ -2,6 +2,10 @@ class Comic < ApplicationRecord
   has_many :likes
   belongs_to :user
 
+
+
+  acts_as_taggable_on :tags
+
   validates :title, presence: true
   validates :front_cover, presence: true
   validates :price, presence: true

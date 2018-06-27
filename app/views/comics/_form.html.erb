@@ -90,6 +90,11 @@
     <%= form.text_field :origin_title, id: :comic_origin_title %>
   </div>
 
+  <div class='field'>
+    <%= form.label :tag_list, 'タグをカンマ区切りで入力' %>
+    <%= text_field_tag 'comic[tag_list]', comic.tag_list.join(',') %>
+  </div>
+
   <div class="field">
     <%= form.label :年齢対象 %>
     <%= form.radio_button :agetarget, "全年齢", id: :comic_agetarget %>全年齢
