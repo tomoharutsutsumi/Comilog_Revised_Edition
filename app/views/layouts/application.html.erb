@@ -24,6 +24,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+   <% if user_signed_in? %>
     <footer>
         <ol>
           <li><%= link_to 'ホーム', root_path, class: "footer_item" %></li>
@@ -33,5 +34,6 @@
           <li><%= link_to 'ランキング', rank_comics_path, class: "footer_item" %></li>
         </ol>
     </footer>
+   <% end %>
   </body>
 </html>
