@@ -18,24 +18,25 @@
 
 <div class="devise_session_log_in">
   <h2 class="devise">ログインする</h2>
+   <div class="twitter_button">
      <% resource_class.omniauth_providers.each do |provider| %>
        <%= link_to "#{OmniAuth::Utils.camelize(provider)}でログインする", omniauth_authorize_path(resource_name, provider), class: :devise_twitter_button_log_in, method: :post %><br />
      <% end %>
      <%= image_tag 'Twitter_Logo_WhiteOnBlue.png', class: :twitter_icon_log_in %>
-
+   </div>
+   <div class="name_login_box">
      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-       <div class="login_field">
+       <div class="login_email_field">
          <%= f.label :email %><br />
          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
        </div>
-
-     <div class="login_field">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
-     </div>
-
-     <%= link_to "ユーザー名でログインする", user_session_path, class: :login_button, method: :post %>
+       <div class="login_pass_field">
+         <%= f.label :password %><br />
+         <%= f.password_field :password, autocomplete: "off" %>
+       </div>
      <% end %>
+   <%= link_to "ユーザー名でログインする", user_session_path, class: :login_button, method: :post %>
+   </div>
 </div>
 
 
