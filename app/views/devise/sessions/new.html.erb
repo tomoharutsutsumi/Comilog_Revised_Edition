@@ -34,8 +34,8 @@
          <%= f.label :password %><br />
          <%= f.password_field :password, autocomplete: "off" %>
        </div>
+       <%= f.submit "ユーザー名でログインする", class: :login_button %>
      <% end %>
-   <%= link_to "ユーザー名でログインする", user_session_path, class: :login_button, method: :post %>
    </div>
 </div>
 

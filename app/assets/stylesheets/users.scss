@@ -108,11 +108,11 @@ h2.devise {
   font-size:20px;
   color:white;
   font-weight:bold;
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
   margin-top: 30px;
   padding: 25px 70px 25px 70px;
   background: #fd6458;
-  width: 240px;
 }
 
 //new.html.erb devise/sessions end//

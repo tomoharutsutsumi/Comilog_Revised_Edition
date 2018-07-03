@@ -23,7 +23,7 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-    <%= button_to "ユーザー登録", new_user_registration_path, class: :sign_up_button %>
+    <%= f.submit "ユーザー登録", class: :sign_up_button %>
 
 <% end %>
 </div>
