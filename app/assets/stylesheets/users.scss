@@ -123,8 +123,15 @@ h2.devise {
   left: 352px;
 }
 
+.devise_registration_sign_up {
+  padding-bottom: 100px;
+}
+
 
 .sign_up_button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
   font-size:20px;
   color:white;
   font-weight:bold;

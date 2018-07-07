@@ -37,6 +37,9 @@ h1 {
     left: 445px;
 }
 
+#top_three_ranking_comics {
+  width: 1000px;
+}
 
 .top_three_ranking_comic {
     display: inline-block;
@@ -45,7 +48,7 @@ h1 {
 .top_three_ranking_comic img{
     margin-top: 30px;
     margin-left: 27px;
-    margin-bottom: 100px;
+    margin-bottom: 130px;
 }
 
 .index_ranked_comics_info {
@@ -67,7 +70,9 @@ h1 {
 }
 
 
-
+.new_comic {
+  width: 1000px;
+}
 
 .new_comic img {
     margin-top: 10px;

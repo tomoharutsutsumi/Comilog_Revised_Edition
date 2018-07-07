@@ -19,10 +19,16 @@
  }
 
  html {
-  width: 70%;
   margin: 0 auto;
   background-color: #f1f1f1;
 }
+
+ .background {
+  background-color: white;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  }
 
 
 hr {
