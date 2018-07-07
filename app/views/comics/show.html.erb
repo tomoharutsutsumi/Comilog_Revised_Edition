@@ -25,58 +25,31 @@
 
 
 
-
-<div class="show_lower">
-  <table class="show_lower_table">
-    <tr>
-      <td><strong>タイトル</strong></td>
-      <td><%= @comic.title %></td>
-    </tr>
-    <tr>
-      <td><strong>価格</strong></td>
-      <td><%= @comic.price %>円</td>
-    </tr>
-    <tr>
-      <td><strong>SNSリンク１</strong></td>
-      <td><%= @comic.sns_first %></td>
-    </tr>
-    <tr>
-      <td><strong>SNSリンク２</strong></td>
-      <td><%= @comic.sns_second %></td>
-    </tr>
-    <tr>
-      <td><strong>SNSリンク３</strong></td>
-      <td><%= @comic.sns_third %></td>
-    </tr>
-    <tr>
-      <td><strong>SNSリンク４</strong></td> 
-      <td><%= @comic.sns_fourth %></td>
-    </tr>
-    <tr>
-      <td><strong>カテゴリー</strong></td>
-      <td><%= @comic.category %></td>
-    </tr>
-    <tr>
-      <td><strong>出展日</strong></td>
-      <td><%= @comic.day %></td>
-    </tr>
-    <tr>
-      <td><strong>元ネタ</strong></td>
-      <td><%= @comic.origin_title %></td>
-    </tr>
-  </table>
-</div>
-
-
-
 <div class="buy_or_notbuy_button">
   <% if @comic.liked?(current_user.id) %>
-    <%= button_to '買うかもリストから外す', unlike_comic_path(@comic), :method => 'post', class: :show_like_button %>
+    <%= link_to '買うかもリストから外す', unlike_comic_path(@comic), method: :post, class: :show_like_button %>
   <% else %>
-    <%= button_to '買うかもリストに追加する', like_comic_path(@comic), :method => 'post', class: :show_like_button %>
-    <%= image_tag 'likedstar.png', class: :show_like_button_likedstar %>
+    <%= link_to like_comic_path(@comic), method: :post, class: :show_like_button do %>
+      <%= image_tag 'likedstar.png', class: :show_like_button_likedstar %>
+      <%= '買うかもリストに追加する' %>
+    <% end %>
   <% end %>
 </div>
+
+
+
+<div class="show_lower">
+    <p><strong>タイトル</strong><%= @comic.title %></p>
+    <p><strong>価格</strong><%= @comic.price %>円</p>
+    <p><strong>SNSリンク１</strong><%= @comic.sns_first %></p>
+    <p><strong>SNSリンク２</strong><%= @comic.sns_second %></p>
+    <p><strong>カテゴリー</strong><%= @comic.category %></p>
+    <p><strong>出展日</strong><%= @comic.day %></p>
+    <p><strong>元ネタ</strong><%= @comic.origin_title %></p>
+</div>
+
+
+
 
 
 

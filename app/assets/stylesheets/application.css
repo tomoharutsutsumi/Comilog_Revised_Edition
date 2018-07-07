@@ -16,6 +16,7 @@
 
  body {
   margin: 0 auto;
+  background-color: #f1f1f1;
  }
 
  html {
@@ -25,9 +26,10 @@
 
  .background {
   background-color: white;
-  width: 70%;
+  width: 980px;
   display: block;
   margin: 0 auto;
+  padding: 28px;
   }
 
 

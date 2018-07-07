@@ -38,11 +38,13 @@ h1 {
 }
 
 #top_three_ranking_comics {
+  display: block;
+  margin: 0 auto;
   width: 1000px;
 }
 
 .top_three_ranking_comic {
-    display: inline-block;
+  display: inline-block;
 }
 
 .top_three_ranking_comic img{
@@ -70,6 +72,10 @@ h1 {
 }
 
 
+#new_comics {
+  display: block;
+  margin: 0 auto;
+}
 .new_comic {
   width: 1000px;
 }
@@ -243,8 +249,14 @@ h2 {
     }
 }
 
+.search_result {
+  display: inline-block;
+  text-align: left;
+  width: 600px;
+}
+
 .search_result img {
-    width: 202px;
+    width: 30%;
     margin-left: 15px;
     margin-top: 5px;
 
@@ -296,50 +308,42 @@ h2 {
         padding-left: 15px;
         padding-top: 15px;
         margin-top: 15px;
+        margin-bottom: 100px;
         margin-left: 10px;
         border-color: #fd6458;
         font-size: 22px;
     }
 }
 
+.buy_or_notbuy_button {
+  display: block;
+  text-align: center;
+}
+
 
 .show_lower {
-    position: relative;
-    top: 80px;
-    right: 100px;
+  font-size: 15px;
+  margin-top:130px;
+  padding-bottom: 80px;
 }
 
-.show_lower_table {
-    position: relative;
-    top: -45px;
-    table-layout: fixed;
-    width: 100px;
-    margin-left: 130px;
-}
-
-.show_lower td {
-    width: 450px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 10px;
-    border: solid 1px;
-    font-size: 15px;
-    background-color: #efeeee;
-}
 
 .show_lower strong {
-    margin-right: 100px;
+    display: inline-block;
+    width: 250px;
+    margin: 30px;
+}
+
+.show_lower p {
+  border: 1px dashed black;
+  font-size: 15px;
+
 }
 
 
 .show_like_button {
-    display: inline-block;
-    position: relative;
-    height: 70px;
-    width: 320px;
-    padding-left: 10px;
-    margin-top: 75px;
-    margin-left: 350px;
+    width: 245px;
+    padding: 30px;
     background-color: #fd6458;
     color: white;
     font-size: 20px;
@@ -347,10 +351,10 @@ h2 {
 }
 
 .show_like_button_likedstar {
-    position: relative;
-    left: 360px;
-    bottom: 49px;
-}
+       display: inline;
+    }
+
+
 
 
 
