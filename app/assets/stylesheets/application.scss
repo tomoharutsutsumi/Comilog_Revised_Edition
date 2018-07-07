@@ -14,6 +14,7 @@
  *= require_self
  */
 
+
  body {
   margin: 0 auto;
   background-color: #f1f1f1;
@@ -37,4 +38,24 @@ hr {
     margin: 80px 60px;
 }
 
+
+footer {
+  position: fixed;
+  bottom: 5px;
+    li {
+      display: inline-block;
+    }
+}
+
+.footer_item {
+  padding: 20px 100px;
+  border: solid 1px #DDDDDD;
+  background-color: #DDDDDD;
+  color: blue;
+  font-size: 14px;
+}
+
+.footer_item:hover {
+  background-color: #fd6458; 
+}
 

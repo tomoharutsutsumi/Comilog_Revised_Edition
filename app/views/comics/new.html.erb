@@ -26,9 +26,7 @@
           <%= button_to '編集する', edit_comic_path(my_posted_comic), method: :get, class: :my_posted_comic_edit_button %>
           <%= button_to '削除する', comic_path(my_posted_comic), method: :delete, data: { confirm: 'Are you sure?' }, class: :my_posted_comic_delete_button %>
     </div>
-  <% end %>
+  <% end if @my_posted_comics.present?%>
 
 
 
-
-<%= link_to 'Back', comics_path %>
