@@ -14,6 +14,10 @@ class Comic < ApplicationRecord
 
 
   mount_uploader :front_cover, FrontcoverUploader
+  mount_uploader :content_first, FrontcoverUploader
+  mount_uploader :content_second, FrontcoverUploader
+  mount_uploader :content_third, FrontcoverUploader
+  mount_uploader :content_fourth, FrontcoverUploader
 
   enum status:{nonreleased: 0, released: 1}
 
@@ -25,6 +29,7 @@ class Comic < ApplicationRecord
   def liked_by(user)
     user.likes.create(comic: self) unless liked?(user)
   end
+
 
 
 

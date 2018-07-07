@@ -23,7 +23,9 @@
     <%# deviseログイン フラッシュメッセージ %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="background">
+     <%= yield %>
+    </div>
     <footer>
         <ol>
           <li><%= link_to 'ホーム', root_path, class: "footer_item" %></li>

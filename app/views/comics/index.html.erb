@@ -1,25 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 
-
+<%= image_tag 'gold_crown.png', class: :index_gold_crown %>
+<%= image_tag 'silver_crown.png', class: :index_silver_crown %>
+<%= image_tag 'copper_crown.png', class: :index_copper_crown %>
 <div id="top_three_ranking_comics">
-  <%# コミックランキングtop3をここに入れる %>
+ <h1>総合ランキング</h1>
+  <% @comic_top_three.each do |comic| %>
+    <div class="top_three_ranking_comic">
+      <%= link_to comic_path(comic) do %>
+        <%= image_tag comic.front_cover.to_s %>
+      <% end %>
+       <div class="index_ranked_comics_info">
+         <%= comic.likes_count %>
+         <%= image_tag 'likedstar.png', class: :index_rank_likedstar %>
+         <%= comic.user.username %>
+         <%= image_tag 'authormark.png', class: :index_authormark %>
+       </div>
+    </div>
+  <% end %>
 </div>
 <div id="new_comics">
  <h1>新着作品</h1>
-
-<%= page_entries_info @comics %>
-
- <table>
+  <div class="new_comic">
+    <%= page_entries_info @comics %>
     <% @comics.each do |comic| %>
-      <tr>
-        <td><%= link_to comic_path(comic) do %>
+        <%= link_to comic_path(comic) do %>
          <%= image_tag comic.front_cover.to_s %>
-        <% end %></td>
-      </tr>
+        <% end %>
     <% end %>
- </table>
-
+  </div>
 </div>
 
 <br>

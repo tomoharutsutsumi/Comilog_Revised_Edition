@@ -15,6 +15,28 @@
  */
 
 
+ body {
+  margin: 0 auto;
+  background-color: #f1f1f1;
+ }
+
+ html {
+  margin: 0 auto;
+  background-color: #f1f1f1;
+}
+
+ .background {
+  background-color: white;
+  width: 980px;
+  display: block;
+  margin: 0 auto;
+  padding: 28px;
+  }
+
+
+hr {
+    margin: 80px 60px;
+}
 
 
 footer {
@@ -36,3 +58,4 @@ footer {
 .footer_item:hover {
   background-color: #fd6458; 
 }
+
