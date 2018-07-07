@@ -13,17 +13,15 @@
       <%= link_to image_tag('comilog.png'), root_path, class: "logo_pic" %>
       <nav>
         <% if user_signed_in? %>
-          <%= button_to 'プロフィール変更', edit_user_registration_path, method: :get, class: "header_left_button" %>
-          <%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class: "header_right_button" %>
-          <div class="header_search">
-            <%= form_tag(header_search_comics_path, method: :get) do %>
+          <%= link_to 'プロフィール変更', edit_user_registration_path, method: :get, class: "header_button" %>
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "header_button" %>
+           <%= form_tag(header_search_comics_path, method: :get, class: "header_search") do %>
              <%= text_field_tag :keyword, '', class: "header_search_box", placeholder: "サークル名や著者名"%>
              <%= image_submit_tag ("glass.png"), class: "search_glass" %>
-            <% end %>
-          </div>
+           <% end %>
         <% else %>
-          <%= button_to 'サインアップ', new_user_registration_path, method: :get, class: "header_left_button" %>
-          <%= button_to 'ログイン', new_user_session_path, method: :get, class: "header_right_button" %>
+          <%= link_to 'サインアップ', new_user_registration_path, method: :get, class: "header_button" %>
+          <%= link_to 'ログイン', new_user_session_path, method: :get, class: "header_button" %>
         <% end %>
       </nav>
     </header>
