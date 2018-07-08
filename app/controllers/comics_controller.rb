@@ -8,7 +8,7 @@ class ComicsController < ApplicationController
   # GET /comics.json
   def index
     @comic_top_three = @ranked_comics.first(3)
-    @comics = Comic.released.order('id DESC').page(params[:page]).per(3)
+    @comics = Comic.released.order('id DESC').page(params[:page]).per(6)
   end
 
   # GET /comics/1
