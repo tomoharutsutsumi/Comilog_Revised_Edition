@@ -407,3 +407,68 @@ h2 {
 
 
 //rank.html.erb end //
+
+
+
+@media only screen and (max-width: 750px) {
+
+//search.html.erb//
+
+.search_page h1 {
+    width: 250px;
+    height:22px;
+    font-size: 22px;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-bottom: solid 2px;
+    border-color: #fd6458;
+}
+
+.search_form {
+    height: 500px;
+    border: solid 0.1px #d3d3d3;
+    margin-left: 15px;
+    margin-right: 5px;
+    width: 265px;
+
+    .field {
+        margin-top: 20px;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+}
+
+.search_result {
+  display: inline-block;
+  text-align: left;
+  width: 409px;
+  h3 {
+    margin-left: 24px;
+  }
+}
+
+
+
+//search.html.erb end//
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
