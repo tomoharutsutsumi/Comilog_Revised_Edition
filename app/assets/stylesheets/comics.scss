@@ -362,48 +362,109 @@ h2 {
 //rank.html.erb//
 .ranked_comics {
     margin-top: -65px;
-    .ranked_comics_info {
-        display: inline;
-        position: relative;
-        right: 230px;
-        font-size: 20px;
-        .rank_likedstar {
-            position: absolute;
+    .ranked_comic {
+      display: inline-block;
+      width: 300px;
+      margin: 10px;
+      padding-left: 2px;
+      .ranked_comics_info {
+          display: inline;
+          p {
+            font-size: 25px;
+            }
+          .rank_likedstar {
             width: 30px;
-            top: -40px;
-            left: -71px;
-        }
-        .authormark {
-            position: absolute;
+            margin-left:100px;
+          }
+          .authormark {
             width: 30px;
-            top: -34px;
-            left: 2px;
-        }
+          }
+      }
     }
 }
 
-.ranked_comics img {
-    width: 241px;
-    margin: 35px;
-}
 
 .gold_crown {
-    position: relative;
-    top: -8px;
-    left: 5px;
+    
 }
 
 .silver_crown {
-    position: relative;
-    top: -8px;
-    left: 240px;
+    
 }
 
 .copper_crown {
-    position: relative;
-    top: -8px;
-    left: 478px;
+   
 }
 
 
 //rank.html.erb end //
+
+
+
+
+
+
+
+@media only screen and (max-width: 750px) {
+
+
+//rank.html.erb//
+
+.ranking_page {
+  h1{
+    width: 250px;
+    height:22px;
+    font-size: 22px;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-bottom: solid 2px;
+    border-color: #fd6458;
+  }
+}
+
+.ranked_comics {
+    margin-top: -65px;
+    .ranked_comic {
+      display: inline-block;
+      width: 80px;
+      margin: 3px;
+      padding-left: 2px;
+      img {
+        width:88px;
+      }
+      .ranked_comics_info {
+          display: inline;
+          p {
+            font-size: 18px;
+            }
+          .rank_likedstar {
+            width: 16px;
+            margin-left:2px;
+          }
+          .authormark {
+            width: 18px;
+          }
+      }
+    }
+}
+
+.gold_crown {
+   
+}
+
+.silver_crown {
+    
+}
+
+.copper_crown {
+   
+}
+
+
+
+//rank.html.erb end //
+
+
+
+
+}
