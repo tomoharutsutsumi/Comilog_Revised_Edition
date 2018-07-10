@@ -38,13 +38,13 @@
   <div class="search_result">
     <h3>検索結果</h3>
       <% if @search_result.blank? %>
-       検索結果はありませんでした
+        検索結果はありませんでした
       <% else %>
-       <% @search_result.each do |comic| %>
+        <% @search_result.each do |comic| %>
           <%= link_to comic_path(comic) do %>
             <%= image_tag comic.front_cover.to_s %>
           <% end %>
-       <% end %>
+        <% end %>
       <% end %>
   </div>
 </div>
