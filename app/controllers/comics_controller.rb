@@ -94,6 +94,14 @@ class ComicsController < ApplicationController
     @search_result = @search_result.where(agetarget: params[:agetarget]) unless params[:agetarget].blank?
   end
 
+  def header_search
+    header_search_result = Comic.all
+    header_search_result = header_search_result.where(title: params[:keyword]).or(Comic.where(origin_title: params[:keyword]))
+    #binding.pry
+    @search_result = header_search_result
+    render :search
+  end
+
   def release
     @comic.released!
     redirect_to edit_comic_path, notice: 'この作品を公開しました'
