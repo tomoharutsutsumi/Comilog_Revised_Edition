@@ -6,11 +6,27 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-1.times do |i|
-  User.create(id: "#{i}", email: 'testtest@test.com', password: '123456')
+  #User.create(id: 1, email: 'testtes0@test.com', password: '123456')
+  #User.create(id: 2, email: 'testtest1@test.com', password: '123456')
+  #User.create(id: 3, email: 'testtest2@test.com', password: '123456')
+
+(1..3).each do |i|
+  User.create!(id: i, email: "testtest#{i}@test.com", password: '123456')
 end
 
-13.times do |i|
-  Comic.create(title: "テストテストテスト#{i}", price: 200, status: 1, user_id: 0, front_cover: open("#{Rails.root}/app/assets/images/20171216154719.jpg"))
+
+5.times do |i|
+  Comic.create!(title: "テストテストテスト#{i}", price: 200, status: 1, user_id: 1, day: 1, origin_title: "サンプル", front_cover: open("#{Rails.root}/app/assets/images/20171216154719.jpg"))
 end
+
+5.times do |i|
+  Comic.create(title: "テストテストテスト#{i}", price: 200, status: 0, user_id: 1, day: 1, origin_title: "サンプル", front_cover: open("#{Rails.root}/app/assets/images/20180116214151.jpg"))
+end
+
+
+  comic_first = Comic.first
+  comic_last = Comic.last
+  Like.create(user_id: 1, comic_id: comic_last.id)
+  Like.create(user_id: 2, comic_id: comic_last.id)
+  Like.create(user_id: 2, comic_id: comic_first.id)
 

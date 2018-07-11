@@ -1,6 +1,19 @@
-<% @ranked_comics.each do |comic| %>
-  <%= comic.title %>
-<% end %>
 
-
+<h1>総合ランキング</h1>
+<%= image_tag 'gold_crown.png',class: :gold_crown %>
+<%= image_tag 'silver_crown.png', class: :silver_crown %>
+<%= image_tag 'copper_crown.png', class: :copper_crown %>
+<div class="ranked_comics">
+  <% @ranked_comics.each do |comic| %>
+    <%= link_to comic_path(comic) do %>
+      <%= image_tag comic.front_cover.to_s %>
+      <div class="ranked_comics_info">
+        <%= comic.likes_count %>
+        <%= image_tag 'likedstar.png', class: :rank_likedstar %>
+        <%= comic.user.username %>
+        <%= image_tag 'authormark.png', class: :authormark %>
+     </div>
+    <% end %>
+  <% end %>
+</div>
 

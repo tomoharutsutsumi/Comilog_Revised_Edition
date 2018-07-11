@@ -1,14 +1,24 @@
-<h1>自分がいいねした作品一覧</h1>
-
-<p><%= @sum_of_my_liked_comics_price %></p>
+<h1><%= current_user.email %>さんの買うかもリスト</h1>
+  <div class="sum_of_my_liked_comics_price" >
+    <%= image_tag("budget_money.png") %>
+    購入予定
+    <%= @sum_of_my_liked_comics_price %>
+    円
+  </div>
 
  <% @my_liked_comics.each do |my_liked_comic| %>
   <div class="one_of_my_liked_comics">
-   <%= my_liked_comic.title %>
-   <%= my_liked_comic.day %>
-   <%= my_liked_comic.category %>
-   <%= my_liked_comic.price %>
-   <%= my_liked_comic.introduction %>
+    <%= link_to comic_path(my_liked_comic) do %>
+      <%= image_tag my_liked_comic.front_cover.to_s %>
+    <% end %>
+    <ul>
+     <li>タイトル:<%= my_liked_comic.title %></li>
+     <li>出展日:<%= my_liked_comic.day %>日</li>
+     <li>カテゴリ:<%= my_liked_comic.category %></li>
+     <li>価格:<%= my_liked_comic.price %>円</li>
+     <li>商品紹介:<%= my_liked_comic.introduction %></li>
+    </ul>
+    <hr>
   </div>
  <% end %>
 
