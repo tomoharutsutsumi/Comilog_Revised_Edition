@@ -285,14 +285,9 @@ h2 {
         margin-right: 32px;
         float: left;
         .likes_count {
-            position: relative;
-            top: 10px;
-            left: 140px;
-            font-size: 20px;
+           text-align: center;
+           font-size: 27px;
             .show_likedstar {
-                position: absolute;
-                top: -5px;
-                right: 290px;
             }
         }
     }
@@ -407,3 +402,70 @@ h2 {
 
 
 //rank.html.erb end //
+
+
+
+@media only screen and (max-width: 750px) {
+
+//show.html.erb//
+  .show_upper {
+    width: 300px;
+    .frontcover_and_likes_count {
+      width: 262px;
+      img {
+        width: 270px;
+      }
+      .likes_count {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        .show_likedstar {
+          width: 30px;
+        }
+      }
+    }
+    .contents_picture {
+        width: 285px;
+        text-align: center;
+        img {
+          width: 125px;
+        }
+    }
+    .introduction {
+        width: 280px;
+        font-size: 22px;
+    }
+  }
+
+
+.show_like_button {
+    width: 200px;
+    padding: 20px;
+    background-color: #fd6458;
+    color: white;
+    font-size: 17px;
+    border-radius: 10px;
+  }
+
+
+.show_lower p {
+  border: 1px dashed black;
+  font-size: 15px;
+  padding-left: 26px;
+  padding-bottom: 36px;
+
+}
+
+.show_lower strong {
+    display: inline-block;
+    width: 250px;
+    margin: 25px;
+    margin-left: 0px;
+}
+
+
+
+//show.html.erb end//
+
+
+
+}
