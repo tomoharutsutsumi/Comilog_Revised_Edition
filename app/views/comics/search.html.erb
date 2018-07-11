@@ -2,6 +2,7 @@
 
 
 <div class="search_form">
+  <h2>検索項目</h2>
  <%= form_tag(search_comics_path, method: :get) do  %>
   <div class="field">
     <%= label_tag :タイトル %>
@@ -28,15 +29,15 @@
     <%= number_field_tag :agetarget %>
   </div>
 
-  <div class="actions">
-    <%= submit_tag :検索する %>
-  </div>
+
+    <%= submit_tag :検索する, class: :search_actions %>
+
  <% end %>
 </div>
 
 
 <div class="search_result">
- <h1>検索結果</h1>
+  <h3>検索結果</h3>
   <% if @search_result.blank? %>
     検索結果はありませんでした
   <% else %>

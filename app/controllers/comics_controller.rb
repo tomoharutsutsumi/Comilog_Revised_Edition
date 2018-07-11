@@ -1,11 +1,14 @@
 class ComicsController < ApplicationController
-  before_action :set_comic, only: [:show, :edit, :update, :destroy]
+  before_action :set_comic, only: [:show, :edit, :update, :destroy, :release, :nonrelease]
   before_action :authenticate_user!, only: [:show, :new, :edit, :destroy, :like, :unlike]
+  before_action :set_ranked_comics, only: [:index, :rank]
+
 
   # GET /comics
   # GET /comics.json
   def index
-    @comics = Comic.released.order('id DESC')
+    @comic_top_three = @ranked_comics.first(3)
+    @comics = Comic.released.order('id DESC').page(params[:page]).per(3)
   end
 
   # GET /comics/1
@@ -18,6 +21,7 @@ class ComicsController < ApplicationController
     @comic = Comic.new
     user = User.find_by(id: current_user.id)
     @my_posted_comics = user.comics
+    @authorname = user.authorname
   end
 
   # GET /comics/1/edit
@@ -99,20 +103,19 @@ class ComicsController < ApplicationController
   end
 
   def release
-    comic =  Comic.find(params[:id])
-    comic.released! unless comic.released?
+    @comic.released!
     redirect_to edit_comic_path, notice: 'この作品を公開しました'
   end
 
   def nonrelease
-    comic =  Comic.find(params[:id])
-    comic.nonreleased! unless comic.nonreleased?
+    @comic.nonreleased!
     redirect_to edit_comic_path, notice: 'この作品を非公開にしました'
   end
-  
+
   def rank
-    @ranked_comics = Comic.order('likes_count DESC')
   end
+
+
 
 
 
@@ -123,8 +126,13 @@ class ComicsController < ApplicationController
       @comic = Comic.find(params[:id])
     end
 
+    def set_ranked_comics
+      @ranked_comics = Comic.order('likes_count DESC')
+    end
+
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def comic_params
-      params.require(:comic).permit(:title, :front_cover, :price, :sns_first, :sns_second, :sns_third, :sns_fourth, :introduction, :content_first, :content_second, :content_third, :content_fourth, :content_fifth, :category, :day, :origin_title, :agetarget)
+      params.require(:comic).permit(:title, :front_cover, :price, :sns_first, :sns_second, :sns_third, :sns_fourth, :introduction, :content_first, :content_second, :content_third, :content_fourth, :content_fifth, :category, :day, :origin_title, :agetarget, :tag_list)
     end
 end
