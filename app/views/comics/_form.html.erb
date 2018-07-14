@@ -91,7 +91,7 @@
   <div class="field">
     <%= form.label :カテゴリー %>
     <div class="info_of_required">必須</div>
-    <%= form.select :category, Comic.categories.keys.to_a.map {|category| I18n.t(:category)}, id: :comic_type %>
+    <%= form.select :category, Comic.categories.keys.map {|k| [I18n.t("enums.comic.category.#{k}"), k]}, id: :comic_type %>
   </div>
 
   <div class="field">
