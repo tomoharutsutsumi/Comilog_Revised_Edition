@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180611154445) do
+ActiveRecord::Schema.define(version: 20180712134840) do
 
   create_table "comics", force: :cascade do |t|
     t.string "title"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20180611154445) do
     t.string "content_third"
     t.string "content_fourth"
     t.string "content_fifth"
-    t.string "category"
     t.integer "day"
     t.string "origin_title"
     t.integer "agetarget"
@@ -36,6 +35,7 @@ ActiveRecord::Schema.define(version: 20180611154445) do
     t.integer "user_id"
     t.integer "status", limit: 1, default: 1, null: false
     t.integer "likes_count", default: 0
+    t.integer "category"
   end
 
   create_table "likes", force: :cascade do |t|

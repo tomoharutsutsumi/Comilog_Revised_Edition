@@ -10,6 +10,12 @@ ja:
         day: 出展日
         origin_title: 元ネタ名
         price: 価格
+    enums:
+      category:
+        BL: BL
+        GL: 百合
+        NL: NL
+        others: その他
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
