@@ -67,7 +67,14 @@ group :development do
   #add##########
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'capistrano', '~> 3.9'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano3-unicorn'
 end
+
+  gem 'unicorn'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
