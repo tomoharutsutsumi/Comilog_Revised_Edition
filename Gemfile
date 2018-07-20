@@ -54,6 +54,7 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
+  gem 'rspec-rails', '~> 3.6.0'
 end
 
 group :development do
@@ -67,6 +68,7 @@ group :development do
   #add##########
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'spring-commands-rspec'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
