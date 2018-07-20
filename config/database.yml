@@ -24,9 +24,23 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
-  database: db/test.sqlite3
+  #<<: *default
+  adapter: postgresql
+  host: localhost
+  encoding: utf8
+  database: comilog_db_revised
+  username: tomoharutsutsumi
+  password: postgres
+  pool: 5
+  timeout: 5000
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  #<<: *default
+  adapter: postgresql
+  host: localhost
+  encoding: utf8
+  database: comilog_db_revised
+  username: tomoharutsutsumi
+  password: postgres
+  pool: 5
+  timeout: 5000
