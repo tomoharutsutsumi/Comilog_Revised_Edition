@@ -3,15 +3,13 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
-  config.secret_key = 'e9f4a51b475a938b644f9ff607b9fb19c3edce2a80fcbdc18d81f1b6ec68fa022d07d5bf79658fd72bcda34b9cdd9c6a607b3be1448b7d670ade89ee3152bc1f'
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'c23fda23461d0f4d7a6bed9f551030a908666a48cdeb5f43ccfed9055215126848f00ab6c45ebcd211fcddaf5c69bda16bc81345ccdbff3ef5713e2cc41c7367'
+  config.secret_key = 'c23fda23461d0f4d7a6bed9f551030a908666a48cdeb5f43ccfed9055215126848f00ab6c45ebcd211fcddaf5c69bda16bc81345ccdbff3ef5713e2cc41c7367'
   config.omniauth :twitter, "ixjbDQsXTdJE6tX65atOC7Q3A", "MM1fbfRSwv9KcPREcmbWpWmwUOVkyq04ExStpjdz7Behn5CcEx"
-
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
