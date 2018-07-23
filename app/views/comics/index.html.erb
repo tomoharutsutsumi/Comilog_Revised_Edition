@@ -23,7 +23,6 @@
 <div id="new_comics">
  <h1>新着作品</h1>
   <div class="new_comic">
-    <%= page_entries_info @comics %>
     <% @comics.each do |comic| %>
         <%= link_to comic_path(comic) do %>
          <%= image_tag comic.front_cover.to_s %>
