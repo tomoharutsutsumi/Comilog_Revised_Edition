@@ -366,6 +366,7 @@ h2 {
       display: inline-block;
       width: 300px;
       margin: 10px;
+      margin-top: 50px;
       padding-left: 2px;
       .ranked_comics_info {
           display: inline;
@@ -382,20 +383,6 @@ h2 {
       }
     }
 }
-
-
-.gold_crown {
-    
-}
-
-.silver_crown {
-    
-}
-
-.copper_crown {
-   
-}
-
 
 //rank.html.erb end //
 
@@ -428,10 +415,20 @@ h2 {
       display: inline-block;
       width: 80px;
       margin: 3px;
+      margin-top: 64px;
       padding-left: 2px;
       img {
         width:88px;
       }
+      .gold_crown {
+          width: 35px;
+      }
+      .silver_crown {
+          width: 35px;
+      }
+      .copper_crown {
+          width: 35px;
+       }
       .ranked_comics_info {
           display: inline;
           p {
@@ -448,17 +445,8 @@ h2 {
     }
 }
 
-.gold_crown {
-   
-}
 
-.silver_crown {
-    
-}
 
-.copper_crown {
-   
-}
 
 
 
