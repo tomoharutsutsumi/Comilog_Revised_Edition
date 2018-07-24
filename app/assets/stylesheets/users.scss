@@ -13,6 +13,14 @@ h2.devise {
   text-align: center;
 }
 
+.people_button {
+  display: inline-block;
+  margin-bottom: 80px;
+  padding: 10px 70px 20px 65px;
+  border: thin solid #808080;
+  background-color:#808080;
+}
+
 .twitter_button {
   text-align: center;
   margin-bottom: 50px;
@@ -39,16 +47,13 @@ h2.devise {
 
 .new_registration_button {
   display:inline;
-  padding: 20px 24px 20px 105px;
-  border: thin solid #808080;
-  background-color:#808080;
   font-weight:bold;
   font-size:20px;
   color: white;
 }
 
 .devise_session_log_in {
-  margin-top: 250px;
+  margin-top: 150px;
   padding-bottom: 100px;
 }
 
@@ -142,65 +147,67 @@ h2.devise {
 
 .devise_session_sign_in {
   margin-top:150px;
-  width: 311px;
+  width: 300px;
+  text-align: center;
 }
 
-.people_button {
-  width: 316px;
-  margin-bottom: 45px;
-}
-
-.people_icon {
-  width: 43px;
-  margin-top: -52px;
-  margin-left: 22px;
-}
 
 .twitter_button {
   text-align: center;
-  margin-bottom: 50px;
-  width: 316px;
   margin-bottom: 45px;
+  background-color: #06a7e4;
 }
 
 .devise_twitter_button_new {
-  display:inline;
-  margin-top: 39px;
-  padding: 20px 60px 20px 90px;
-  border: thin solid #06a7e4 ;
-  background-color: #06a7e4 ;
-  color:white;
+  display:inline-block;
+  padding: 0px 60px 0px 90px;
+  margin-top: 21px;
+  border: thin solid #06a7e4;
+  background-color:#06a7e4;
   font-weight:bold;
-  font-size:14px;
-  text-align:center;
+  font-size: 13px;
+  color: white;
 }
 
 .twitter_icon_sign_in {
-  display: inline;
-  margin-right: 215px;
+  display: inline-block;
   width: 50px;
-  margin-top: -50px;
+  margin-right: 219px;
+  margin-top: -36px;
+}
+
+.people_button {
+  text-align: center;
+  background-color: #808080;
+  padding: 11px 0px 4px 32px;
+}
+
+.people_icon {
+  display: inline-block;
+  width: 46px;
+  margin-right: 219px;
+  margin-top: -36px;
 }
 
 .new_registration_button {
-  display:inline;
-  padding: 20px 51px 20px 88px;
+  display:inline-block;
+  padding: 7px 4px 0px 0px;
   border: thin solid #808080;
-  background-color:#808080;
+  background-color: #808080;
   font-weight:bold;
-  font-size: 17px;
+  font-size: 15px;
   color: white;
 }
 
 .devise_session_log_in {
-  margin-top: 250px;
+  margin-top: 150px;
   padding-bottom: 100px;
 }
 
 .devise_twitter_button_log_in {
-  display:inline;
-  margin-top: 39px;
-  padding: 20px 60px 20px 90px;
+  display:inline-block;
+  margin-top: 22px;
+  padding: 0px 60px 0px 90px;
   border: thin solid #06a7e4 ;
   background-color: #06a7e4 ;
   color:white;
