@@ -12,11 +12,11 @@
     </div>
   <% end %>
 
+
   <div class="field">
     <%= form.label :タイトル %>
     <div class="info_of_required">必須</div>
     <%= form.text_field :title, id: :comic_title %>
-    
 
   </div>
 
@@ -24,67 +24,46 @@
     <%= form.label :表紙 %>
     <div class="info_of_required">必須</div>
     <%= form.file_field :front_cover, id: :comic_front_cover %>
-    
   </div>
 
   <div class="field">
     <%= form.label :価格 %>
     <div class="info_of_required">必須</div>
     <%= form.number_field :price, id: :comic_price %>
-    
   </div>
 
   <div class="field">
-    <%= form.label :SNSリンク１ %>
-    <div class="info_of_required">必須</div>
+    <%= form.label :pixivリンクURL %>
     <%= form.text_field :sns_first, id: :comic_sns_first %>
   </div>
 
   <div class="field">
-    <%= form.label :SNSリンク２ %>
-    <div class="info_of_required">必須</div>
+    <%= form.label :twitterリンクURL %>
     <%= form.text_field :sns_second, id: :comic_sns_second %>
   </div>
 
   <div class="field">
-    <%= form.label :SNSリンク３ %>
-    <div class="info_of_required">必須</div>
-    <%= form.text_field :sns_third, id: :comic_sns_third %>
-  </div>
-
-  <div class="field">
-    <%= form.label :SNSリンク４ %>
-    <div class="info_of_required">必須</div>
-    <%= form.text_field :sns_fourth, id: :comic_sns_fourth %>
-  </div>
-
-  <div class="field">
     <%= form.label :作品説明 %>
-    <div class="info_of_required">必須</div>
     <%= form.text_area :introduction, id: :comic_introduction %>
   </div>
 
   <div class="field">
     <%= form.label :チラ見せ１ %>
-    <div class="info_of_required">必須</div>
     <%= form.file_field :content_first, id: :comic_content_first %>
   </div>
 
   <div class="field">
     <%= form.label :チラ見せ２ %>
-    <div class="info_of_required">必須</div>
     <%= form.file_field :content_second, id: :comic_content_second %>
   </div>
 
   <div class="field">
     <%= form.label :チラ見せ３ %>
-    <div class="info_of_required">必須</div>
     <%= form.file_field :content_third, id: :comic_content_third %>
   </div>
 
   <div class="field">
     <%= form.label :チラ見せ４ %>
-    <div class="info_of_required">必須</div>
     <%= form.file_field :content_fourth, id: :comic_content_fourth %>
   </div>
 
@@ -113,11 +92,12 @@
 
   <div class="field">
     <%= form.label :年齢対象 %>
-    <div class="info_of_required">必須</div>
     <%= form.radio_button :agetarget, "全年齢", id: :comic_agetarget %>全年齢
     <%= form.radio_button :agetarget, "18歳以上", id: :comic_agetarget %>18歳以上
   </div>
 
+<div class="form_action_field">
   <%= form.submit "上の内容で出展する", class: :form_action %>
+</div>
 
 <% end %>
