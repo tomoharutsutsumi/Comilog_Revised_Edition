@@ -201,20 +201,16 @@ h1 {
 //_form.html.erb end//
 //liked.html.erb//
 .sum_of_my_liked_comics_price {
-    display: inline-block;
-    position: relative;
-    top: 12px;
-    left: 750px;
+    display: block;
+    float: right;
     font-size: 25px;
     img {
-       position: absolute;
-       right: 195px;
-       bottom: -17px;
-       width: 60px;
+       width: 37px;
     }
 }
 
 .one_of_my_liked_comics {
+    text-align: right;
     padding: 20px;
     margin-left: 60px;
     ul {
@@ -419,7 +415,7 @@ h2 {
 
 h1 {
   width: 250px;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .my_posted_comics {
@@ -502,10 +498,42 @@ h1 {
     background-color: #fd6458;
     color: white;
     font-size: 20px;
+}
 
 //_form.html.erb end//
 
+//liked.html.erb//
+.sum_of_my_liked_comics_price {
+    display: block;
+    float: right;
+    font-size: 16px;
+    img {
+       width: 26px;
+    }
 }
+
+.one_of_my_liked_comics {
+    padding: 20px;
+    text-align: center;
+    margin-left: 0px;
+    ul {
+       display: inline-block;
+       list-style: none;
+       padding-left: 0px;
+       li {
+          padding: 15px;
+          padding-bottom: 40px;
+          margin-bottom: 10px;
+          font-size: 17px;
+          font-weight: bold;
+       }
+    }
+    img {
+        width: 200px;
+    }
+}
+
+//liked.html.erb end//
 
 
 
