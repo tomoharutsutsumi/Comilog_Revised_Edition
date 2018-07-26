@@ -7,16 +7,14 @@ h2.devise {
 
 .devise_session_sign_in {
   margin-top:150px;
-}
-
-.mail_button {
   text-align: center;
 }
+
 
 .people_button {
   display: inline-block;
   margin-bottom: 80px;
-  padding: 10px 70px 20px 65px;
+  padding: 20px 13px 5px 47px;
   border: thin solid #808080;
   background-color:#808080;
 }
@@ -57,10 +55,11 @@ h2.devise {
   padding-bottom: 100px;
 }
 
-.mail_icon {
-  margin-right: 250px;
+.people_icon {
+  display: inline-block;
+  width: 46px;
+  margin-right: 267px;
   margin-top: -36px;
-  margin-bottom: 73px
 }
 
 .devise_twitter_button_log_in {
