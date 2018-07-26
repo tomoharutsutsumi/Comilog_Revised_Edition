@@ -53,11 +53,16 @@ h1 {
 
 .index_ranked_comics_info {
     display: block;
-    p {
+    .index_likes_count {
+      display: inline-block;
+      font-size: 25px;
+    }
+    .index_username {
+      display: inline-block;
       font-size: 25px;
     }
     .index_rank_likedstar {
-      margin-left: 100px;
+      margin-left: 63px;
     }
     .index_authormark {
       margin-left: 10px;
@@ -425,7 +430,7 @@ h2 {
     width: 40px;
     position: relative;
     top: 78px;
-    left: 3px;
+    left: -8px;
 }
 
 
@@ -433,14 +438,14 @@ h2 {
     width: 40px;
     position: relative;
     top: 78px;
-    left: 65px;
+    left: 46px;
 }
 
 .index_copper_crown {
     width: 40px;
     position: relative;
     top: 78px;
-    left: 125px;
+    left: 97px;
 }
 
 
@@ -496,21 +501,22 @@ h2 {
 
 
 .index_ranked_comics_info {
-   p {
-    margin:0px;
-    font-size: 16px;
-   }
-   display: block;
-  .index_rank_likedstar {
-    width: 20px;
-    margin-left: 10px;
-  }
-  .index_authormark {
-    width: 20px;
-    margin-top: 10px;
-    top: 0px;
-    left: 0px;
-  }
+  .index_likes_count {
+      display: block;
+      font-size: 15px;
+    }
+    .index_username {
+      display: block;
+      font-size: 15px;
+    }
+    .index_rank_likedstar {
+      margin-left: 12px;
+      width: 16px;
+    }
+    .index_authormark {
+      margin-left: 12px;
+      width: 16px;
+    }
 }
 
 
