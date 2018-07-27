@@ -10,20 +10,27 @@
 
   <body>
     <header>
+      <%= link_to image_tag('comilog.png'), root_path, class: "logo_pic" %>
       <nav>
         <% if user_signed_in? %>
-          <%= link_to 'プロフィール変更', edit_user_registration_path %>
-          <%= link_to 'ログアウト', destroy_user_session_path, :method => :delete %>
+          <%= link_to 'プロフィール変更', edit_user_registration_path, method: :get, class: "header_button" %>
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "header_button" %>
+           <%= form_tag(header_search_comics_path, method: :get, class: "header_search") do %>
+             <%= text_field_tag :keyword, '', class: "header_search_box", placeholder: "サークル名や著者名"%>
+             <%= image_submit_tag ("glass.png"), class: "search_glass" %>
+           <% end %>
         <% else %>
-          <%= link_to 'サインアップ', new_user_registration_path %>
-          <%= link_to 'ログイン', new_user_session_path %>
+          <%= link_to 'サインアップ', new_user_registration_path, method: :get, class: "header_button" %>
+          <%= link_to 'ログイン', new_user_session_path, method: :get, class: "header_button" %>
         <% end %>
       </nav>
     </header>
     <%# deviseログイン フラッシュメッセージ %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="background">
+     <%= yield %>
+    </div>
     <footer>
         <ol>
           <li><%= link_to 'ホーム', root_path, class: "footer_item" %></li>

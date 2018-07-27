@@ -9,7 +9,8 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: [:development, :test]
+gem 'pg', group: :production
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -42,6 +43,7 @@ gem 'rails-i18n'
 gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on', branch: 'master'
 gem 'kaminari'
 gem 'dotenv-rails'
+gem 'enum_help'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -67,7 +69,14 @@ group :development do
   #add##########
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'capistrano', '~> 3.9'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano3-unicorn'
 end
+
+  gem 'unicorn'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

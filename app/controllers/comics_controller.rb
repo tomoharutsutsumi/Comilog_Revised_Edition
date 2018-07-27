@@ -1,11 +1,13 @@
 class ComicsController < ApplicationController
   before_action :set_comic, only: [:show, :edit, :update, :destroy, :release, :nonrelease]
   before_action :authenticate_user!, only: [:show, :new, :edit, :destroy, :like, :unlike]
+  before_action :set_ranked_comics, only: [:index, :rank]
 
 
   # GET /comics
   # GET /comics.json
   def index
+    @comic_top_three = @ranked_comics.first(3)
     @comics = Comic.released.order('id DESC').page(params[:page]).per(3)
   end
 
@@ -19,6 +21,7 @@ class ComicsController < ApplicationController
     @comic = Comic.new
     user = User.find_by(id: current_user.id)
     @my_posted_comics = user.comics
+    @authorname = user.authorname
   end
 
   # GET /comics/1/edit
@@ -91,6 +94,14 @@ class ComicsController < ApplicationController
     @search_result = @search_result.where(agetarget: params[:agetarget]) unless params[:agetarget].blank?
   end
 
+  def header_search
+    header_search_result = Comic.all
+    header_search_result = header_search_result.where(title: params[:keyword]).or(Comic.where(origin_title: params[:keyword]))
+    #binding.pry
+    @search_result = header_search_result
+    render :search
+  end
+
   def release
     @comic.released!
     redirect_to edit_comic_path, notice: 'この作品を公開しました'
@@ -100,10 +111,11 @@ class ComicsController < ApplicationController
     @comic.nonreleased!
     redirect_to edit_comic_path, notice: 'この作品を非公開にしました'
   end
-  
+
   def rank
-    @ranked_comics = Comic.order('likes_count DESC')
   end
+
+
 
 
 
@@ -113,6 +125,11 @@ class ComicsController < ApplicationController
     def set_comic
       @comic = Comic.find(params[:id])
     end
+
+    def set_ranked_comics
+      @ranked_comics = Comic.order('likes_count DESC')
+    end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comic_params

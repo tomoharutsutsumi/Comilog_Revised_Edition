@@ -1,27 +1,46 @@
 <%# ログイン画面 %>
-<h2>Log in</h2>
+<div class="devise_session_sign_in">
+  <h2 class="devise">新規会員登録</h2>
+   <div class="mail_button">
+     <%= link_to "ユーザー名で登録する", new_registration_path(resource_name), class: :new_registration_button %><br />
+     <%= image_tag 'mailicon', class: :mail_icon %>
+   </div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+   <div class="twitter_button">
+     <% resource_class.omniauth_providers.each do |provider| %>
+       <%= link_to "#{OmniAuth::Utils.camelize(provider)}で新規登録する", omniauth_authorize_path(resource_name, provider), class: :devise_twitter_button_new, method: :post %><br />
+     <% end %>
+     <%= image_tag 'Twitter_Logo_WhiteOnBlue.png', class: :twitter_icon_sign_in %>
+   </div>
+</div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+
+<div class="devise_session_log_in">
+  <h2 class="devise">ログインする</h2>
+   <div class="twitter_button">
+     <% resource_class.omniauth_providers.each do |provider| %>
+       <%= link_to "#{OmniAuth::Utils.camelize(provider)}でログインする", omniauth_authorize_path(resource_name, provider), class: :devise_twitter_button_log_in, method: :post %><br />
+     <% end %>
+     <%= image_tag 'Twitter_Logo_WhiteOnBlue.png', class: :twitter_icon_log_in %>
+   </div>
+   <div class="name_login_box">
+     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+       <div class="login_email_field">
+         <%= f.label :email %><br />
+         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+       </div>
+       <div class="login_pass_field">
+         <%= f.label :password %><br />
+         <%= f.password_field :password, autocomplete: "off" %>
+       </div>
+       <%= f.submit "ユーザー名でログインする", class: :login_button %>
+     <% end %>
+   </div>
+</div>
+
+
+
+<%#= render "devise/shared/links" %>

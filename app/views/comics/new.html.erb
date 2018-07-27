@@ -2,13 +2,31 @@
 
 <%= render 'form', comic: @comic %>
 
+<hr>
 
-
-<div class="my_posted_comics">
+<h1><%= @authorname%>さんの出展作品</h1>
   <% @my_posted_comics.each do |my_posted_comic| %>
-    <%= my_posted_comic.title %>
-    <%= link_to 'Edit', edit_comic_path(my_posted_comic) %>
-    <%= link_to 'Destroy', comic_path(my_posted_comic), method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end if @my_posted_comics.present? %>
-</div>
+    <div class="my_posted_comics">
+      <%= link_to comic_path(my_posted_comic) do %>
+        <%= image_tag my_posted_comic.front_cover.to_s %>
+      <% end %>
+      <div class="new_comics_info">
+        <%= my_posted_comic.likes_count %>
+        <%= image_tag 'likedstar.png' %>
+      </div>
+      <div class="my_posted_comics_info">
+          <ul>
+           <li>タイトル:<%= my_posted_comic.title %></li>
+           <li>ジャンル:<%= my_posted_comic.category %></li>
+           <li>出展日:<%= my_posted_comic.day %></li>
+           <li>元ネタ:<%= my_posted_comic.origin_title %></li>
+           <li>作品紹介:<%= my_posted_comic.introduction %></li>
+          </ul>
+      </div>
+          <%= button_to '編集する', edit_comic_path(my_posted_comic), method: :get, class: :my_posted_comic_edit_button %>
+          <%= button_to '削除する', comic_path(my_posted_comic), method: :delete, data: { confirm: 'Are you sure?' }, class: :my_posted_comic_delete_button %>
+    </div>
+  <% end if @my_posted_comics.present?%>
+
+
 

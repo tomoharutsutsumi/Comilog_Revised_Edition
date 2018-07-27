@@ -1,0 +1,763 @@
+@charset "UTF-8";
+/* line 5, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+h1 {
+  width: 900px;
+  height: 30px;
+  font-size: 32px;
+  padding-top: 7px;
+  padding-left: 30px;
+  margin-left: 15px;
+  font-family: "Lucida Grande", "segoe UI", "ヒラギノ角ゴ Std", "Hiragino Maru Gothic ProN", Meiryo, Arial, sans-serif;
+  border-bottom: solid 7px;
+  border-color: #fd6458;
+}
+
+/* line 17, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.index_gold_crown {
+  display: inline-block;
+  position: relative;
+  top: 140px;
+  left: 7px;
+}
+
+/* line 26, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.index_silver_crown {
+  display: inline-block;
+  position: relative;
+  top: 140px;
+  left: 220px;
+}
+
+/* line 33, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.index_copper_crown {
+  display: inline-block;
+  position: relative;
+  top: 140px;
+  left: 445px;
+}
+
+/* line 40, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+#top_three_ranking_comics {
+  display: block;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+/* line 46, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.top_three_ranking_comic {
+  display: inline-block;
+}
+
+/* line 50, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.top_three_ranking_comic img {
+  margin-top: 30px;
+  margin-left: 27px;
+  margin-bottom: 130px;
+}
+
+/* line 56, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.index_ranked_comics_info {
+  display: inline;
+  position: relative;
+  font-size: 20px;
+  top: -71px;
+  right: 220px;
+}
+/* line 62, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.index_ranked_comics_info .index_rank_likedstar {
+  position: absolute;
+  top: -33px;
+  left: -65px;
+}
+/* line 67, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.index_ranked_comics_info .index_authormark {
+  position: absolute;
+  top: -32px;
+  left: 25px;
+}
+
+/* line 75, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+#new_comics {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 79, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.new_comic {
+  width: 1000px;
+}
+
+/* line 83, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.new_comic img {
+  margin-top: 10px;
+  margin-left: 36px;
+}
+
+/* line 90, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.my_posted_comics {
+  position: relative;
+  margin-bottom: 50px;
+}
+/* line 93, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.my_posted_comics .my_posted_comics_info {
+  display: inline;
+}
+
+/* line 101, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.my_posted_comics img {
+  position: relative;
+  right: -69px;
+  width: 250px;
+}
+
+/* line 107, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.new_comics_info {
+  display: inline-block;
+  position: relative;
+  top: 30px;
+  left: -70px;
+  font-size: 20px;
+}
+
+/* line 115, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.new_comics_info img {
+  position: relative;
+  width: 30px;
+  top: 5px;
+  left: -62px;
+}
+
+/* line 123, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.my_posted_comics_info ul {
+  list-style: none;
+  top: 60px;
+  left: 400px;
+  position: absolute;
+}
+
+/* line 130, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.my_posted_comics_info li {
+  display: block;
+  padding-bottom: 30px;
+  font-size: 18px;
+}
+
+/* line 136, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.my_posted_comic_edit_button {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 400px;
+  width: 300px;
+  height: 70px;
+  background-color: #fd6458;
+  color: white;
+  font-size: 20px;
+}
+
+/* line 147, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.my_posted_comic_delete_button {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 400px;
+  width: 300px;
+  height: 70px;
+  background-color: gray;
+  color: white;
+  font-size: 20px;
+}
+
+/* line 165, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.field {
+  width: 300px;
+  margin: 0px auto;
+  font-size: 15px;
+}
+
+/* line 172, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.info_of_required {
+  display: inline-block;
+  width: 35px;
+  color: white;
+  background-color: #fd6458;
+  text-align: center;
+  padding: 1px;
+  position: relative;
+  top: -20px;
+  left: 251px;
+}
+
+/* line 184, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.form_action {
+  position: relative;
+  top: 60px;
+  left: 350px;
+  width: 300px;
+  height: 70px;
+  background-color: #fd6458;
+  color: white;
+  font-size: 20px;
+}
+
+/* line 199, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.sum_of_my_liked_comics_price {
+  display: inline-block;
+  position: relative;
+  top: 12px;
+  left: 750px;
+  font-size: 25px;
+}
+/* line 205, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.sum_of_my_liked_comics_price img {
+  position: absolute;
+  right: 195px;
+  bottom: -17px;
+  width: 60px;
+}
+
+/* line 213, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.one_of_my_liked_comics {
+  padding: 20px;
+  margin-left: 60px;
+}
+/* line 216, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.one_of_my_liked_comics ul {
+  display: inline-block;
+  padding-left: 100px;
+  list-style: none;
+}
+/* line 220, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.one_of_my_liked_comics ul li {
+  padding: 15px;
+  padding-bottom: 40px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* line 233, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+h2 {
+  margin-left: 5px;
+}
+
+/* line 237, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.search_form {
+  float: left;
+  height: 500px;
+  border: solid 0.1px #d3d3d3;
+  margin-left: 15px;
+  margin-right: 5px;
+  width: 265px;
+}
+/* line 245, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.search_form .field {
+  margin-top: 20px;
+  margin-left: 28px;
+  font-size: 15px;
+}
+
+/* line 252, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.search_result {
+  display: inline-block;
+  text-align: left;
+  width: 600px;
+}
+
+/* line 258, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.search_result img {
+  width: 30%;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+/* line 263, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.search_result img h3 {
+  margin-left: 5px;
+}
+
+/* line 268, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.search_actions {
+  position: relative;
+  top: 74px;
+  left: 45px;
+  width: 177px;
+  height: 58px;
+  background-color: #fd6458;
+  color: white;
+  font-size: 20px;
+}
+
+/* line 283, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.show_upper .frontcover_and_likes_count {
+  margin-left: 10px;
+  margin-right: 32px;
+  float: left;
+}
+/* line 287, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.show_upper .frontcover_and_likes_count .likes_count {
+  position: relative;
+  top: 10px;
+  left: 140px;
+  font-size: 20px;
+}
+/* line 292, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.show_upper .frontcover_and_likes_count .likes_count .show_likedstar {
+  position: absolute;
+  top: -5px;
+  right: 290px;
+}
+/* line 299, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.show_upper .contents_picture img {
+  width: 150px;
+  margin-left: 10px;
+}
+/* line 304, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.show_upper .introduction {
+  display: inline-block;
+  height: 150px;
+  width: 500px;
+  padding-left: 15px;
+  padding-top: 15px;
+  margin-top: 15px;
+  margin-bottom: 100px;
+  margin-left: 10px;
+  border-color: #fd6458;
+  font-size: 22px;
+}
+
+/* line 318, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.buy_or_notbuy_button {
+  display: block;
+  text-align: center;
+}
+
+/* line 324, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.show_lower {
+  font-size: 15px;
+  margin-top: 130px;
+  padding-bottom: 80px;
+}
+
+/* line 331, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.show_lower strong {
+  display: inline-block;
+  width: 250px;
+  margin: 30px;
+}
+
+/* line 337, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.show_lower p {
+  border: 1px dashed black;
+  font-size: 15px;
+}
+
+/* line 344, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.show_like_button {
+  width: 245px;
+  padding: 30px;
+  background-color: #fd6458;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+/* line 353, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.show_like_button_likedstar {
+  display: inline;
+}
+
+/* line 363, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.ranked_comics {
+  margin-top: -65px;
+}
+/* line 365, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.ranked_comics .ranked_comics_info {
+  display: inline;
+  position: relative;
+  right: 230px;
+  font-size: 20px;
+}
+/* line 370, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.ranked_comics .ranked_comics_info .rank_likedstar {
+  position: absolute;
+  width: 30px;
+  top: -40px;
+  left: -71px;
+}
+/* line 376, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.ranked_comics .ranked_comics_info .authormark {
+  position: absolute;
+  width: 30px;
+  top: -34px;
+  left: 2px;
+}
+
+/* line 385, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.ranked_comics img {
+  width: 241px;
+  margin: 35px;
+}
+
+/* line 390, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.gold_crown {
+  position: relative;
+  top: -8px;
+  left: 5px;
+}
+
+/* line 396, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.silver_crown {
+  position: relative;
+  top: -8px;
+  left: 240px;
+}
+
+/* line 402, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/comics.scss */
+.copper_crown {
+  position: relative;
+  top: -8px;
+  left: 478px;
+}
+/* line 1, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 28, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 34, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 38, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 43, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 48, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 52, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 58, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 65, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 75, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 81, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 3, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+h2.devise {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/* line 8, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.devise_session_sign_in {
+  margin-top: 150px;
+}
+
+/* line 12, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.mail_button {
+  text-align: center;
+}
+
+/* line 16, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.twitter_button {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* line 22, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.devise_twitter_button_new {
+  display: inline;
+  margin-top: 39px;
+  padding: 20px 60px 20px 90px;
+  border: thin solid #06a7e4;
+  background-color: #06a7e4;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* line 35, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.twitter_icon_sign_in {
+  display: inline;
+  margin-right: 250px;
+  width: 50px;
+  margin-top: -50px;
+}
+
+/* line 44, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.new_registration_button {
+  display: inline;
+  padding: 20px 24px 20px 105px;
+  border: thin solid #808080;
+  background-color: #808080;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+/* line 54, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.devise_session_log_in {
+  margin-top: 250px;
+  padding-bottom: 100px;
+}
+
+/* line 59, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.mail_icon {
+  margin-right: 250px;
+  margin-top: -36px;
+  margin-bottom: 73px;
+}
+
+/* line 67, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.devise_twitter_button_log_in {
+  display: inline;
+  margin-top: 39px;
+  padding: 20px 60px 20px 90px;
+  border: thin solid #06a7e4;
+  background-color: #06a7e4;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* line 83, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.twitter_icon_log_in {
+  display: inline-block;
+  width: 50px;
+  margin-right: 270px;
+  margin-top: -36px;
+}
+
+/* line 90, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.name_login_box {
+  text-align: center;
+}
+
+/* line 94, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.login_email_field {
+  display: inline;
+  width: 100px;
+  margin-top: 45px;
+}
+
+/* line 100, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.login_pass_field {
+  display: inline;
+  width: 100px;
+  margin-top: 45px;
+}
+
+/* line 106, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.login_button {
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 25px 70px 25px 70px;
+  background: #fd6458;
+}
+
+/* line 122, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.devise_registration_sign_up h2 {
+  left: 352px;
+}
+
+/* line 126, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.devise_registration_sign_up {
+  padding-bottom: 100px;
+}
+
+/* line 131, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/users.scss */
+.sign_up_button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  width: 370px;
+  height: 70px;
+  background: #fd6458;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 18, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/application.scss */
+header {
+  height: 70px;
+  width: 100%;
+  background-color: #fd6458;
+}
+
+/* line 24, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/application.scss */
+.header_search {
+  float: right;
+  display: inline-block;
+}
+/* line 27, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/application.scss */
+.header_search .search_glass {
+  position: relative;
+  right: 50px;
+  top: 10px;
+}
+
+/* line 34, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/application.scss */
+.header_button {
+  float: right;
+  margin: 24px;
+  background-color: #fd6458;
+  border-color: #fd6458;
+  color: white;
+  font-size: 20px;
+  text-shadow: black 1px 1px 0px, black -1px 1px 0px, black 1px -1px 0px, black -1px -1px 0px;
+}
+
+/* line 47, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/application.scss */
+.header_search_box {
+  border-radius: 10px;
+  height: 40px;
+  width: 250px;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+/* line 55, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/application.scss */
+.logo_pic {
+  float: left;
+  margin-left: 30px;
+  bottom: 12px;
+}
+/* line 59, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/application.scss */
+.logo_pic img {
+  margin-top: 15px;
+}
+
+/* line 65, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/application.scss */
+body {
+  margin: 0 auto;
+  background-color: #f1f1f1;
+}
+
+/* line 70, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/application.scss */
+html {
+  margin: 0 auto;
+  background-color: #f1f1f1;
+}
+
+/* line 75, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/application.scss */
+.background {
+  background-color: white;
+  width: 980px;
+  display: block;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+/* line 84, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/application.scss */
+hr {
+  margin: 80px 60px;
+}
+
+/* line 89, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/application.scss */
+footer {
+  position: fixed;
+  bottom: 5px;
+}
+/* line 92, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/application.scss */
+footer li {
+  display: inline-block;
+}
+
+/* line 97, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/application.scss */
+.footer_item {
+  padding: 20px 100px;
+  border: solid 1px #DDDDDD;
+  background-color: #DDDDDD;
+  color: blue;
+  font-size: 14px;
+}
+
+/* line 105, /Users/tomoharutsutsumi/work/Comilog_Revised_Edition/Comilog_Revised_Edition/app/assets/stylesheets/application.scss */
+.footer_item:hover {
+  background-color: #fd6458;
+}
