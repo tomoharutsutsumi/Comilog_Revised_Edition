@@ -106,15 +106,12 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
-<<<<<<< HEAD
     dotenv (2.2.1)
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
-=======
     enum_help (0.0.17)
       activesupport (>= 3.0.0)
->>>>>>> master
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.25)
