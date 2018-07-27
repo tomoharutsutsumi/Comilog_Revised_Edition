@@ -22,8 +22,5 @@
 
 .byebug_history
 .env.sample
-
-
-
-
-/images/20171216154719.jpg
+/.env
+/public/uploads/comic
