@@ -21,8 +21,6 @@
 /yarn-error.log
 
 .byebug_history
-
-
-
-
-/images/20171216154719.jpg
+.env.sample
+/.env
+/public/uploads/comic

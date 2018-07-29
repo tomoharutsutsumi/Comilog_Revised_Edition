@@ -45,29 +45,27 @@ h1 {
 
 .top_three_ranking_comic {
   display: inline-block;
+  margin-left: 29px;
 }
 
 .top_three_ranking_comic img{
-    margin-top: 30px;
-    margin-left: 27px;
-    margin-bottom: 130px;
 }
 
 .index_ranked_comics_info {
-    display: inline;
-    position: relative;
-    font-size: 20px;
-    top: -71px;
-    right: 220px;
+    display: block;
+    .index_likes_count {
+      display: inline-block;
+      font-size: 25px;
+    }
+    .index_username {
+      display: inline-block;
+      font-size: 25px;
+    }
     .index_rank_likedstar {
-        position: absolute;
-        top: -33px;
-        left: -65px;
+      margin-left: 63px;
     }
     .index_authormark {
-        position: absolute;
-        top: -32px;
-        left: 25px;
+      margin-left: 10px;
     }
 }
 
@@ -94,8 +92,6 @@ h1 {
         display: inline;
     }
 }
-
-
 
 
 .my_posted_comics img {
@@ -285,14 +281,9 @@ h2 {
         margin-right: 32px;
         float: left;
         .likes_count {
-            position: relative;
-            top: 10px;
-            left: 140px;
-            font-size: 20px;
+           text-align: center;
+           font-size: 27px;
             .show_likedstar {
-                position: absolute;
-                top: -5px;
-                right: 290px;
             }
         }
     }
@@ -354,56 +345,279 @@ h2 {
        display: inline;
     }
 
-
-
-
-
 //show.htmkl.erb end//
+
 //rank.html.erb//
 .ranked_comics {
     margin-top: -65px;
-    .ranked_comics_info {
-        display: inline;
-        position: relative;
-        right: 230px;
-        font-size: 20px;
-        .rank_likedstar {
-            position: absolute;
+    .ranked_comic {
+      display: inline-block;
+      width: 300px;
+      margin: 10px;
+      margin-top: 50px;
+      padding-left: 2px;
+      .ranked_comics_info {
+          display: inline;
+          p {
+            font-size: 25px;
+            }
+          .rank_likedstar {
             width: 30px;
-            top: -40px;
-            left: -71px;
-        }
-        .authormark {
-            position: absolute;
+            margin-left:100px;
+          }
+          .authormark {
             width: 30px;
-            top: -34px;
-            left: 2px;
-        }
+          }
+      }
     }
 }
 
-.ranked_comics img {
-    width: 241px;
-    margin: 35px;
+//rank.html.erb end //
+
+
+@media only screen and (max-width: 750px) {
+
+
+//rank.html.erb//
+
+.ranking_page {
+  h1{
+    width: 250px;
+    height:22px;
+    font-size: 22px;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-bottom: solid 2px;
+    border-color: #fd6458;
+  }
 }
 
-.gold_crown {
-    position: relative;
-    top: -8px;
-    left: 5px;
+.ranked_comics {
+    margin-top: -65px;
+    .ranked_comic {
+      display: inline-block;
+      width: 80px;
+      margin: 3px;
+      margin-top: 64px;
+      padding-left: 2px;
+      img {
+        width:88px;
+      }
+      .gold_crown {
+          width: 35px;
+      }
+      .silver_crown {
+          width: 35px;
+      }
+      .copper_crown {
+          width: 35px;
+       }
+      .ranked_comics_info {
+          display: inline;
+          p {
+            font-size: 18px;
+            }
+          .rank_likedstar {
+            width: 16px;
+            margin-left:2px;
+          }
+          .authormark {
+            width: 18px;
+          }
+      }
+    }
+
+//rank.html.erb end //
+
+//search.html.erb//
+
+.search_page h1 {
+    width: 250px;
+    height:22px;
+    font-size: 22px;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-bottom: solid 2px;
+    border-color: #fd6458;
 }
 
-.silver_crown {
-    position: relative;
-    top: -8px;
-    left: 240px;
+.search_form {
+    height: 500px;
+    border: solid 0.1px #d3d3d3;
+    margin-left: 15px;
+    margin-right: 5px;
+    width: 265px;
+
+    .field {
+        margin-top: 20px;
+        margin-left: 10px;
+        font-size: 15px;
+    }
 }
 
-.copper_crown {
+.search_result {
+  display: inline-block;
+  text-align: left;
+  width: 409px;
+  h3 {
+    margin-left: 24px;
+  }
+}
+
+//search.html.erb end//
+
+//responsive.index.html.erb//
+
+.index_gold_crown {
+    width: 40px;
     position: relative;
-    top: -8px;
-    left: 478px;
+    top: 78px;
+    left: -8px;
+}
+
+
+.index_silver_crown {
+    width: 40px;
+    position: relative;
+    top: 78px;
+    left: 46px;
+}
+
+.index_copper_crown {
+    width: 40px;
+    position: relative;
+    top: 78px;
+    left: 97px;
+}
+
+
+#top_three_ranking_comics {
+  width: 300px;
+  h1 {
+    width: 250px;
+    height:22px;
+    font-size: 12px;
+    margin-left: 0px;
+    padding-left: 10px;
+    border-bottom: solid 2px;
+    border-color: #fd6458;
+    }
+}
+
+.top_three_ranking_comic {
+  width: 91px;
+  margin-left: 0px;
+}
+
+
+.top_three_ranking_comic img{
+    width: 87px;
+    margin-top: 0px;
+    margin-left: 3px;
 }
 
 
 //rank.html.erb end //
+
+
+//show.html.erb//
+  .show_upper {
+    width: 300px;
+    .frontcover_and_likes_count {
+      width: 262px;
+      img {
+        width: 270px;
+      }
+      .likes_count {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        .show_likedstar {
+          width: 30px;
+        }
+      }
+    }
+    .contents_picture {
+        width: 285px;
+        text-align: center;
+        img {
+          width: 125px;
+        }
+    }
+    .introduction {
+        width: 280px;
+        font-size: 22px;
+    }
+  }
+
+
+.show_like_button {
+    width: 200px;
+    padding: 20px;
+    background-color: #fd6458;
+    color: white;
+    font-size: 17px;
+    border-radius: 10px;
+  }
+
+
+.show_lower p {
+  border: 1px dashed black;
+  font-size: 15px;
+  padding-left: 26px;
+  padding-bottom: 36px;
+
+}
+
+.show_lower strong {
+    display: inline-block;
+    width: 250px;
+    margin: 25px;
+    margin-left: 0px;
+
+//show.html.erb end//
+
+
+#new_comics {
+  width: 310px;
+  h1 {
+     width: 250px;
+     height:22px;
+     font-size: 12px;
+     margin-left: 0px;
+     padding-left: 10px;
+     border-bottom: solid 2px;
+     border-color: #fd6458;
+    }
+}
+
+.new_comic {
+  width: 330px;
+}
+
+.new_comic img {
+  width: 87px;
+  margin-top: 0px;
+  margin-left: 2px;
+}
+
+
+.index_ranked_comics_info {
+  .index_likes_count {
+      display: block;
+      font-size: 15px;
+    }
+    .index_username {
+      display: block;
+      font-size: 15px;
+    }
+    .index_rank_likedstar {
+      margin-left: 12px;
+      width: 16px;
+    }
+    .index_authormark {
+      margin-left: 12px;
+      width: 16px;
+    }
+}
+//responsive.index.html.erb end//
+}

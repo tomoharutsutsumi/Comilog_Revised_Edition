@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180611154445) do
+ActiveRecord::Schema.define(version: 20180712134840) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "comics", force: :cascade do |t|
     t.string "title"
@@ -27,15 +30,15 @@ ActiveRecord::Schema.define(version: 20180611154445) do
     t.string "content_third"
     t.string "content_fourth"
     t.string "content_fifth"
-    t.string "category"
     t.integer "day"
     t.string "origin_title"
     t.integer "agetarget"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.integer "status", limit: 1, default: 1, null: false
+    t.integer "status", limit: 2, default: 1, null: false
     t.integer "likes_count", default: 0
+    t.integer "category"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -45,7 +48,7 @@ ActiveRecord::Schema.define(version: 20180611154445) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "taggings", force: :cascade do |t|
+  create_table "taggings", id: :serial, force: :cascade do |t|
     t.integer "tag_id"
     t.string "taggable_type"
     t.integer "taggable_id"
@@ -64,7 +67,7 @@ ActiveRecord::Schema.define(version: 20180611154445) do
     t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
   end
 
-  create_table "tags", force: :cascade do |t|
+  create_table "tags", id: :serial, force: :cascade do |t|
     t.string "name"
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
