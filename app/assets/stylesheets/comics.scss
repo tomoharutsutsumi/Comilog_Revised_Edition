@@ -86,7 +86,7 @@ h1 {
 //index.html.erb end //
 //new.html.erb//
 .my_posted_comics {
-    position: relative;
+    text-align: center;
     margin-bottom: 50px;
     .my_posted_comics_info {
         display: inline;
@@ -94,17 +94,28 @@ h1 {
 }
 
 
+<<<<<<< HEAD
+.my_posted_comics_left {
+  display: inline;
+  float: left;
+  margin-left: 70px;
+  text-align: center;
+}
+
+.my_posted_comics_right {
+  width: 800px;
+  padding-top: 39px;
+}
+
+=======
+>>>>>>> master
 .my_posted_comics img {
-    position: relative;
-    right: -69px;
-    width: 250px;
 }
 
 .new_comics_info {
-    display: inline-block;
-    position: relative;
-    top: 30px;
-    left: -70px;
+    margin-top: 7px;
+    margin-left: 69px;
+    text-align: center;
     font-size: 20px;
 }
 
@@ -118,9 +129,6 @@ h1 {
 
 .my_posted_comics_info ul {
     list-style: none;
-    top: 60px;
-    left: 400px;
-    position: absolute;
 }
 
 .my_posted_comics_info li {
@@ -132,7 +140,6 @@ h1 {
 .my_posted_comic_edit_button {
     display: inline-block;
     margin-top: 30px;
-    margin-left: 400px;
     width: 300px;
     height: 70px;
     background-color: #fd6458;
@@ -143,7 +150,6 @@ h1 {
 .my_posted_comic_delete_button {
     display: inline-block;
     margin-top: 30px;
-    margin-left: 400px;
     width: 300px;
     height: 70px;
     background-color: gray;
@@ -177,10 +183,12 @@ h1 {
     left: 251px;
 }
 
+.form_action_field {
+  text-align: center;
+  margin-top: 40px;
+}
+
 .form_action {
-    position: relative;
-    top: 60px;
-    left: 350px;
     width: 300px;
     height: 70px;
     background-color: #fd6458;
@@ -188,6 +196,7 @@ h1 {
     font-size: 20px;
 
 }
+
 
 
 //_form.html.erb end//
@@ -492,6 +501,105 @@ h2 {
 }
 
 
+
+//rank.html.erb end //
+
+
+@media only screen and (max-width: 750px) {
+
+//new.html.erb//
+
+h1 {
+  width: 250px;
+  font-size: 20px;
+}
+
+.my_posted_comics {
+    text-align: center;
+    margin-bottom: 50px;
+    .my_posted_comics_info {
+        display: inline;
+    }
+}
+
+
+.my_posted_comics_left {
+  display: inline;
+  float: left;
+  margin-left: 0px;
+  margin-bottom: 52px;
+  text-align: center;
+}
+
+.my_posted_comics_right {
+  width: 200px;
+  padding-top: 39px;
+}
+
+.my_posted_comics img {
+}
+
+.new_comics_info {
+    margin-top: 7px;
+    margin-left: 69px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.new_comics_info img {
+    position: relative;
+    width: 30px;
+    top: 5px;
+    left: -62px;
+
+}
+
+.my_posted_comics_info ul {
+    list-style: none;
+}
+
+.my_posted_comics_info li {
+    display: block;
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+
+.my_posted_comic_edit_button {
+    display: inline-block;
+    margin-top: 30px;
+    width: 286px;
+    height: 70px;
+    background-color: #fd6458;
+    color: white;
+    font-size: 20px;
+}
+
+.my_posted_comic_delete_button {
+    display: inline-block;
+    margin-top: 30px;
+    width: 286px;
+    height: 70px;
+    background-color: gray;
+    color: white;
+    font-size: 20px;
+}
+
+//new.html.erb end //
+
+//_form.html.erb//
+
+.form_action {
+    width: 286px;
+    height: 70px;
+    background-color: #fd6458;
+    color: white;
+    font-size: 20px;
+
+//_form.html.erb end//
+
+}
+
+
 #top_three_ranking_comics {
   width: 300px;
   h1 {
@@ -623,3 +731,4 @@ h2 {
 }
 //responsive.index.html.erb end//
 }
+

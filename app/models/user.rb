@@ -7,6 +7,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :lockable, :timeoutable, :omniauthable, omniauth_providers: [:twitter]
 
+
+
   validates_uniqueness_of :username
   validates_presence_of :username
 
