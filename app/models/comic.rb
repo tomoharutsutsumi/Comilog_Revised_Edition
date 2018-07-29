@@ -20,6 +20,7 @@ class Comic < ApplicationRecord
   mount_uploader :content_fourth, FrontcoverUploader
 
   enum status:{nonreleased: 0, released: 1}
+  enum category:{BL: 0, GL: 1, NL: 2, others: 3}
 
   def liked?(user)
     Like.exists?(user_id: user, comic_id: self.id)

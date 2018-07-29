@@ -14,24 +14,68 @@
  *= require_self
  */
 
-
- body {
-  margin: 0 auto;
-  background-color: #f1f1f1;
- }
-
- html {
-  margin: 0 auto;
-  background-color: #f1f1f1;
+header {
+    height: 70px;
+    width: 100%;
+    background-color: #fd6458;
 }
 
- .background {
-  background-color: white;
-  width: 980px;
-  display: block;
-  margin: 0 auto;
-  padding: 28px;
-  }
+.header_search {
+    float: right;
+    display: inline-block;
+    .search_glass {
+        position: relative;
+        right: 50px;
+        top: 10px;
+    }
+}
+
+.header_button {
+    float: right;
+    margin: 24px;
+    background-color: #fd6458;
+    border-color: #fd6458;
+    color: white;
+    font-size: 20px;
+    text-shadow: black 1px 1px 0px, black -1px 1px 0px, black 1px -1px 0px, black -1px -1px 0px;
+}
+
+
+.header_search_box {
+    border-radius: 10px;
+    height: 40px;
+    width: 250px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.logo_pic {
+    float: left;
+    margin-left: 30px;
+    bottom: 12px;
+    img {
+        margin-top: 15px;
+    }
+}
+
+
+body {
+    margin: 0 auto;
+    background-color: #f1f1f1;
+}
+
+html {
+    margin: 0 auto;
+    background-color: #f1f1f1;
+}
+
+.background {
+    background-color: white;
+    width: 980px;
+    display: block;
+    margin: 0 auto;
+    padding: 28px;
+}
 
 
 hr {
@@ -40,23 +84,40 @@ hr {
 
 
 footer {
-  position: fixed;
-  bottom: 5px;
+    position: fixed;
+    bottom: 5px;
     li {
-      display: inline-block;
+        display: inline-block;
     }
 }
 
 .footer_item {
-  padding: 20px 100px;
-  border: solid 1px #DDDDDD;
-  background-color: #DDDDDD;
-  color: blue;
-  font-size: 14px;
+    padding: 20px 100px;
+    border: solid 1px #DDDDDD;
+    background-color: #DDDDDD;
+    color: blue;
+    font-size: 14px;
 }
 
 .footer_item:hover {
-  background-color: #fd6458; 
+  background-color: #fd6458;
+}
+
+
+@media only screen and (max-width: 750px) {
+
+body {
+  margin: 0 auto;
+  background-color: #f1f1f1;
+ }
+
+.background {
+  background-color: white;
+  width: 286px;
+  display: block;
+  margin: 0 auto;
+  padding: 28px;
+  }
 }
 
 @media only screen and (max-width: 750px) {

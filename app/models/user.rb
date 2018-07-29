@@ -7,6 +7,29 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :lockable, :timeoutable, :omniauthable, omniauth_providers: [:twitter]
 
+  validates_uniqueness_of :username
+  validates_presence_of :username
+
+
+  def self.find_first_by_auth_conditions(warden_conditions)
+    conditions = warden_conditions.dup
+    if login = conditions.delete(:login)
+      #認証の条件式を変更する
+      where(conditions).where(["username = :value", { :value => username }]).first
+    else
+      where(conditions).first
+    end
+  end
+
+
+  def email_required?
+    false
+  end
+
+  def email_changed?
+    false
+  end
+
 
   def self.from_omniauth(auth)
     User.find_or_create_by(provider: auth.provider, uid: auth.uid) do |user|

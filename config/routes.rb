@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :comics do
     collection do
         get :search
+        get :header_search
         get :rank
     end
     member do

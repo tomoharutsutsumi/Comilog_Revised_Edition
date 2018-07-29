@@ -8,7 +8,7 @@ class ComicsController < ApplicationController
   # GET /comics.json
   def index
     @comic_top_three = @ranked_comics.first(3)
-    @comics = Comic.released.order('id DESC').page(params[:page]).per(3)
+    @comics = Comic.released.order('id DESC').page(params[:page]).per(6)
   end
 
   # GET /comics/1
@@ -92,6 +92,14 @@ class ComicsController < ApplicationController
     @search_result = @search_result.where(day: params[:day]) unless params[:day].blank?
     @search_result = @search_result.where(origin_title: params[:origin_title]) unless params[:origin_title].blank?
     @search_result = @search_result.where(agetarget: params[:agetarget]) unless params[:agetarget].blank?
+  end
+
+  def header_search
+    header_search_result = Comic.all
+    header_search_result = header_search_result.where(title: params[:keyword]).or(Comic.where(origin_title: params[:keyword]))
+    #binding.pry
+    @search_result = header_search_result
+    render :search
   end
 
   def release
