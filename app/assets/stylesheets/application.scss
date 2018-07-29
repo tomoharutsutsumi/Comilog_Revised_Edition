@@ -41,8 +41,6 @@ header {
 }
 
 
-
-
 .header_search_box {
     border-radius: 10px;
     height: 40px;
@@ -102,5 +100,24 @@ footer {
 }
 
 .footer_item:hover {
-    background-color: #fd6458;
+  background-color: #fd6458;
 }
+
+
+@media only screen and (max-width: 750px) {
+
+body {
+  margin: 0 auto;
+  background-color: #f1f1f1;
+ }
+
+.background {
+  background-color: white;
+  width: 286px;
+  display: block;
+  margin: 0 auto;
+  padding: 28px;
+  }
+}
+
+
