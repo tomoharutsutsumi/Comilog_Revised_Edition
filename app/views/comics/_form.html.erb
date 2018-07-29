@@ -1,3 +1,5 @@
+
+
 <%= form_with(model: comic, local: true) do |form| %>
   <% if @comic.errors.any? %>
     <div id="error_explanation">
@@ -89,7 +91,7 @@
   <div class="field">
     <%= form.label :カテゴリー %>
     <div class="info_of_required">必須</div>
-    <%= form.select :category, [["BL", "BL"], ["百合", "百合"], ["NL", "NL"], ["その他", "その他"]], id: :comic_type %>
+    <%= form.select :category, Comic.categories.keys.map {|k| [I18n.t("enums.comic.category.#{k}"), k]}, id: :comic_type %>
   </div>
 
   <div class="field">
