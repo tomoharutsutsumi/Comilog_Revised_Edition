@@ -29,8 +29,8 @@
    <div class="name_login_box">
      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
        <div class="login_email_field">
-         <%= f.label :email %><br />
-         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+         <%= f.label :username %><br />
+         <%= f.text_field :username, autofocus: true, autocomplete: "email" %>
        </div>
        <div class="login_pass_field">
          <%= f.label :password %><br />
