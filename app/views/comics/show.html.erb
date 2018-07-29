@@ -3,10 +3,10 @@
 <div class="show_upper">
   <div class="frontcover_and_likes_count">
     <%= image_tag @comic.front_cover.to_s %>
-      <div class="likes_count">
-        <%= @comic.likes_count %>
-        <%= image_tag 'likedstar.png', class: :show_likedstar %>
-      </div>
+    <div class="likes_count">
+      <%= image_tag 'likedstar.png', class: :show_likedstar %>
+      <%= @comic.likes_count %>
+    </div>
   </div>
 
   <div class="contents_picture">
@@ -43,8 +43,13 @@
     <p><strong>価格</strong><%= @comic.price %>円</p>
     <p><strong>SNSリンク１</strong><%= @comic.sns_first %></p>
     <p><strong>SNSリンク２</strong><%= @comic.sns_second %></p>
+<<<<<<< HEAD
+    <p><strong>カテゴリー</strong><%= @comic.category %></p>
+    <p><strong>出展日</strong><%= @comic.day %>日目</p>
+=======
     <p><strong>カテゴリー</strong><%= @comic.category_i18n %></p>
     <p><strong>出展日</strong><%= @comic.day %></p>
+>>>>>>> master
     <p><strong>元ネタ</strong><%= @comic.origin_title %></p>
 </div>
 
