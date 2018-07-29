@@ -12,10 +12,14 @@
         <%= image_tag comic.front_cover.to_s %>
       <% end %>
        <div class="index_ranked_comics_info">
-         <%= comic.likes_count %>
-         <%= image_tag 'likedstar.png', class: :index_rank_likedstar %>
-         <%= comic.user.username %>
-         <%= image_tag 'authormark.png', class: :index_authormark %>
+        <div class="index_likes_count">
+          <%= image_tag 'likedstar.png', class: :index_rank_likedstar %>
+          <%= comic.likes_count %>
+        </div>
+        <div class="index_username">
+          <%= image_tag 'authormark.png', class: :index_authormark %>
+           <%= comic.user.username %>
+        </div>
        </div>
     </div>
   <% end %>

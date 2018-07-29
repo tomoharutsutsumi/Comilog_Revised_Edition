@@ -42,7 +42,9 @@ gem 'rmagick'
 gem 'rails-i18n'
 gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on', branch: 'master'
 gem 'kaminari'
+gem 'dotenv-rails'
 gem 'enum_help'
+gem 'fog-aws', group: :production
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
