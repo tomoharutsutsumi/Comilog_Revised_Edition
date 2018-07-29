@@ -100,11 +100,18 @@ footer {
 }
 
 .footer_item:hover {
-<<<<<<< HEAD
     background-color: #fd6458;
 }
 
 @media only screen and (max-width: 750px) {
+
+.background {
+  background-color: white;
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  padding: 28px;
+}
 
     header {
         height: 70px;
@@ -189,4 +196,5 @@ footer {
     padding: 28px;
     }
 }
+
 
