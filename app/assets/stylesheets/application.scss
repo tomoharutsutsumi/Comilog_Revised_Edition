@@ -100,27 +100,81 @@ footer {
 }
 
 .footer_item:hover {
-  background-color: #fd6458;
-}
-
-
-@media only screen and (max-width: 750px) {
-
-body {
-  margin: 0 auto;
-  background-color: #f1f1f1;
- }
-
-.background {
-  background-color: white;
-  width: 286px;
-  display: block;
-  margin: 0 auto;
-  padding: 28px;
-  }
+<<<<<<< HEAD
+    background-color: #fd6458;
 }
 
 @media only screen and (max-width: 750px) {
+
+    header {
+        height: 70px;
+        width: 100%;
+        background-color: #fd6458;
+    }
+
+    .header_search {
+        float: right;
+        display: inline-block;
+        width: 144px;
+        .search_glass {
+            position: relative;
+            right: -112px;
+            top: -28px;
+            width: 21px;
+        }
+    }
+
+    .header_button {
+        float: right;
+        margin: 3px;
+        background-color: #fd6458;
+        border-color: #fd6458;
+        color: white;
+        font-size: 10px;
+        text-shadow: black 1px 1px 0px, black -1px 1px 0px, black 1px -1px 0px, black -1px -1px 0px;
+    }
+
+    .header_search_box {
+        border-radius: 10px;
+        height: 31px;
+        width: 134px;
+        font-size: 10px;
+        margin-top: 17px;
+    }
+
+    .logo_pic {
+        float: left;
+        margin-left: 7px;
+        width: 82px;
+        img {
+            margin-top: 26px;
+            width: 75px;
+        }
+    }
+
+    hr {
+        margin: 80px 60px;
+    }
+
+
+    footer {
+        position: fixed;
+        bottom: 5px;
+        li {
+            display: inline-block;
+        }
+        ol {
+            padding: 7px;
+        }
+    }
+
+    .footer_item {
+        padding: 18px 8px;
+        border: solid 1px #DDDDDD;
+        background-color: #DDDDDD;
+        color: blue;
+        font-size: 11px;
+    }
 
   body {
     margin: 0 auto;
@@ -135,6 +189,4 @@ body {
     padding: 28px;
     }
 }
-
-
 
