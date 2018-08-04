@@ -1,113 +1,118 @@
 //new.html.erb devise/sessions//
-
-h2.devise {
-  text-align: center;
-  margin-bottom: 100px;
+.loginupper {
+  height: 230px;
 }
 
-.devise_session_sign_in {
-  margin-top:150px;
-  text-align: center;
+.loginmiddle {
+  height: 180px;
+  background-color: #EEEEEE;
+  h2 {
+    display: block;
+    text-align: center;
+    padding: 15px;
+  }
+  .registration_buttons {
+    display: block;
+    text-align: center;
+    height: 130px;
+    .registration_user_button {
+      width: 400px;
+      margin-right: 15px;
+      display: inline-block;
+      background-color: red;
+      border-radius: 3px;
+      box-shadow: 0px 2px 4px grey;
+      a {
+        display: block;
+        padding: 22px 10px 0px 10px;
+        height: 40px;
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+      }
+      a:hover {
+        opacity: 0.8;
+        background-color: transparent;
+      }
+    }
+    .registration_twitter_button {
+      width: 400px;
+      margin-left: 15px;
+      display: inline-block;
+      background-color: #87CEFA;
+      border-radius: 3px;
+      box-shadow: 0px 2px 4px grey;
+      a {
+        display: block;
+        padding: 22px 10px 0px 10px;
+        height: 40px;
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+      }
+      a:hover {
+        opacity: 0.8;
+        background-color: transparent;
+      }
+    }
+  }
 }
 
-
-.people_button {
-  display: inline-block;
-  margin-bottom: 80px;
-  padding: 20px 13px 5px 47px;
-  border: thin solid #808080;
-  background-color:#808080;
+.loginlower {
+  height: 400px;
+  h2 {
+    display: block;
+    text-align: center;
+    padding: 15px;
+  }
+  .login_buttons {
+    text-align: center;
+    .login_username {
+      width: 400px;
+      height: 20px;
+      text-align: center;
+      margin: 10px;
+    }
+    .login_password {
+      width: 400px;
+      height: 20px;
+      text-align: center;
+      margin: 10px;
+    }
+    .login_button {
+      width: 400px;
+      height: 59px;
+      display: inline-block;
+      background-color: red;
+      border-radius: 3px;
+      color: white;
+      margin: 10px;
+      font-size: 16px;
+      box-shadow: 0px 2px 4px grey;
+    }
+    .login_twitter {
+      width: 400px;
+      display: inline-block;
+      background-color: #87CEFA;
+      border-radius: 3px;
+      margin: 10px;
+      box-shadow: 0px 2px 4px grey;
+      a {
+        display: block;
+        padding: 22px 10px 0px 10px;
+        height: 23px;
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+      }
+      a:hover {
+        opacity: 0.8;
+        background-color: transparent;
+      }
+    }
+  }
 }
 
-.twitter_button {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.devise_twitter_button_new {
-  display:inline;
-  margin-top: 39px;
-  padding: 20px 60px 20px 90px;
-  border: thin solid #06a7e4 ;
-  background-color: #06a7e4 ;
-  color:white;
-  font-weight:bold;
-  font-size:20px;
-  text-align:center;
-}
-
-.twitter_icon_sign_in {
-  display: inline;
-  margin-right: 250px;
-  width: 50px;
-  margin-top: -50px;
-}
-
-.new_registration_button {
-  display:inline;
-  font-weight:bold;
-  font-size:20px;
-  color: white;
-}
-
-.devise_session_log_in {
-  margin-top: 150px;
-  padding-bottom: 100px;
-}
-
-.people_icon {
-  display: inline-block;
-  width: 46px;
-  margin-right: 267px;
-  margin-top: -36px;
-}
-
-.devise_twitter_button_log_in {
-  display:inline;
-  margin-top: 39px;
-  padding: 20px 60px 20px 90px;
-  border: thin solid #06a7e4 ;
-  background-color: #06a7e4 ;
-  color:white;
-  font-weight:bold;
-  font-size:20px;
-  text-align:center;
-}
-
-.twitter_icon_log_in {
-  display: inline-block;
-  width: 50px;
-  margin-right: 270px;
-  margin-top: -36px;
-}
-
-.name_login_box {
-  text-align: center;
-}
-
-.login_email_field {
-  display: inline;
-  width: 100px;
-  margin-top: 45px;
-}
-
-.login_pass_field {
-  display: inline;
-  width: 100px;
-  margin-top: 45px;
-}
-
-.login_button {
-  text-align: center;
-  font-size:20px;
-  color:white;
-  font-weight:bold;
-  display: block;
-  margin: 0 auto;
-  margin-top: 30px;
-  padding: 25px 70px 25px 70px;
-  background: #fd6458;
-}
 
 //new.html.erb devise/sessions end//
 
