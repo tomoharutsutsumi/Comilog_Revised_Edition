@@ -23,4 +23,4 @@
 .byebug_history
 .env.sample
 /.env
-/public/uploads/comic
+/public/uploads/
