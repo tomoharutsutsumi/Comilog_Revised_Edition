@@ -1,5 +1,8 @@
 class User < ApplicationRecord
   has_many :likes
+  has_many :wants
+  has_many :like_comics, through: :likes
+  has_many :want_comics, through: :wants
   has_many :comics
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

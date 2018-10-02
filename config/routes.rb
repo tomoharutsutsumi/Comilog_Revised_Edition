@@ -12,12 +12,14 @@ Rails.application.routes.draw do
     member do
         post 'like'
         post 'unlike'
+        post 'want'
         patch 'release'
         patch 'nonrelease'
     end
   end
   namespace :my do
     get '/likes',:to => "likes#liked"
+    get '/wants', :to => "wants#wanted"
   end
 
 

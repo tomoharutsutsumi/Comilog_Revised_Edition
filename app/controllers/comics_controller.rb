@@ -2,7 +2,7 @@ class ComicsController < ApplicationController
   before_action :set_comic, only: [:show, :edit, :update, :destroy, :release, :nonrelease]
   before_action :authenticate_user!, only: [:show, :new, :edit, :destroy, :like, :unlike]
   before_action :set_ranked_comics, only: [:index, :rank]
-
+  after_action :redirect_to_show, only: [:like, :unlike, :want, :not_want]
 
   # GET /comics
   # GET /comics.json
@@ -73,7 +73,6 @@ class ComicsController < ApplicationController
   def like
     like = Like.create(comic_id: params[:id], user_id: current_user.id)
     like.save
-    redirect_to :action => "show"
   end
 
 
@@ -81,7 +80,19 @@ class ComicsController < ApplicationController
     unlike = Like.find_by(comic_id: params[:id], user_id: current_user.id)
     unlike.destroy
     unlike.save
-    redirect_to :action => "show"
+  end
+
+
+  def want
+    want = Want.create(comic_id: params[:id], user_id: current_user.id)
+    want.save
+  end
+
+
+  def not_want
+    not_want = Want.find_by(comic_id: params[:id], user_id: current_user.id)
+    not_want.destroy
+    not_want.save
   end
 
 
@@ -128,6 +139,10 @@ class ComicsController < ApplicationController
 
     def set_ranked_comics
       @ranked_comics = Comic.order('likes_count DESC')
+    end
+
+    def redirect_to_show
+      redirect_to :action => "show"
     end
 
 
