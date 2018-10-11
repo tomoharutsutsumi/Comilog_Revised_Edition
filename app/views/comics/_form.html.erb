@@ -1,6 +1,6 @@
 
 
-<%= form_with(model: comic, local: true) do |form| %>
+<%= form_with(model: comic, local: true, url: confirm_comics_path) do |form| %>
   <% if @comic.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(comic.errors.count, "つのエラー") %> があります:</h2>
@@ -24,6 +24,9 @@
     <%= form.label :表紙 %>
     <div class="info_of_required">必須</div>
     <%= form.file_field :front_cover, id: :comic_front_cover %>
+    <%= form.hidden_field :front_cover_cache %>
+    <%= notice_of_choice %>
+    <%= image_tag @comic.front_cover if @comic.front_cover? %>
   </div>
 
   <div class="field">
@@ -83,17 +86,6 @@
     <%= form.label :元ネタ名 %>
     <div class="info_of_required">必須</div>
     <%= form.text_field :origin_title, id: :comic_origin_title %>
-  </div>
-
-  <div class='field'>
-    <%= form.label :tag_list, 'タグをカンマ区切りで入力' %>
-    <%= text_field_tag 'comic[tag_list]', comic.tag_list.join(',') %>
-  </div>
-
-  <div class="field">
-    <%= form.label :年齢対象 %>
-    <%= form.radio_button :agetarget, "全年齢", id: :comic_agetarget %>全年齢
-    <%= form.radio_button :agetarget, "18歳以上", id: :comic_agetarget %>18歳以上
   </div>
 
 <div class="form_action_field">

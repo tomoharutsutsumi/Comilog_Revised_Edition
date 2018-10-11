@@ -24,6 +24,17 @@ class ComicsController < ApplicationController
     @authorname = user.authorname
   end
 
+  def confirm
+    @comic = Comic.new(comic_params)
+    @comic.user_id = current_user.id
+    if @comic.valid?
+      flash.now[:notice_of_confirm] = "こちらで登録しますがよろしいですか？"
+    else
+      flash.now[:notice_of_choice] = "あなたが選択中の画像はこちらです。"
+      render :new
+    end
+  end
+
   # GET /comics/1/edit
   def edit
   end
@@ -33,9 +44,10 @@ class ComicsController < ApplicationController
   def create
     @comic = Comic.new(comic_params)
     @comic.user_id = current_user.id
-
     respond_to do |format|
-      if @comic.save
+      if params[:back]
+        format.html { render :new }
+      elsif @comic.save
         format.html { redirect_to @comic, notice: 'Comic was successfully created.' }
         format.json { render :show, status: :created, location: @comic }
       else
@@ -133,6 +145,6 @@ class ComicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comic_params
-      params.require(:comic).permit(:title, :front_cover, :price, :sns_first, :sns_second, :sns_third, :sns_fourth, :introduction, :content_first, :content_second, :content_third, :content_fourth, :content_fifth, :category, :day, :origin_title, :agetarget, :tag_list)
+      params.require(:comic).permit(:title, :front_cover, :front_cover_cache, :price, :sns_first, :sns_second, :sns_third, :sns_fourth, :introduction, :content_first, :content_second, :content_third, :content_fourth, :content_fifth, :category, :day, :origin_title, :agetarget, :tag_list)
     end
 end

@@ -1,0 +1,89 @@
+<%= flash.now[:notice_of_confirm] %>
+ブラウザバックしないでください
+
+<%= form_for @comic, url: comics_path, html: {method: "post"} do |f| %>
+  <div class="field">
+    <%= f.label :タイトル %>
+    <%= f.hidden_field :title%>
+    <%= @comic.title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :表紙 %>
+    <%= f.hidden_field :front_cover_cache %>
+    <%= image_tag(@comic.front_cover) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :価格 %>
+    <%= f.hidden_field :price %>
+    <%= @comic.price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pixivリンクURL %>
+    <%= f.hidden_field :sns_first %>
+    <%= @comic.sns_first %>
+  </div>
+
+  <div class="field">
+    <%= f.label :twitterリンクURL %>
+    <%= f.hidden_field :sns_second %>
+    <%= @comic.sns_second %>
+  </div>
+
+  <div class="field">
+    <%= f.label :作品説明 %>
+    <%= f.hidden_field :introduction %>
+    <%= @comic.introduction %>
+  </div>
+
+  <div class="field">
+    <%= f.label :チラ見せ１ %>
+    <%= f.hidden_field :content_first %>
+    <%= @comic.content_first %>
+  </div>
+
+  <div class="field">
+    <%= f.label :チラ見せ２ %>
+    <%= f.hidden_field :content_second %>
+    <%= @comic.content_second %>
+  </div>
+
+  <div class="field">
+    <%= f.label :チラ見せ３ %>
+    <%= f.hidden_field :content_third %>
+    <%= @comic.content_third %>
+  </div>
+
+  <div class="field">
+    <%= f.label :チラ見せ４ %>
+    <%= f.hidden_field :content_fourth %>
+    <%= @comic.content_fourth %>
+  </div>
+
+  <div class="field">
+    <%= f.label :カテゴリー %>
+    <%= f.hidden_field :category %>
+    <%= @comic.category %>
+  </div>
+
+  <div class="field">
+    <%= f.label :出展日 %>
+    <%= f.hidden_field :day %>
+    <%= @comic.day %>
+  </div>
+
+  <div class="field">
+    <%= f.label :元ネタ名 %>
+    <%= f.hidden_field :origin_title %>
+    <%= @comic.origin_title %>
+  </div>
+
+ <div class="actions">
+    <%= f.submit '上記の内容で出展する' %>
+  </div>
+  <div class="actions">
+    <%= f.submit '投稿画面に戻る', name: 'back' %>
+  </div>
+<% end %>

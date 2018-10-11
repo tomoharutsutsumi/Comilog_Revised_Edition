@@ -8,6 +8,7 @@ Rails.application.routes.draw do
         get :search
         get :header_search
         get :rank
+        post :confirm
     end
     member do
         post 'like'
