@@ -1,6 +1,7 @@
 
 Rails.application.routes.draw do
-  devise_for :users, controllers: { :omniauth_callbacks => "omniauth_callbacks" }
+  devise_for :users, controllers: { :omniauth_callbacks => "omniauth_callbacks",
+    :sessions => "users/sessions" }
   root 'comics#index'
   resources :users
   resources :comics do

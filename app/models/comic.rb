@@ -1,8 +1,8 @@
 class Comic < ApplicationRecord
   has_many :likes
   has_many :wants
-  has_many :like_users, through: :likes
-  has_many :want_users, through: :wants
+  has_many :like_users, through: :likes, source: :user
+  has_many :want_users, through: :wants, source: :user
   belongs_to :user
 
   acts_as_taggable_on :tags
