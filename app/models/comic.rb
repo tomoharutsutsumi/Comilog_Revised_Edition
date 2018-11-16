@@ -32,7 +32,9 @@ class Comic < ApplicationRecord
   end
 
 
+  scope :all_rank_limit, -> { order('likes_count DESC').limit(3) }
 
+  scope :rank_limit_by_day, -> { order('likes_count DESC').limit(10) }
 
   scope :sum_price, -> { sum(:price) }
 end
