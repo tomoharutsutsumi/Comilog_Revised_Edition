@@ -1,12 +1,8 @@
 class ComicsController < ApplicationController
   before_action :set_comic, only: [:show, :edit, :update, :destroy, :release, :nonrelease]
   before_action :authenticate_user!, only: [:show, :new, :edit, :destroy, :like, :unlike]
-<<<<<<< HEAD
   before_action :set_ranked_comics, only: [:index, :rank]
   after_action :redirect_to_show, only: [:like, :unlike, :want, :not_want]
-=======
-
->>>>>>> 88-divide-ranking-by-days
 
   # GET /comics
   # GET /comics.json
