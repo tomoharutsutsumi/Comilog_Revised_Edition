@@ -1,6 +1,7 @@
 
 Rails.application.routes.draw do
-  devise_for :users, controllers: { :omniauth_callbacks => "omniauth_callbacks" }
+  devise_for :users, controllers: { :omniauth_callbacks => "omniauth_callbacks",
+    :sessions => "users/sessions" }
   root 'comics#index'
   resources :users
   resources :comics do
@@ -13,12 +14,14 @@ Rails.application.routes.draw do
     member do
         post 'like'
         post 'unlike'
+        post 'want'
         patch 'release'
         patch 'nonrelease'
     end
   end
   namespace :my do
     get '/likes',:to => "likes#liked"
+    get '/wants', :to => "wants#wanted"
   end
 
 
