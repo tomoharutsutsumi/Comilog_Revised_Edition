@@ -27,14 +27,16 @@
 
 <div class="buy_or_notbuy_button">
   <% if @comic.liked?(current_user.id) %>
-    <%= link_to '買うかもリストから外す', unlike_comic_path(@comic), method: :post, class: :show_like_button %>
+    <%= link_to 'いいかもリストから外す', unlike_comic_path(@comic), method: :post, class: :show_like_button %>
   <% else %>
     <%= link_to like_comic_path(@comic), method: :post, class: :show_like_button do %>
       <%= image_tag 'likedstar.png', class: :show_like_button_likedstar %>
-      <%= '買うかもリストに追加する' %>
+      <%= 'いいかもリストに追加する' %>
     <% end %>
   <% end %>
 </div>
+
+<%= link_to '欲しいかもリストに追加する', want_comic_path(@comic), method: :post %>
 
 
 

@@ -1,0 +1,33 @@
+マイページ
+
+
+買いたいリスト
+<% @liked_comics_top_three.each do |my_liked_comic| %>
+  <%= link_to comic_path(my_liked_comic) do %>
+      <%= image_tag my_liked_comic.front_cover.to_s %>
+  <% end %>
+  <ul>
+    <li>タイトル:<%= my_liked_comic.title %></li>
+    <li>出展日:<%= my_liked_comic.day %>日</li>
+    <li>カテゴリ:<%= my_liked_comic.category %></li>
+    <li>価格:<%= my_liked_comic.price %>円</li>
+    <li>商品紹介:<%= my_liked_comic.introduction %></li>
+  </ul>
+<% end %>
+<%= link_to '買いたいリスト', my_likes_path %>
+
+
+欲しいかもリスト
+<% @wanted_comics_top_three.each do |my_wanted_comic| %>
+  <%= link_to comic_path(my_wanted_comic) do %>
+    <%= image_tag my_wanted_comic.front_cover.to_s %>
+  <% end %>
+  <ul>
+    <li>タイトル:<%= my_wanted_comic.title %></li>
+    <li>出展日:<%= my_wanted_comic.day %>日</li>
+    <li>カテゴリ:<%= my_wanted_comic.category %></li>
+    <li>価格:<%= my_wanted_comic.price %>円</li>
+    <li>商品紹介:<%= my_wanted_comic.introduction %></li>
+  </ul>
+<% end %>
+<%= link_to '欲しいものリスト', my_wants_path %>

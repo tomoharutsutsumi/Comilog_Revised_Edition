@@ -1,8 +1,9 @@
 class Comic < ApplicationRecord
   has_many :likes
+  has_many :wants
+  has_many :like_users, through: :likes, source: :user
+  has_many :want_users, through: :wants, source: :user
   belongs_to :user
-
-
 
   acts_as_taggable_on :tags
 
@@ -11,7 +12,6 @@ class Comic < ApplicationRecord
   validates :price, presence: true
   validates :day, presence: true
   validates :origin_title, presence: true
-
 
   mount_uploader :front_cover, FrontcoverUploader
   mount_uploader :content_first, FrontcoverUploader
@@ -26,13 +26,17 @@ class Comic < ApplicationRecord
     Like.exists?(user_id: user, comic_id: self.id)
   end
 
-
   def liked_by(user)
     user.likes.create(comic: self) unless liked?(user)
   end
 
+  def wanted?(user)
+    Want.exist?(user_id: user, comic_id: self.id)
+  end
 
-
+  def wanted_by(user)
+    user.wants.create(comic: self) unless wanted?(user)
+  end
 
   scope :sum_price, -> { sum(:price) }
 end

@@ -33,7 +33,11 @@
     <footer>
         <ol>
           <li><%= link_to 'ホーム', root_path, class: "footer_item" %></li>
-          <li><%= link_to '買うかもリスト', my_likes_path, class: "footer_item" %></li>
+          <% if user_signed_in? %>
+            <li><%= link_to 'マイページ', user_path(current_user), class: "footer_item" %></li>
+          <% else %>
+            <li><%= link_to 'マイページ', new_user_session_path, class: "footer_item" %></li>
+          <% end %>
           <li><%= link_to '出品する', new_comic_path, class: "footer_item" %></li>
           <li><%= link_to '検索する', search_comics_path, class: "footer_item" %></li>
           <li><%= link_to 'ランキング', rank_comics_path, class: "footer_item" %></li>
