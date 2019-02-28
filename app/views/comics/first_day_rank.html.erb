@@ -1,9 +1,6 @@
-<div class="ranking_page">
-  <h1>総合ランキング</h1>
-  <div class="ranked_comics">
-    <% @ranked_comics.each do |comic| %>
+    <% @first_day_ranked_comics.each do |comic| %>
       <div class="ranked_comic">
-        <% case @ranked_comics.index(comic) %>
+        <% case @first_day_ranked_comics.index(comic) %>
           <% when 0 %>
             <%= image_tag 'gold_crown.png',class: :gold_crown %>
           <% when 1 %>
@@ -22,13 +19,3 @@
         <% end %>
       </div>
     <% end %>
-  </div>
-</div>
-
-
-
-
-
-
-
-

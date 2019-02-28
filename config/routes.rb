@@ -8,8 +8,11 @@ Rails.application.routes.draw do
     collection do
         get :search
         get :header_search
-        get :rank
         post :confirm
+        get :all_rank
+        get :first_day_rank
+        get :second_day_rank
+        get :third_day_rank
     end
     member do
         post 'like'

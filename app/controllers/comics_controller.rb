@@ -1,13 +1,16 @@
 class ComicsController < ApplicationController
   before_action :set_comic, only: [:show, :edit, :update, :destroy, :release, :nonrelease]
   before_action :authenticate_user!, only: [:show, :new, :edit, :destroy, :like, :unlike]
+<<<<<<< HEAD
   before_action :set_ranked_comics, only: [:index, :rank]
   after_action :redirect_to_show, only: [:like, :unlike, :want, :not_want]
+=======
+
+>>>>>>> 88-divide-ranking-by-days
 
   # GET /comics
   # GET /comics.json
   def index
-    @comic_top_three = @ranked_comics.first(3)
     @comics = Comic.released.order('id DESC').page(params[:page]).per(6)
   end
 
@@ -135,9 +138,24 @@ class ComicsController < ApplicationController
     redirect_to edit_comic_path, notice: 'この作品を非公開にしました'
   end
 
-  def rank
+  def all_rank
+    @ranked_comics = Comic.all_rank_limit
+    @first_day_ranked_comics = Comic.where(day: 1).all_rank_limit
+    @second_day_ranked_comics = Comic.where(day: 2).all_rank_limit
+    @third_day_ranked_comics = Comic.where(day: 3).all_rank_limit
   end
 
+  def first_day_rank
+     @first_day_ranked_comics = Comic.where(day: 1).rank_limit_by_day
+  end
+
+  def second_day_rank
+     @second_day_ranked_comics = Comic.where(day: 2).rank_limit_by_day
+  end
+
+  def third_day_rank
+     @third_day_ranked_comics = Comic.where(day: 3).rank_limit_by_day
+  end
 
 
 
@@ -156,7 +174,6 @@ class ComicsController < ApplicationController
     def redirect_to_show
       redirect_to :action => "show"
     end
-
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comic_params
