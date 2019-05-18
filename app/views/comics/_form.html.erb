@@ -1,6 +1,6 @@
 
 
-<%= form_with(model: comic, local: true, url: confirm_comics_path) do |form| %>
+<%= form_with(model: comic, local: true, method: :post,  url: confirm_comics_path) do |form| %>
   <% if @comic.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(comic.errors.count, "つのエラー") %> があります:</h2>
@@ -12,84 +12,87 @@
     </div>
   <% end %>
 
+<div class="new_comic">
+  <h2>出展作品を登録</h2>
+  <div class="new_form">
+    <div class="form_right">
+      <div class="picform">
+        <div class="front_cover_field">
+          <%= form.file_field :front_cover, id: :comic_front_cover %>
+          <%= form.label :表紙 %>
+          <%= form.hidden_field :front_cover_cache %>
+          <%#= notice_of_choice %>
+        </div>
 
-  <div class="field">
-    <%= form.label :タイトル %>
-    <div class="info_of_required">必須</div>
-    <%= form.text_field :title, id: :comic_title %>
+        <div class="glanced_covers">
+          <div class="second_cover_field">
+            <%= form.file_field :content_first, id: :comic_content_first %>
+            <%= form.label :チラ見せ１ %>
+          </div>
 
+          <div class="third_cover_field">
+            <%= form.file_field :content_second, id: :comic_content_second %>
+            <%= form.label :チラ見せ２ %>
+          </div>
+
+          <div class="fourth_cover_field">
+            <%= form.file_field :content_third, id: :comic_content_third %>
+            <%= form.label :チラ見せ３ %>
+          </div>
+        </div>
+      </div>
+
+      <div class="link_field">
+        <%= form.label :pixivリンクURL %>
+        <%= form.text_field :sns_first, id: :comic_sns_first %>
+      </div>
+
+      <div class="link_field">
+        <%= form.label :twitterリンクURL %>
+        <%= form.text_field :sns_second, id: :comic_sns_second %>
+      </div>
+    </div>
+    <div class="form_left">
+      <div class="field">
+        <%= form.label :タイトル, class: :label_name %>
+        <div class="required">必須</div>
+        <%= form.text_field :title, id: :input_field %>
+      </div>
+
+      <div class="field">
+        <%= form.label :価格, class: :label_name %>
+        <div class="required">必須</div>
+        <%= form.number_field :price, id: :input_field %>
+      </div>
+
+      <div class="field">
+        <%= form.label :出展日, class: :label_name %>
+        <div class="required">必須</div>
+        <%= form.number_field :day, id: :input_field  %>
+      </div>
+
+      <div class="field">
+        <%= form.label :カテゴリー, class: :label_name %>
+        <div class="required">必須</div>
+        <%= form.select :category, Comic.categories.keys.map {|k| [I18n.t("enums.comic.category.#{k}"), k]}, {}, {id: :input_category} %>
+      </div>
+
+      <div class="field">
+        <%= form.label :元ネタ名, class: :label_name %>
+        <div class="required">必須</div>
+        <%= form.text_field :origin_title, id: :input_field  %>
+      </div>
+
+      <div class="field">
+        <%= form.label :作品説明 %>
+        <%= form.text_area :introduction, id: :input_introduction  %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :表紙 %>
-    <div class="info_of_required">必須</div>
-    <%= form.file_field :front_cover, id: :comic_front_cover %>
-    <%= form.hidden_field :front_cover_cache %>
-    <%= notice_of_choice %>
-    <%= image_tag @comic.front_cover if @comic.front_cover? %>
+  <div class="form_action_field">
+    <%= form.submit "上記の内容で出展する", class: :form_action %>
   </div>
-
-  <div class="field">
-    <%= form.label :価格 %>
-    <div class="info_of_required">必須</div>
-    <%= form.number_field :price, id: :comic_price %>
-  </div>
-
-  <div class="field">
-    <%= form.label :pixivリンクURL %>
-    <%= form.text_field :sns_first, id: :comic_sns_first %>
-  </div>
-
-  <div class="field">
-    <%= form.label :twitterリンクURL %>
-    <%= form.text_field :sns_second, id: :comic_sns_second %>
-  </div>
-
-  <div class="field">
-    <%= form.label :作品説明 %>
-    <%= form.text_area :introduction, id: :comic_introduction %>
-  </div>
-
-  <div class="field">
-    <%= form.label :チラ見せ１ %>
-    <%= form.file_field :content_first, id: :comic_content_first %>
-  </div>
-
-  <div class="field">
-    <%= form.label :チラ見せ２ %>
-    <%= form.file_field :content_second, id: :comic_content_second %>
-  </div>
-
-  <div class="field">
-    <%= form.label :チラ見せ３ %>
-    <%= form.file_field :content_third, id: :comic_content_third %>
-  </div>
-
-  <div class="field">
-    <%= form.label :チラ見せ４ %>
-    <%= form.file_field :content_fourth, id: :comic_content_fourth %>
-  </div>
-
-  <div class="field">
-    <%= form.label :カテゴリー %>
-    <div class="info_of_required">必須</div>
-    <%= form.select :category, Comic.categories.keys.map {|k| [I18n.t("enums.comic.category.#{k}"), k]}, id: :comic_type %>
-  </div>
-
-  <div class="field">
-    <%= form.label :出展日 %>
-    <div class="info_of_required">必須</div>
-    <%= form.number_field :day, id: :comic_day %>
-  </div>
-
-  <div class="field">
-    <%= form.label :元ネタ名 %>
-    <div class="info_of_required">必須</div>
-    <%= form.text_field :origin_title, id: :comic_origin_title %>
-  </div>
-
-<div class="form_action_field">
-  <%= form.submit "上の内容で出展する", class: :form_action %>
 </div>
 
 <% end %>

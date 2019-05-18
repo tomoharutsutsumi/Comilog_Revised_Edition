@@ -3,15 +3,14 @@
     // You can use Sass (SCSS) here: http://sass-lang.com/
     //index.html.erb//
     h1 {
-        width: 900px;
         height: 30px;
         font-size: 32px;
         padding-top: 7px;
         padding-left: 30px;
         margin-left: 15px;
         font-family: "Lucida Grande", "segoe UI", "ヒラギノ角ゴ Std", "Hiragino Maru Gothic ProN", Meiryo, Arial, sans-serif;
-        border-bottom: solid 7px;
-        border-color: #fd6458;
+        border-bottom: solid 3px;
+        border-color: #FFAAFF;
     }
 
     .index_gold_crown {
@@ -70,127 +69,132 @@
 
 
     #new_comics {
-        display: block;
-        margin: 0 auto;
-    }
-
-    .new_comic {
+      padding-top:10px;
+      .new_comic {
         width: 1000px;
+        margin: auto;
+        .one_comic {
+          display: inline-block;
+          margin-right: 30px;
+          margin-bottom: 30px;
+          .comic_title{
+            text-align:center;
+            font-size: 15px;
+            margin: 10px 0px;
+          }
+          .marks {
+            text-align: center;
+            .comic_want {
+              display: inline-block;
+              position: relative;
+              left: -10px;
+              font-size: 15px;
+            }
+            .comic_like {
+              display: inline-block;
+              position: relative;
+              right: -10px;
+              font-size: 15px;
+            }
+          }
+        }
+      }
     }
 
-    .new_comic img {
-        margin-top: 10px;
-        margin-left: 36px;
-    }
 
     //index.html.erb end //
     //new.html.erb//
-    .my_posted_comics {
-        text-align: center;
-        margin-bottom: 50px;
-        .my_posted_comics_info {
-            display: inline;
-        }
-    }
-
-
-    .my_posted_comics_left {
-        display: inline;
-        float: left;
-        margin-left: 70px;
-        text-align: center;
-    }
-
-    .my_posted_comics_right {
-        width: 800px;
-        padding-top: 39px;
-    }
-
-    .my_posted_comics img {}
-
-    .new_comics_info {
-        margin-top: 7px;
-        margin-left: 69px;
-        text-align: center;
-        font-size: 20px;
-    }
-
-    .new_comics_info img {
-        position: relative;
-        width: 30px;
-        top: 5px;
-        left: -62px;
-    }
-
-    .my_posted_comics_info ul {
-        list-style: none;
-    }
-
-    .my_posted_comics_info li {
-        display: block;
-        padding-bottom: 30px;
-        font-size: 18px;
-    }
-
-    .my_posted_comic_edit_button {
-        display: inline-block;
-        margin-top: 30px;
-        width: 300px;
-        height: 70px;
-        background-color: #fd6458;
-        color: white;
-        font-size: 20px;
-    }
-
-    .my_posted_comic_delete_button {
-        display: inline-block;
-        margin-top: 30px;
-        width: 300px;
-        height: 70px;
-        background-color: gray;
-        color: white;
-        font-size: 20px;
-    }
-
-
-
 
     //new.html.erb end//
     //edit.html.erb//
     //edit.html.erb end//
     //_form.html.erb//
-    .field {
-        width: 300px;
-        margin: 0px auto;
-        font-size: 15px;
-    }
-
-
-    .info_of_required {
-        display: inline-block;
-        width: 35px;
-        color: white;
-        background-color: #fd6458;
+  .new_comic{
+    h2 {
         text-align: center;
-        padding: 1px;
-        position: relative;
-        top: -20px;
-        left: 251px;
     }
-
+    .new_form{
+        text-align: center;
+        .form_right{
+            width: 500px;
+            display: inline-block;
+            .picform {
+                width: 600px;
+                .front_cover_field{
+                    vertical-align: top;
+                    width: 200px;
+                    height: 300px;
+                    display: inline-block;
+                }
+                .glanced_covers {
+                    display: inline-block;
+                    width: 200px;
+                    height: 300px;
+                    .second_cover_field {
+                        height: 100px;
+                    }
+                    .third_cover_field {
+                        height: 100px;
+                    }
+                    .fourth_cover_field {
+                        height: 100px;
+                    }
+                }
+            }
+            .link_field {
+                position: relative;
+                left: 100px;
+                text-align: left;
+                margin-top: 10px;
+                #comic_sns_first {
+                    width: 400px;
+                }
+                #comic_sns_second {
+                    width: 400px;
+                }
+            }
+        }
+        .form_left{
+            vertical-align: top;
+            width: 500px;
+            display: inline-block;
+            text-align: left;
+            margin-left: 30px;
+            .field {
+                label {
+                    display: inline-block;
+                }
+                .required {
+                    display: inline-block;
+                }
+                #input_field{
+                    width: 300px;
+                    display: block;
+                }
+                #input_category{
+                    border: black 1px solid;
+                    display: block;
+                }
+                #input_introduction{
+                    height: 120px;
+                    width: 300px;
+                    display: block;
+                }
+            }
+        }
+    }
     .form_action_field {
         text-align: center;
-        margin-top: 40px;
+        .form_action {
+            width: 300px;
+            border: hidden;
+            background-color: #EF8EDC;
+            height: 50px;
+            position: relative;
+            top: 30px;
+        }
     }
-
-    .form_action {
-        width: 300px;
-        height: 70px;
-        background-color: #fd6458;
-        color: white;
-        font-size: 20px;
-    }
-
+  }
 
 
     //_form.html.erb end//
@@ -225,47 +229,98 @@
 
     //liked.html.erb end//
     //search.html.erb//
-    h2 {
-        margin-left: 5px;
-    }
-
-    .search_form {
-        float: left;
-        height: 500px;
-        border: solid 0.1px #d3d3d3;
-        margin-left: 15px;
-        margin-right: 5px;
-        width: 265px;
-
-        .field {
-            margin-top: 20px;
-            margin-left: 28px;
-            font-size: 15px;
-        }
-    }
-
-    .search_result {
-        display: inline-block;
-        text-align: left;
-        width: 600px;
-    }
-
-    .search_result img {
-        width: 30%;
-        margin-left: 15px;
-        margin-top: 5px;
-
-        h3 {
+    .search_page{
+        margin-top: 30px;
+        h2 {
             margin-left: 5px;
         }
+
+        .search_form {
+            height: 300px;
+            border: solid 0.1px #d3d3d3;
+            margin: auto;
+            width: 1000px;
+            position: relative;
+            left: -50px;
+
+            .field {
+                margin-top: 20px;
+                margin-left: 28px;
+                font-size: 15px;
+                text-align: center;
+                width: 900px;
+                .label_name{
+                    display: inline-block;
+                }
+                .input_title {
+                    display: inline-block;
+                    border: 1px black solid;
+                    width: 700px;
+                    height: 30px;
+                    margin-left: 19px;
+                }
+                .input_category {
+                    display: inline-block;
+                    border: 1px black solid;
+                    width: 700px;
+                    height: 30px;
+                    margin-left: 5px;
+                }
+                .input_day {
+                    display: inline-block;
+                    border: 1px black solid;
+                    width: 700px;
+                    height: 30px;
+                    margin-left: 32px;
+                }
+            }
+        }
     }
+
+    .search_result  {
+      padding-top:10px;
+      .searched_comics {
+        width: 1000px;
+        margin: 0 auto;
+        .comic_group{
+            margin: 0 auto;
+            width: 100%;
+            .one_comic {
+              display: inline-block;
+              margin-right: 30px;
+              margin-bottom: 30px;
+              .comic_title{
+                text-align:center;
+                font-size: 15px;
+                margin: 10px 0px;
+              }
+              .marks {
+                text-align: center;
+                .comic_want {
+                  display: inline-block;
+                  position: relative;
+                  left: -10px;
+                  font-size: 15px;
+                }
+                .comic_like {
+                  display: inline-block;
+                  position: relative;
+                  right: -10px;
+                  font-size: 15px;
+                }
+              }
+            }
+        }
+      }
+    }
+
 
     .search_actions {
         position: relative;
-        top: 74px;
-        left: 45px;
-        width: 177px;
-        height: 58px;
+        top: 46px;
+        left: 166px;
+        width: 700px;
+        height: 41px;
         background-color: #fd6458;
         color: white;
         font-size: 20px;
@@ -274,101 +329,354 @@
     //search.html.erb end//
     //show.html.erb//
     //show_upperとshow_lowerは画面のいいね数を境界として、上下で分けている//
-    .show_upper {
-        .frontcover_and_likes_count {
-            margin-left: 10px;
-            margin-right: 32px;
-            float: left;
-            .likes_count {
-                text-align: center;
-                font-size: 27px;
-                .show_likedstar {}
+    .comic_show_box {
+      display: block;
+      text-align: center;
+      padding: 50px;
+      .left_box{
+        display: inline-block;
+        .images {
+          .front_cover {
+            display: inline-block;
+          }
+          .sub_pic {
+            display: inline-block;
+            margin-left: 5px;
+            .first {
+              display: block;
+              img {
+                width: 130px;
+              }
+            }
+            .second {
+              display: block;
+              img {
+                width: 130px;
+              }
+            }
+            .third {
+              display: block;
+              img {
+                width: 130px;
+              }
+            }
+          }
+        }
+        .author {
+          text-align:left;
+          .name{
+            position: relative;
+            left: 10px;
+          }
+        }
+      }
+      .right_box {
+        display: inline-block;
+        vertical-align: top;
+        .right_box_upper {
+          height: 130px;
+          .title{
+            font-size: 20px;
+            margin-bottom: 10px;
+          }
+            .marks {
+              height: 60px;
+              text-align: center;
+                .comic_want {
+                  display: inline-block;
+                  position: relative;
+                  left: -10px;
+                  font-size: 15px;
+                }
+                .comic_like {
+                  display: inline-block;
+                  position: relative;
+                  right: -10px;
+                  font-size: 15px;
+                }
+            }
+            .buttons {
+                height: 100px;
+                width: 300px;
+                .want_button {
+                   width: 130px;
+                   height: 100px;
+                   display: inline-block;
+                   .show_want_button {
+                     display: inline-block;
+                     float: right;
+                     position: relative;
+                     top: 10px;
+                     right: 5px;
+                   }
+                   img {
+                     display: inline-block;
+                     float: left;
+                     position: relative;
+                     bottom: 5px;
+                     left: 20px;
+                   }
+                }
+                .like_button {
+                  width: 130px;
+                  height: 100px;
+                  display: inline-block;
+                   .show_like_button {
+                     display: inline-block;
+                     float: right;
+                     position: relative;
+                     top: 10px;
+                     right: 5px;
+                   }
+                   img {
+                     display: inline-block;
+                     float: left;
+                     position: relative;
+                     bottom: 5px;
+                     left: 5px;
+                   }
+                }
             }
         }
-        .contents_picture img {
-            width: 150px;
-            margin-left: 10px;
+        .right_box_lower {
+            h3 {
+                display: inline-block;
+                position: relative;
+                left: 5px;
+            }
+            .contents {
+                display: inline-block;
+                position: relative;
+                left: 50px;
+                width: 200px;
+            }
+            .price {
+              width: 300px;
+              .contents {
+                left:33px;
+              }
+            }
+            .category {
+              width: 300px;
+              .contents {
+                left: 0px;
+              }
+            }
+            .day {
+              .contents {
+                left: 23px;
+              }
+            }
+            .origin_title {
+              .contents {
+                left: 35px;
+              }
+            }
+            .introduction {
+                h3 {
+                }
+                width: 300px;
+                height: 300px;
+                .contents {
+                  width: 200px;
+                  word-wrap: break-word;
+                  position: relative;
+                  left: 92px;
+                  text-align: left;
+                  vertical-align: text-top;
+                }
+            }
         }
-
-        .introduction {
-            display: inline-block;
-            height: 150px;
-            width: 500px;
-            padding-left: 15px;
-            padding-top: 15px;
-            margin-top: 15px;
-            margin-bottom: 100px;
-            margin-left: 10px;
-            border-color: #fd6458;
-            font-size: 22px;
-        }
-    }
-
-    .buy_or_notbuy_button {
-        display: block;
-        text-align: center;
-    }
-
-
-    .show_lower {
-        font-size: 15px;
-        margin-top: 130px;
-        padding-bottom: 80px;
-    }
-
-
-    .show_lower strong {
-        display: inline-block;
-        width: 250px;
-        margin: 30px;
-    }
-
-    .show_lower p {
-        border: 1px dashed black;
-        font-size: 15px;
-    }
-
-
-    .show_like_button {
-        width: 245px;
-        padding: 30px;
-        background-color: #fd6458;
-        color: white;
-        font-size: 20px;
-        border-radius: 10px;
-    }
-
-    .show_like_button_likedstar {
-        display: inline;
+      }
     }
 
     //show.htmkl.erb end//
-    //rank.html.erb//
-    .ranked_comics {
-        margin-top: -65px;
-        .ranked_comic {
-            display: inline-block;
-            width: 300px;
-            margin: 10px;
-            margin-top: 50px;
-            padding-left: 2px;
-            .ranked_comics_info {
-                display: inline;
-                p {
-                    font-size: 25px;
+    //allrank.html.erb//
+        .ranked_comics {
+          padding: 10px;
+          .ranked_comic {
+                width: 100%;
+                text-align: left;
+                padding-left: 13%;
+                .one_comic {
+                  display: inline-block;
+                  margin-right: 30px;
+                  margin-bottom: 30px;
+                  .crown{
+                    text-align:left;
+                    position: relative;
+                    top: 30px;
+                    left: -20px;
+                  }
+                  .comic_title{
+                    text-align:center;
+                    font-size: 15px;
+                    margin: 10px 0px;
+                  }
+                    .marks {
+                      text-align: center;
+                      .comic_want {
+                        display: inline-block;
+                        position: relative;
+                        left: -10px;
+                        font-size: 15px;
+                       }
+                      .comic_like {
+                        display: inline-block;
+                        position: relative;
+                        right: -10px;
+                        font-size: 15px;
+                      }
+                    }
                 }
-                .rank_likedstar {
-                    width: 30px;
-                    margin-left: 100px;
+          }
+        }
+
+    //allrank.html.erb end //
+    //confirm.html.erb //
+    .confirm_form {
+        text-align:center;
+        .comic_confirm {
+            .left_box {
+                display: inline-block;
+                .covers {
+                    .front_cover_field {
+                        display: inline-block;
+                        img {
+                            height: 489px;
+                        }
+                    }
+                    .glanced_covers {
+                        display: inline-block;
+                        vertical-align: top;
+                        .second_cover_field{
+                            img {
+                                height: 150px;
+                            }
+
+                        }
+                        .third_cover_field{
+                            img {
+                                height: 150px;
+                            }
+                        }
+                        .fourth_cover_field{
+                            img {
+                                height: 150px;
+                            }
+                        }
+                    }
                 }
-                .authormark {
-                    width: 30px;
+                .user_info {
+                    text-align: left;
+                }
+            }
+            .right_box {
+                display: inline-block;
+                vertical-align: top;
+                width: 400px;
+                text-align: left;
+                margin-left: 35px;
+                .field {
+                    height: 50px;
+                    .label_name {
+                        display: inline-block;
+                    }
+                    .title_field{
+                        display: inline-block;
+                        text-align: center;
+                    }
+                    .price_field{
+                        display: inline-block;
+                    }
+                    .introduction_field{
+                        display: inline-block;
+                    }
+                    .category_field{
+                        display: inline-block;
+                    }
+                    .day_field{
+                        display: inline-block;
+                    }
+                    .origin_title_field{
+                        display: inline-block;
+                    }
+                }
+                .text {
+                        text-align: center;
+                    }
+            }
+        }
+        .actions {
+            margin-top: 10px;
+            .submit_action {
+                width: 200px;
+                height: 50px;
+            }
+            .back_action {
+                width: 200px;
+                height: 50px;
+            }
+
+        }
+    }
+    //confirm.html.erb end //
+    //_mypage_list.html.erb//
+    .mypage_list {
+        .title_list {
+            padding: 10px;
+            border-bottom: 5px solid pink;
+            width: 80%;
+            margin: 0 auto;
+            .title {
+                display: inline-block;
+            }
+            .price {
+                display: inline-block;
+                float: right;
+            }
+        }
+        .list {
+            text-align: left;
+            margin: 0 auto;
+            width: 70%;
+            .one_comic {
+                display: inline-block;
+                margin-top: 15px;
+                margin-left: 30px;
+                .title {
+                    text-align: center;
+                }
+                .marks {
+                    text-align: center;
+                    .buy_count {
+                      display: inline-block;
+                      position: relative;
+                      left: -10px;
+                      font-size: 15px;
+                    }
+                    .want_count {
+                      display: inline-block;
+                      position: relative;
+                      right: -10px;
+                      font-size: 15px;
+                    }
+                }
+                .delete_button {
+                    .button {
+                        display: block;
+                        text-align: center;
+                        margin-top: 15px;
+                        padding: 10px;
+                        border: 1px solid pink;
+                        background-color: pink;
+                        text-decoration: none;
+                    }
                 }
             }
         }
     }
-
-    //rank.html.erb end //
+    //_mypage_list.html.erb end//
     @media only screen and (max-width: 750px) {
 
 
@@ -421,14 +729,16 @@
             }
         } //rank.html.erb end //
         //search.html.erb//
-        .search_page h1 {
-            width: 250px;
-            height: 22px;
-            font-size: 22px;
-            margin-left: 10px;
-            padding-left: 10px;
-            border-bottom: solid 2px;
-            border-color: #fd6458;
+        .search_page {
+            h1 {
+                width: 250px;
+                height: 22px;
+                font-size: 22px;
+                margin-left: 10px;
+                padding-left: 10px;
+                border-bottom: solid 2px;
+                border-color: #fd6458;
+            }
         }
 
         .search_form {
@@ -446,14 +756,12 @@
         }
 
         .search_result {
-            display: inline-block;
             text-align: left;
             width: 409px;
             h3 {
                 margin-left: 24px;
             }
         } //search.html.erb end//
-        //responsive.index.html.erb//
         .index_gold_crown {
             width: 40px;
             position: relative;
@@ -508,8 +816,6 @@
             padding-top: 39px;
         }
 
-        .my_posted_comics img {}
-
         .new_comics_info {
             margin-top: 7px;
             margin-left: 69px;
@@ -533,7 +839,6 @@
             padding-bottom: 30px;
             font-size: 18px;
         }
-
 
         .form_action {
             width: 286px;
@@ -682,46 +987,51 @@
             margin: 25px;
             margin-left: 0px;
         } //show.html.erb end//
+
+        //responsive.index.html.erb//
         #new_comics {
-            width: 310px;
             h1 {
-                width: 250px;
+                width: 97%;
                 height: 22px;
-                font-size: 12px;
+                font-size: 17px;
                 margin-left: 0px;
                 padding-left: 10px;
                 border-bottom: solid 2px;
-                border-color: #fd6458;
+                border-color: #FFAAFF;
+            }
+            .new_comic {
+                width: 90%;
+                text-align: center;
+                padding-top: 25px;
+                .one_comic{
+                    width: 165px;
+                    margin-right: 0px;
+                    img {
+                      width: 160px;
+                      margin-top: 0px;
+                      margin-left: 2px;
+                    }
+                    .marks{
+                      .comic_want{
+                        img {
+                          width: 20px;
+                        }
+                      }
+                      .comic_like{
+                        img {
+                          width: 20px;
+                        }
+                      }
+                    }
+                }
             }
         }
 
-        .new_comic {
-            width: 330px;
-        }
+        
 
-        .new_comic img {
-            width: 87px;
-            margin-top: 0px;
-            margin-left: 2px;
-        }
+        
 
 
-        .index_ranked_comics_info {
-            .index_likes_count {
-                display: block;
-                font-size: 15px;
-            }
-            .index_username {
-                display: block;
-                font-size: 15px;
-            }
-            .index_rank_likedstar {
-                margin-left: 12px;
-                width: 16px;
-            }
-            .index_authormark {
-                margin-left: 12px;
-                width: 16px;
-            }
-        } //responsive.index.html.erb end//
+        
+         //responsive.index.html.erb end//
     }

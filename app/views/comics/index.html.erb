@@ -1,11 +1,25 @@
-<p id="notice"><%= notice %></p>
-
 <div id="new_comics">
+<p id="notice"><%= notice %></p>
  <h1>新着作品</h1>
   <div class="new_comic">
     <% @comics.each do |comic| %>
         <%= link_to comic_path(comic) do %>
-         <%= image_tag comic.front_cover.to_s %>
+          <div class="one_comic">
+            <%= image_tag comic.front_cover.to_s %>
+            <div class= "comic_title">
+              <%= comic.title %>
+            </div>
+            <div class="marks">
+              <div class="comic_want">
+                  <%= image_tag 'bag.png' %>
+                  <%= comic.wants.count %>
+              </div>
+              <div class="comic_like">
+                  <%= image_tag 'tag.png' %>
+                  <%= comic.likes.count %>
+              </div>
+            </div>
+          </div>
         <% end %>
     <% end %>
   </div>

@@ -1,98 +1,145 @@
-<div class="ranking_page">
-  <h1>総合ランキング</h1>
+<div class="ranking">
   <div class="ranked_comics">
-    <% @ranked_comics.each do |comic| %>
-      <div class="ranked_comic">
-        <% case @ranked_comics.index(comic) %>
-          <% when 0 %>
-            <%= image_tag 'gold_crown.png',class: :gold_crown %>
-          <% when 1 %>
-            <%= image_tag 'silver_crown.png', class: :silver_crown %>
-          <% when 2 %>
-            <%= image_tag 'copper_crown.png', class: :copper_crown %>
-        <% end %>
+    <h1>総合ランキング</h1>
+    <div class="ranked_comic">
+      <% @ranked_comics.each do |comic| %>
         <%= link_to comic_path(comic) do %>
-          <%= image_tag comic.front_cover.to_s %>
-          <div class="ranked_comics_info">
-          <p><%= image_tag 'likedstar.png', class: :rank_likedstar %>
-             <%= comic.likes_count %></p>
-          <p><%= image_tag 'authormark.png', class: :authormark %>
-             <%= comic.user.username %></p>
+          <div class="one_comic">
+             <div class="crown">
+              <% case @ranked_comics.index(comic) %>
+                 <% when 0 %>
+                   <%= image_tag 'gold_crown.png',class: :gold_crown %>
+                 <% when 1 %>
+                   <%= image_tag 'silver_crown.png', class: :silver_crown %>
+                 <% when 2 %>
+                   <%= image_tag 'copper_crown.png', class: :copper_crown %>
+               <% end %>
+             </div>
+             <%= image_tag comic.front_cover.to_s %>
+             <div class= "comic_title">
+               <%= comic.title %>
+             </div>
+             <div class="marks">
+               <div class="comic_want">
+                 <%= image_tag 'bag.png' %>
+                 <%= comic.wants.count %>
+               </div>
+               <div class="comic_like">
+                 <%= image_tag 'tag.png' %>
+                 <%= comic.likes.count %>
+              </div>
+             </div>
           </div>
         <% end %>
-      </div>
     <% end %>
+    </div>
+  </div>
+  <div class="ranked_comics">
+    <h1>１日目ランキング</h1>
+    <div class="ranked_comic">
+      <% @first_day_ranked_comics.each do |comic| %>
+        <%= link_to comic_path(comic) do %>
+          <div class="one_comic">
+            <div class="crown">
+              <% case first_day_ranked_comics.index(comic) %>
+                 <% when 0 %>
+                   <%= image_tag 'gold_crown.png',class: :gold_crown %>
+                 <% when 1 %>
+                   <%= image_tag 'silver_crown.png', class: :silver_crown %>
+                 <% when 2 %>
+                   <%= image_tag 'copper_crown.png', class: :copper_crown %>
+               <% end %>
+             </div>
+             <%= image_tag comic.front_cover.to_s %>
+             <div class= "comic_title">
+               <%= comic.title %>
+             </div>
+             <div class="marks">
+               <div class="comic_want">
+                 <%= image_tag 'bag.png' %>
+                 <%= comic.wants.count %>
+               </div>
+               <div class="comic_like">
+                 <%= image_tag 'tag.png' %>
+                 <%= comic.likes.count %>
+              </div>
+             </div>
+          </div>
+        <% end %>
+    <% end %>
+    </div>
+  </div>
+  <div class="ranked_comics">
+    <h1>２日目ランキング</h1>
+    <div class="ranked_comic">
+      <% @second_day_ranked_comics.each do |comic| %>
+        <%= link_to comic_path(comic) do %>
+          <div class="one_comic">
+            <div class="crown">
+              <% case @second_day_ranked_comics.index(comic) %>
+                 <% when 0 %>
+                   <%= image_tag 'gold_crown.png',class: :gold_crown %>
+                 <% when 1 %>
+                   <%= image_tag 'silver_crown.png', class: :silver_crown %>
+                 <% when 2 %>
+                   <%= image_tag 'copper_crown.png', class: :copper_crown %>
+               <% end %>
+             </div>
+             <%= image_tag comic.front_cover.to_s %>
+             <div class= "comic_title">
+               <%= comic.title %>
+             </div>
+             <div class="marks">
+               <div class="comic_want">
+                 <%= image_tag 'bag.png' %>
+                 <%= comic.wants.count %>
+               </div>
+               <div class="comic_like">
+                 <%= image_tag 'tag.png' %>
+                 <%= comic.likes.count %>
+              </div>
+             </div>
+          </div>
+        <% end %>
+    <% end %>
+    </div>
+  </div>
+  <div class="ranked_comics">
+    <h1>３日目ランキング</h1>
+    <div class="ranked_comic">
+      <% @third_day_ranked_comics.each do |comic| %>
+        <%= link_to comic_path(comic) do %>
+          <div class="one_comic">
+            <div class="crown">
+              <% case @third_day_ranked_comics.index(comic) %>
+                 <% when 0 %>
+                   <%= image_tag 'gold_crown.png',class: :gold_crown %>
+                 <% when 1 %>
+                   <%= image_tag 'silver_crown.png', class: :silver_crown %>
+                 <% when 2 %>
+                   <%= image_tag 'copper_crown.png', class: :copper_crown %>
+               <% end %>
+             </div>
+             <%= image_tag comic.front_cover.to_s %>
+             <div class= "comic_title">
+               <%= comic.title %>
+             </div>
+             <div class="marks">
+               <div class="comic_want">
+                 <%= image_tag 'bag.png' %>
+                 <%= comic.wants.count %>
+               </div>
+               <div class="comic_like">
+                 <%= image_tag 'tag.png' %>
+                 <%= comic.likes.count %>
+              </div>
+             </div>
+          </div>
+        <% end %>
+    <% end %>
+    </div>
   </div>
 </div>
-
-    <% @first_day_ranked_comics.each do |comic| %>
-      <div class="ranked_comic">
-        <% case @first_day_ranked_comics.index(comic) %>
-          <% when 0 %>
-            <%= image_tag 'gold_crown.png',class: :gold_crown %>
-          <% when 1 %>
-            <%= image_tag 'silver_crown.png', class: :silver_crown %>
-          <% when 2 %>
-            <%= image_tag 'copper_crown.png', class: :copper_crown %>
-        <% end %>
-        <%= link_to comic_path(comic) do %>
-          <%= image_tag comic.front_cover.to_s %>
-          <div class="ranked_comics_info">
-          <p><%= image_tag 'likedstar.png', class: :rank_likedstar %>
-             <%= comic.likes_count %></p>
-          <p><%= image_tag 'authormark.png', class: :authormark %>
-             <%= comic.user.username %></p>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-    <%= link_to "1日目ランキング一覧", first_day_rank_comics_path %>
-
-    <% @second_day_ranked_comics.each do |comic| %>
-      <div class="ranked_comic">
-        <% case @second_day_ranked_comics.index(comic) %>
-          <% when 0 %>
-            <%= image_tag 'gold_crown.png',class: :gold_crown %>
-          <% when 1 %>
-            <%= image_tag 'silver_crown.png', class: :silver_crown %>
-          <% when 2 %>
-            <%= image_tag 'copper_crown.png', class: :copper_crown %>
-        <% end %>
-        <%= link_to comic_path(comic) do %>
-          <%= image_tag comic.front_cover.to_s %>
-          <div class="ranked_comics_info">
-          <p><%= image_tag 'likedstar.png', class: :rank_likedstar %>
-             <%= comic.likes_count %></p>
-          <p><%= image_tag 'authormark.png', class: :authormark %>
-             <%= comic.user.username %></p>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-    <%= link_to "2日目ランキング一覧", second_day_rank_comics_path %>
-
-    <% @third_day_ranked_comics.each do |comic| %>
-      <div class="ranked_comic">
-        <% case @third_day_ranked_comics.index(comic) %>
-          <% when 0 %>
-            <%= image_tag 'gold_crown.png',class: :gold_crown %>
-          <% when 1 %>
-            <%= image_tag 'silver_crown.png', class: :silver_crown %>
-          <% when 2 %>
-            <%= image_tag 'copper_crown.png', class: :copper_crown %>
-        <% end %>
-        <%= link_to comic_path(comic) do %>
-          <%= image_tag comic.front_cover.to_s %>
-          <div class="ranked_comics_info">
-          <p><%= image_tag 'likedstar.png', class: :rank_likedstar %>
-             <%= comic.likes_count %></p>
-          <p><%= image_tag 'authormark.png', class: :authormark %>
-             <%= comic.user.username %></p>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-    <%= link_to "3日目ランキング一覧", third_day_rank_comics_path %>
 
 
 

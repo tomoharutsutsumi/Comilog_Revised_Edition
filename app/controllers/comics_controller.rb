@@ -2,7 +2,7 @@ class ComicsController < ApplicationController
   before_action :set_comic, only: [:show, :edit, :update, :destroy, :release, :nonrelease]
   before_action :authenticate_user!, only: [:show, :new, :edit, :destroy, :like, :unlike]
   before_action :set_ranked_comics, only: [:index, :rank]
-  after_action :redirect_to_show, only: [:like, :unlike, :want, :not_want]
+  #after_action :redirect_to_show, only: [:like, :unlike, :want, :not_want]
 
   # GET /comics
   # GET /comics.json
@@ -18,13 +18,11 @@ class ComicsController < ApplicationController
   # GET /comics/new
   def new
     @comic = Comic.new
-    user = User.find_by(id: current_user.id)
-    @my_posted_comics = user.comics
-    @authorname = user.authorname
   end
 
   def confirm
     @comic = Comic.new(comic_params)
+    #コンテンツFirstがnil
     @comic.user_id = current_user.id
     if @comic.valid?
       flash.now[:notice_of_confirm] = "こちらで登録しますがよろしいですか？"
@@ -83,7 +81,7 @@ class ComicsController < ApplicationController
 
   def like
     like = Like.create(comic_id: params[:id], user_id: current_user.id)
-    like.save
+    redirect_to :action => "show"
   end
 
 
@@ -91,12 +89,13 @@ class ComicsController < ApplicationController
     unlike = Like.find_by(comic_id: params[:id], user_id: current_user.id)
     unlike.destroy
     unlike.save
+    redirect_to :action => "show"
   end
 
 
   def want
     want = Want.create(comic_id: params[:id], user_id: current_user.id)
-    want.save
+    redirect_to :action => "show"
   end
 
 
@@ -104,6 +103,7 @@ class ComicsController < ApplicationController
     not_want = Want.find_by(comic_id: params[:id], user_id: current_user.id)
     not_want.destroy
     not_want.save
+    redirect_to :action => "show"
   end
 
 
@@ -154,9 +154,6 @@ class ComicsController < ApplicationController
   end
 
 
-
-
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_comic
@@ -168,7 +165,7 @@ class ComicsController < ApplicationController
     end
 
     def redirect_to_show
-      redirect_to :action => "show"
+      redirect_to :action => "show" and return
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

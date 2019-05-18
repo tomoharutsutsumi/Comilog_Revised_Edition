@@ -1,282 +1,508 @@
 //new.html.erb devise/sessions//
-
-h2.devise {
-  text-align: center;
-  margin-bottom: 100px;
+.devise_session_upper {
+  .session_pic {
+    height: 300px;
+    padding-left: 40px;
+    text-align: center;
+    img {
+      position: relative;
+      top: 50px;
+    }
+  }
+  .devise_session_sign_in{
+    height: 90px;
+      .buttons {
+        text-align: center;
+        padding: 20px;
+        background-color: #eeeeee;
+        .people_button {
+          width: 300px;
+          display: inline-block;
+          background-color: #EF8EDC;
+          margin-right: 20px;
+          box-shadow: 0px 2px 4px gray;
+          .new_registration_button {
+            display: inline-block;
+            float: right;
+            position: relative;
+            top: 15px;
+            right: 60px;
+            text-decoration: none;
+            color: white;
+          }
+          .people_icon {
+            display: inline-block;
+            float: left;
+            position: relative;
+            bottom: 11px;
+            left: 60px;
+            color: white;
+          }
+        }
+        .twitter_button {
+          display: inline-block;
+          width: 300px;
+          height: 50px;
+          background-color: #38a0ef;
+          color: white;
+          box-shadow: 0px 2px 4px gray;
+          .devise_twitter_button_new {
+            display: inline-block;
+            float: right;
+            position: relative;
+            top: 14px;
+            right: 60px;
+            text-decoration: none;
+            color: white;
+          }
+          .twitter_icon_sign_in {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            float: left;
+            position: relative;
+            bottom: 15px;
+            left: 60px;
+          }
+        }
+      }
+  }
+}
+.devise_session_lower {
+  height: 420px;
+  background-color: #dddddd;
+  .session_login{
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 20px #dddddd solid;
+    background-color: #eeeeee;
+    text-align:center;
+    .devise_login_str {
+      text-align: center;
+    }
+    .twitter_button {
+      display: inline-block;
+      width: 300px;
+      height: 45px;
+      margin: 10px 0px;
+      background-color: #38a0ef;
+      box-shadow: 0px 2px 4px gray;
+        .devise_twitter_button_log_in {
+            display: inline-block;
+            float: right;
+            position: relative;
+            top: 14px;
+            right: 53px;
+            text-decoration: none;
+            color: white;
+        }
+        .twitter_icon_log_in {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            float: left;
+            position: relative;
+            bottom: 15px;
+            left: 60px;
+        }
+    }
+    .name_login_box {
+      position: relative;
+      margin: 0 auto;
+      .login_email_field {
+        text-align: center;
+        margin-top: 5px;
+        #user_username{
+          width: 300px;
+          height: 23px;
+          text-align: center;
+        }
+      }
+      .login_pass_field {
+        text-align: center;
+        margin: 10px 0px;
+        #user_password{
+          width: 300px;
+          height: 23px;
+          text-align: center;
+        }
+      }
+      .login_button {
+        display: block;
+        margin: 0 auto;
+        height: 30px;
+        width: 300px;
+        background-color: #EF8EDC;
+        color: white;
+        border: #EF8EDC;
+        box-shadow: 0px 2px 4px gray;
+      }
+    }
+  }
 }
 
-.devise_session_sign_in {
-  margin-top:150px;
-  text-align: center;
-}
 
 
-.people_button {
-  display: inline-block;
-  margin-bottom: 80px;
-  padding: 20px 13px 5px 47px;
-  border: thin solid #808080;
-  background-color:#808080;
-}
-
-.twitter_button {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.devise_twitter_button_new {
-  display:inline;
-  margin-top: 39px;
-  padding: 20px 60px 20px 90px;
-  border: thin solid #06a7e4 ;
-  background-color: #06a7e4 ;
-  color:white;
-  font-weight:bold;
-  font-size:20px;
-  text-align:center;
-}
-
-.twitter_icon_sign_in {
-  display: inline;
-  margin-right: 250px;
-  width: 50px;
-  margin-top: -50px;
-}
-
-.new_registration_button {
-  display:inline;
-  font-weight:bold;
-  font-size:20px;
-  color: white;
-}
-
-.devise_session_log_in {
-  margin-top: 150px;
-  padding-bottom: 100px;
-}
-
-.people_icon {
-  display: inline-block;
-  width: 46px;
-  margin-right: 267px;
-  margin-top: -36px;
-}
-
-.devise_twitter_button_log_in {
-  display:inline;
-  margin-top: 39px;
-  padding: 20px 60px 20px 90px;
-  border: thin solid #06a7e4 ;
-  background-color: #06a7e4 ;
-  color:white;
-  font-weight:bold;
-  font-size:20px;
-  text-align:center;
-}
-
-.twitter_icon_log_in {
-  display: inline-block;
-  width: 50px;
-  margin-right: 270px;
-  margin-top: -36px;
-}
-
-.name_login_box {
-  text-align: center;
-}
-
-.login_email_field {
-  display: inline;
-  width: 100px;
-  margin-top: 45px;
-}
-
-.login_pass_field {
-  display: inline;
-  width: 100px;
-  margin-top: 45px;
-}
-
-.login_button {
-  text-align: center;
-  font-size:20px;
-  color:white;
-  font-weight:bold;
-  display: block;
-  margin: 0 auto;
-  margin-top: 30px;
-  padding: 25px 70px 25px 70px;
-  background: #fd6458;
-}
 
 //new.html.erb devise/sessions end//
 
 
 //new.html.erb devise/registrations//
-.devise_registration_sign_up h2 {
-  left: 352px;
-}
-
 .devise_registration_sign_up {
-  padding-bottom: 100px;
+  .devise_registration_sign_up_box{
+    text-align: center;
+    background-color: #D3D3D3;
+    padding: 20px 0px;
+    .field{
+      margin: 25px 0px;
+      #user_username{
+        text-align: center;
+        width: 200px;
+        height: 20px;
+      }
+      #user_password{
+        text-align: center;
+        width: 200px;
+        height: 20px;
+      }
+      #user_password_confirmation {
+        text-align: center;
+        width: 200px;
+        height: 20px;
+      }
+    }
+    .sign_up_button {
+      display: block;
+      margin: 0 auto;
+      margin-top: 50px;
+      font-size:15px;
+      color:white;
+      width: 370px;
+      height: 50px;
+      background: #EF8EDC;
+      border: #EF8EDC;
+      box-shadow: 0px 2px 4px gray;
+    }
+  }
 }
 
 
-.sign_up_button {
-  display: block;
-  margin: 0 auto;
-  margin-top: 50px;
-  font-size:20px;
-  color:white;
-  font-weight:bold;
-  width: 370px;
-  height: 70px;
-  background: #fd6458;
-}
+
+
 
 //new.html.erb devise/registrations end//
+
+//show.html.erb//
+.comic_user_list{
+  .profile {
+    text-align: center;
+    padding-top: 10px;
+  }
+  .buy_list {
+    width: 1000px;
+    margin: 0 auto;
+    .buy_title {
+      border-bottom: 1px #EF8EDC solid;
+      img {
+       display: inline-block;
+      }
+      h2 {
+       display: inline-block;
+      }
+    }
+    .comics_to_buy {
+      display: inline-block;
+      margin: 22px;
+      .title {
+        text-align: center;
+      }
+      .marks {
+        text-align: center;
+        .buy_count {
+          display: inline-block;
+        }
+        .want_count {
+          display: inline-block;
+        }
+      }
+    }
+    .link {
+      text-align: right;
+    }
+  }
+  .want_list {
+    width: 1000px;
+    margin: 0 auto;
+    .want_title {
+      border-bottom: 1px #EF8EDC solid;
+      img {
+       display: inline-block;
+      }
+      h2 {
+       display: inline-block;
+      }
+    }
+    .comics_to_want {
+      display: inline-block;
+      margin: 22px;
+      .title {
+        text-align: center;
+      }
+      .marks {
+        text-align: center;
+        .buy_count {
+          display: inline-block;
+        }
+        .want_count {
+          display: inline-block;
+        }
+      }
+    }
+    .link {
+      text-align: right;
+    }
+  }
+}
+
+//show.html.erb end//
+
+//my_posted_comics.html.erb//
+
+.my_posted_comics_page{
+  .upper_box{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    .move_to_post_button {
+      display: block;
+      margin: 0 auto ;
+      position: relative;
+      top: 60px;
+      background-color: #EF8EDC;
+      text-decoration: none;
+      padding: 20px;
+      width: 300px;
+    }
+  }
+  .page_title {
+    text-align: center;
+    font-size: 15px;
+  }
+  .list {
+          text-align: left;
+          margin: 0 auto;
+          width: 70%;
+          .my_posted_comic {
+              display: inline-block;
+              margin-top: 15px;
+              margin-left: 30px;
+              .title {
+                  text-align: center;
+              }
+              .marks {
+                  text-align: center;
+                  .buy_count {
+                    display: inline-block;
+                    position: relative;
+                    left: -10px;
+                    font-size: 15px;
+                  }
+                  .want_count {
+                    display: inline-block;
+                    position: relative;
+                    right: -10px;
+                    font-size: 15px;
+                  }
+              }
+              .buttons {
+                .button_to {
+                  display: inline-block;
+                  margin-left: 15px;
+                  .edit_button {
+                      width: 120px;
+                      text-align: center;
+                      margin-top: 15px;
+                      padding: 10px;
+                      border: 1px solid #EF8EDC;
+                      background-color: #EF8EDC;
+                      text-decoration: none;
+                  }
+                  .delete_button {
+                      width: 120px;
+                      text-align: center;
+                      margin-top: 15px;
+                      padding: 10px;
+                      border: 1px solid #EF8EDC;
+                      background-color: #EF8EDC;
+                      text-decoration: none;
+                  }
+                }
+              }
+          }
+        }
+}
+
+
+//my_posted_comics.html.erb end//
 
 
 @media only screen and (max-width: 750px) {
-
-h2.devise {
-  text-align: center;
-  margin-bottom: 100px;
-}
-
-.devise_session_sign_in {
-  margin-top:150px;
-  width: 300px;
-  text-align: center;
-}
-
-
-.twitter_button {
-  text-align: center;
-  margin-bottom: 45px;
-  background-color: #06a7e4;
-}
-
-.devise_twitter_button_new {
-  display:inline-block;
-  padding: 0px 60px 0px 90px;
-  margin-top: 21px;
-  border: thin solid #06a7e4;
-  background-color:#06a7e4;
-  font-weight:bold;
-  font-size: 13px;
-  color: white;
-}
-
-.twitter_icon_sign_in {
-  display: inline-block;
-  width: 50px;
-  margin-right: 219px;
-  margin-top: -36px;
-}
-
-.people_button {
-  text-align: center;
-  background-color: #808080;
-  padding: 11px 0px 4px 32px;
-}
-
-.people_icon {
-  display: inline-block;
-  width: 46px;
-  margin-right: 219px;
-  margin-top: -36px;
-}
-
-.new_registration_button {
-  display:inline-block;
-  padding: 7px 4px 0px 0px;
-  border: thin solid #808080;
-  background-color: #808080;
-  font-weight:bold;
-  font-size: 15px;
-  color: white;
-}
-
-.devise_session_log_in {
-  margin-top: 150px;
-  padding-bottom: 100px;
-}
-
-.devise_twitter_button_log_in {
-  display:inline-block;
-  margin-top: 22px;
-  padding: 0px 60px 0px 90px;
-  border: thin solid #06a7e4 ;
-  background-color: #06a7e4 ;
-  color:white;
-  font-weight:bold;
-  font-size:13px;
-  text-align:center;
-}
-
-.twitter_icon_log_in {
-  display: inline-block;
-  width: 50px;
-  margin-right: 219px;
-  margin-top: -36px;
-}
-
-.name_login_box {
-  text-align: center;
-}
-
-.login_email_field {
-  display: inline;
-  width: 100px;
-  margin-top: 45px;
-}
-
-.login_pass_field {
-  display: inline;
-  width: 100px;
-  margin-top: 45px;
-}
-
-.login_button {
-  text-align: center;
-  font-size:13px;
-  color:white;
-  font-weight:bold;
-  display: block;
-  margin: 0 auto;
-  margin-top: 30px;
-  padding: 25px 70px 25px 70px;
-  background: #fd6458;
-}
-
+  .devise_session_upper{
+    .session_pic{
+      height: 150px;
+      padding: 0px;
+      img{
+        width: 200px;
+      }
+    }
+    .devise_session_sign_in{
+      height: 122px;
+      .buttons{
+        width: auto;
+        height: 96px;
+        .people_button{
+          width: 250px;
+          height: 35px;
+          margin-bottom: 10px;
+          margin-right: 0px;
+          .new_registration_button{
+            top: 9px;
+          }
+          .people_icon{
+            left: 20px;
+            bottom: 17px;
+          }
+        }
+        .twitter_button{
+          width: 250px;
+          height: 35px;
+          .devise_twitter_button_new{
+            top: 9px;
+          }
+          .twitter_icon_sign_in{
+            width: 30px;
+            height: 30px;
+            left: 20px;
+          }
+        }
+      }
+    }
+  }
+  .devise_session_lower{
+    height: 370px;
+    background: #eeeeee;
+    .session_login{
+      width: 74%;
+      margin: 0px;
+      border: #dddddd 29px solid;
+      .name_login_box{
+        .login_email_field{
+          #user_username{
+            width: 243px;
+          }
+        }
+        .login_pass_field{
+          #user_password{
+            width: 243px;
+          }
+        }
+        .login_button {
+          width: 243px;
+        }
+      }
+      .twitter_button{
+        width: 243px;
+        .twitter_icon_log_in {
+          width: 30px;
+          height: 30px;
+          bottom: 10px;
+          left: 10px;
+        }
+      }
+    }
+  }
 //new.html.erb devise/sessions end//
 
 
 //new.html.erb devise/registrations//
-.devise_registration_sign_up h2 {
-  left: 352px;
-}
-
-.devise_registration_sign_up {
-  padding-bottom: 100px;
-}
-
-
-.sign_up_button {
-  display: block;
-  margin: 0 auto;
-  margin-top: 50px;
-  font-size:20px;
-  color:white;
-  font-weight:bold;
-  width: 370px;
-  height: 70px;
-  background: #fd6458;
-}
+  .devise_registration_sign_up{
+    .devise_registration_sign_up_box{
+      width: 100%;
+      .field{
+        
+      }
+      .sign_up_button{
+        width: 230px;
+        height: 40px;
+      }
+    }
+  }
 
 //new.html.erb devise/registrations end//
 
+//show.html.erb //
+.comic_user_list {
+  padding-top: 70px;
+  padding-bottom: 50px;
+  .buy_list {
+    width: 100%;
+    .buy_title{
+      padding-left: 10px;
+      img {
+        width: 21px;
+        position: relative;
+        top: 3px;
+      }
+      .price {
+        display: inline-block;
+        font-size: 16px;
+        padding-left: 5px;
+      }
+      .comics_to_buy {
+        margin: 0px 0px 0px 28px;
+        img {
+          width: 141px;
+        }
+        .marks {
+          img{
+            width: 30px;
+          }
+        }
+      }
+    }
+  }
+  .want_list {
+    width: 100%;
+    .want_title{
+      padding-left: 10px;
+      img {
+        width: 21px;
+        position: relative;
+        top: 3px;
+      }
+      .price {
+        display: inline-block;
+        font-size: 16px;
+        padding-left: 5px;
+      }
+    }
+    .comics_to_want {
+      margin: 0px 0px 0px 28px;
+      img {
+        width: 141px;
+      }
+      .marks {
+        img{
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+
+
+//show.html.erb end //
 
 
 }

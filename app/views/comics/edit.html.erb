@@ -6,10 +6,3 @@
 <%= link_to 'Back', root_path %>
 
 
-<% if @comic.released? %>
-  <%= link_to '非公開にする', nonrelease_comic_path(@comic), method: :patch %>
-<% else %>
-  <%= link_to '公開する', release_comic_path(@comic), method: :patch %>
-<% end %>
-
-

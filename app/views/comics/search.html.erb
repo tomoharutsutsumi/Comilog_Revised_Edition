@@ -1,51 +1,56 @@
 
 
 <div class="search_page">
-  <h1>検索する</h1>
   <div class="search_form">
-  <h2>検索項目</h2>
     <%= form_tag(search_comics_path, method: :get) do  %>
       <div class="field">
-        <%= label_tag :タイトル %>
-        <%= text_field_tag :title %>
+        <div class="label_name"><%= label_tag :タイトル %></div>
+        <%= text_field_tag :title, "" ,class: :input_title %>
       </div>
 
       <div class="field">
-        <%= label_tag :カテゴリー %>
-        <%= text_field_tag :category %>
+        <div class="label_name"><%= label_tag :カテゴリー %></div>
+        <%= text_field_tag :category, "" ,class: :input_category%>
       </div>
 
       <div class="field">
-        <%= label_tag :出展日 %>
-        <%= number_field_tag :day %>
-      </div>
-
-      <div class="field">
-        <%= label_tag :元ネタ %>
-        <%= text_field_tag :origin_title %>
-      </div>
-
-      <div class="field">
-        <%= label_tag :年齢対象 %>
-        <%= number_field_tag :agetarget %>
+        <div class="label_name"><%= label_tag :出展日 %></div>
+        <%= number_field_tag :day, "", class: :input_day %>
       </div>
 
         <%= submit_tag :検索する, class: :search_actions %>
     <% end %>
   </div>
-
-
   <div class="search_result">
-    <h3>検索結果</h3>
-      <% if @search_result.blank? %>
-        検索結果はありませんでした
-      <% else %>
-        <% @search_result.each do |comic| %>
-          <%= link_to comic_path(comic) do %>
-            <%= image_tag comic.front_cover.to_s %>
+       <h1>検索結果</h1>
+      <div class="searched_comics">
+        <div class="comic_group">
+        <% if @search_result.blank? %>
+          検索結果はありませんでした
+        <% else %>
+          <% @search_result.each do |comic| %>
+            <%= link_to comic_path(comic) do %>
+            <div class="one_comic">
+              <%= image_tag comic.front_cover.to_s %>
+            <% end %>
+              <div class="comic_title">
+                <%= comic.title %>
+              </div>
+              <div class="marks">
+                <div class="comic_want">
+                  <%= image_tag 'bag.png' %>
+                  <%= comic.wants.count %>
+                </div>
+                <div class="comic_like">
+                  <%= image_tag 'tag.png' %>
+                  <%= comic.likes.count %>
+                </div>
+              </div>
+            </div>
           <% end %>
         <% end %>
-      <% end %>
+      </div>
+    </div>
   </div>
 </div>
 

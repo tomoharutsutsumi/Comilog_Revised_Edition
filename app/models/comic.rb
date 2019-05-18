@@ -31,7 +31,7 @@ class Comic < ApplicationRecord
   end
 
   def wanted?(user)
-    Want.exist?(user_id: user, comic_id: self.id)
+    Want.exists?(user_id: user, comic_id: self.id)
   end
 
   def wanted_by(user)

@@ -5,43 +5,34 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
-  <body>
-    <header>
-      <%= link_to image_tag('comilog.png'), root_path, class: "logo_pic" %>
+  <body class="drawer drawer--right">
+    <header role="banner">
+		  <%= render 'layouts/drawer' %>
+      <%= link_to image_tag('comilog_logo_revised.png'), root_path, class: "logo_pic" %>
       <nav>
         <% if user_signed_in? %>
-          <%= link_to 'プロフィール変更', edit_user_registration_path, method: :get, class: "header_button" %>
-          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "header_button" %>
-           <%= form_tag(header_search_comics_path, method: :get, class: "header_search") do %>
-             <%= text_field_tag :keyword, '', class: "header_search_box", placeholder: "サークル名や著者名"%>
-             <%= image_submit_tag ("glass.png"), class: "search_glass" %>
-           <% end %>
-        <% else %>
-          <%= link_to 'サインアップ', new_user_registration_path, method: :get, class: "header_button" %>
-          <%= link_to 'ログイン', new_user_session_path, method: :get, class: "header_button" %>
+             <%= link_to 'マイページ', user_path(current_user), class: :header_item %>
+             <%= link_to '出品する', my_posted_comics_user_path(current_user), class: :header_item %>
+             <%= link_to 'ランキング', all_rank_comics_path, class: :header_item %>
+             <%= link_to 'ログアウト', destroy_user_session_path, class: :header_item, data: { confirm: "ログアウトしますか?"}, method: :delete %>
+             <%= form_tag(header_search_comics_path, method: :get, class: "header_search") do %>
+               <%= text_field_tag :keyword, '', class: "header_search_box", placeholder: "サークル名か著者名"%>
+               <%= image_submit_tag ("glass.png"), class: "search_glass" %>
+             <% end %>
+				<% else %>
+					<div class="not_login_header">
+            <%= link_to 'ログイン/新規登録', new_user_session_path, class: "not_login_header_item" %>
+					</div>
         <% end %>
       </nav>
     </header>
-    <%# deviseログイン フラッシュメッセージ %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <div class="background">
      <%= yield %>
     </div>
-    <footer>
-        <ol>
-          <li><%= link_to 'ホーム', root_path, class: "footer_item" %></li>
-          <% if user_signed_in? %>
-            <li><%= link_to 'マイページ', user_path(current_user), class: "footer_item" %></li>
-          <% else %>
-            <li><%= link_to 'マイページ', new_user_session_path, class: "footer_item" %></li>
-          <% end %>
-          <li><%= link_to '出品する', new_comic_path, class: "footer_item" %></li>
-          <li><%= link_to '検索する', search_comics_path, class: "footer_item" %></li>
-          <li><%= link_to 'ランキング', all_rank_comics_path, class: "footer_item" %></li>
-        </ol>
-    </footer>
   </body>
 </html>

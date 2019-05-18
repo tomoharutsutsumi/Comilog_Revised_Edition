@@ -55,6 +55,17 @@ class User < ApplicationRecord
     end
   end
 
+  def my_want_comic_price
+    Comic.joins({:wants => :user})
+    .where("wants.user_id" => self.id).sum_price
+  end
+
+  def my_like_comic_price
+    Comic.joins({:likes => :user})
+    .where("likes.user_id" => self.id).sum_price
+  end
+
+
 
   private
 

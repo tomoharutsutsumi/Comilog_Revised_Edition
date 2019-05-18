@@ -1,0 +1,31 @@
+<div class="mypage_list">
+  <div class="title_list">
+    <%= image_tag img %>
+    <div class="title">
+      <%= title %>
+    </div>
+    <div class="price">
+      <%= price %>
+    </div>
+  </div>
+  <div class="list">
+    <% comics.each do |comic| %>
+      <div class="one_comic">
+        <%= link_to comic_path(comic) do %>
+            <%= image_tag comic.front_cover.to_s %>
+        <% end %>
+        <%= comic.title %>
+        <div class="marks">
+            <div class="buy_count">
+              <%= image_tag "bag.png" %>
+              <%= comic.likes.count %>
+            </div>
+            <div class="want_count">
+              <%= image_tag "tag.png" %>
+              <%= comic.wants.count %>
+            </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

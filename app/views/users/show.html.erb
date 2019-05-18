@@ -1,33 +1,78 @@
-マイページ
+<div class="comic_user_list">
+  <div class="profile">
+    <div><%= image_tag "bigface.png" %></div>
+    <div><%= current_user.username %>さん</div>
+  </div>
+  <div class="buy_list">
+    <div class="buy_title">
+      <%= image_tag "bag.png" %>
+      <h2>買いたいリスト</h2>
+      <div class="price">合計金額：<%= @liked_comics_price_sum %>円</div>
+    </div>
+    <% if @liked_comics_top_three.size > 0 %>
+      <% @liked_comics_top_three.each do |my_liked_comic| %>
+        <div class="comics_to_buy">
+          <%= link_to comic_path(my_liked_comic) do %>
+            <%= image_tag my_liked_comic.front_cover.to_s %>
+          <% end %>
+          <div class="title">
+            <%= my_liked_comic.title %>
+          </div>
+          <div class="marks">
+            <div class="buy_count">
+              <%= image_tag "bag.png" %>
+              <%= my_liked_comic.likes.count %>
+            </div>
+            <div class="want_count">
+              <%= image_tag "tag.png" %>
+              <%= my_liked_comic.wants.count %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <div class="link">
+        <%= link_to '買いたいリスト一覧を見る＞＞', my_likes_path %>
+      </div>
+    <% else %>
+      <div class="comics_to_buy">
+        まだ買いたいリストに登録しているコミックはありません
+      </div>
+    <% end %>
+  </div>
 
-
-買いたいリスト
-<% @liked_comics_top_three.each do |my_liked_comic| %>
-  <%= link_to comic_path(my_liked_comic) do %>
-      <%= image_tag my_liked_comic.front_cover.to_s %>
-  <% end %>
-  <ul>
-    <li>タイトル:<%= my_liked_comic.title %></li>
-    <li>出展日:<%= my_liked_comic.day %>日</li>
-    <li>カテゴリ:<%= my_liked_comic.category %></li>
-    <li>価格:<%= my_liked_comic.price %>円</li>
-    <li>商品紹介:<%= my_liked_comic.introduction %></li>
-  </ul>
-<% end %>
-<%= link_to '買いたいリスト', my_likes_path %>
-
-
-欲しいかもリスト
-<% @wanted_comics_top_three.each do |my_wanted_comic| %>
-  <%= link_to comic_path(my_wanted_comic) do %>
-    <%= image_tag my_wanted_comic.front_cover.to_s %>
-  <% end %>
-  <ul>
-    <li>タイトル:<%= my_wanted_comic.title %></li>
-    <li>出展日:<%= my_wanted_comic.day %>日</li>
-    <li>カテゴリ:<%= my_wanted_comic.category %></li>
-    <li>価格:<%= my_wanted_comic.price %>円</li>
-    <li>商品紹介:<%= my_wanted_comic.introduction %></li>
-  </ul>
-<% end %>
-<%= link_to '欲しいものリスト', my_wants_path %>
+  <div class="want_list">
+    <div class="want_title">
+      <%= image_tag "tag.png" %>
+      <h2>欲しいかもリスト</h2>
+      <div class="price">合計金額：<%= @wanted_comics_price_sum %>円</div>
+    </div>
+    <% if @wanted_comics_top_three.size > 0 %>
+      <% @wanted_comics_top_three.each do |my_wanted_comic| %>
+        <div class="comics_to_want">
+          <%= link_to comic_path(my_wanted_comic) do %>
+            <%= image_tag my_wanted_comic.front_cover.to_s %>
+          <% end %>
+          <div class="title">
+            <%= my_wanted_comic.title %>
+          </div>
+          <div class="marks">
+            <div class="buy_count">
+              <%= image_tag "bag.png" %>
+              <%= my_wanted_comic.likes.count %>
+            </div>
+            <div class="want_count">
+              <%= image_tag "tag.png" %>
+              <%= my_wanted_comic.wants.count %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <div class="link">
+        <%= link_to '欲しいかもリスト一覧を見る＞＞', my_wants_path %>
+      </div>
+    <% else %>
+      <div class="comics_to_want">
+        まだ欲しいかもリストに登録しているコミックはまだありません
+      </div>
+    <% end %>
+  </div>

@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { :omniauth_callbacks => "omniauth_callbacks",
     :sessions => "users/sessions" }
   root 'comics#index'
-  resources :users
+  resources :users do
+    member do
+      get :my_posted_comics
+    end
+  end
   resources :comics do
     collection do
         get :search
@@ -18,6 +22,7 @@ Rails.application.routes.draw do
         post 'like'
         post 'unlike'
         post 'want'
+        post 'not_want'
         patch 'release'
         patch 'nonrelease'
     end
