@@ -1,89 +1,118 @@
 <%= flash.now[:notice_of_confirm] %>
-ブラウザバックしないでください
+<div class="confirm_form">
+  <div class="comic_confirm">
+    <div class="left_box">
+      <%= form_for @comic, url: comics_path, html: {method: "post"} do |f| %>
+      <div class="covers">
+        <div class="front_cover_field">
+          <%= f.label :表紙 %>
+          <%= f.hidden_field :front_cover_cache %>
+          <%= image_tag(@comic.front_cover) %>
+        </div>
+        <div class="glanced_covers">
+            <div class="second_cover_field">
+              <%= f.label :チラ見せ１ %>
+              <%= f.hidden_field :content_first %>
+              <%= image_tag(@comic.content_first) %>
+            </div>
 
-<%= form_for @comic, url: comics_path, html: {method: "post"} do |f| %>
-  <div class="field">
-    <%= f.label :タイトル %>
-    <%= f.hidden_field :title%>
-    <%= @comic.title %>
+            <div class="third_cover_field">
+              <%= f.label :チラ見せ２ %>
+              <%= f.hidden_field :content_second %>
+              <%= image_tag(@comic.content_second) %>
+            </div>
+
+            <div class="fourth_cover_field">
+              <%= f.label :チラ見せ３ %>
+              <%= f.hidden_field :content_third %>
+              <%= image_tag(@comic.content_third) %>
+            </div>
+        </div>
+      </div>
+      <div class="user_info">
+        <div class="name_field">
+          <%= @comic.user.username%>
+        </div>
+
+        <div class="link_field">
+          <%= f.label :pixivリンクURL %>
+          <%= f.hidden_field :sns_first %>
+          <%= @comic.sns_first %>
+        </div>
+
+        <div class="link_field">
+          <%= f.label :twitterリンクURL %>
+          <%= f.hidden_field :sns_second %>
+          <%= @comic.sns_second %>
+        </div>
+      </div>
+    </div>
+
+    <div class="right_box">
+      <div class="field text">
+        <%= f.hidden_field :title %>
+        <div class="title_field">
+          <%= @comic.title %>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label_name">
+          <%= f.label :価格 %>
+        </div>
+        <%= f.hidden_field :price %>
+        <div class="price_field">
+          <%= @comic.price %>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label_name">
+          <%= f.label :カテゴリー %>
+        </div>
+        <%= f.hidden_field :category %>
+        <div class="category_field">
+          <%= @comic.category %>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label_name">
+          <%= f.label :出展日 %>
+        </div>
+        <%= f.hidden_field :day %>
+        <div class="day_field">
+          <%= @comic.day %>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label_name">
+          <%= f.label :元ネタ名 %>
+        </div>
+        <%= f.hidden_field :origin_title %>
+        <div class="origin_title_field">
+          <%= @comic.origin_title %>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label_name">
+          <%= f.label :作品説明 %>
+        </div>
+        <%= f.hidden_field :introduction %>
+        <div class="introduction_field">
+          <%= @comic.introduction %>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :表紙 %>
-    <%= f.hidden_field :front_cover_cache %>
-    <%= image_tag(@comic.front_cover) %>
-  </div>
-
-  <div class="field">
-    <%= f.label :価格 %>
-    <%= f.hidden_field :price %>
-    <%= @comic.price %>
-  </div>
-
-  <div class="field">
-    <%= f.label :pixivリンクURL %>
-    <%= f.hidden_field :sns_first %>
-    <%= @comic.sns_first %>
-  </div>
-
-  <div class="field">
-    <%= f.label :twitterリンクURL %>
-    <%= f.hidden_field :sns_second %>
-    <%= @comic.sns_second %>
-  </div>
-
-  <div class="field">
-    <%= f.label :作品説明 %>
-    <%= f.hidden_field :introduction %>
-    <%= @comic.introduction %>
-  </div>
-
-  <div class="field">
-    <%= f.label :チラ見せ１ %>
-    <%= f.hidden_field :content_first %>
-    <%= @comic.content_first %>
-  </div>
-
-  <div class="field">
-    <%= f.label :チラ見せ２ %>
-    <%= f.hidden_field :content_second %>
-    <%= @comic.content_second %>
-  </div>
-
-  <div class="field">
-    <%= f.label :チラ見せ３ %>
-    <%= f.hidden_field :content_third %>
-    <%= @comic.content_third %>
-  </div>
-
-  <div class="field">
-    <%= f.label :チラ見せ４ %>
-    <%= f.hidden_field :content_fourth %>
-    <%= @comic.content_fourth %>
-  </div>
-
-  <div class="field">
-    <%= f.label :カテゴリー %>
-    <%= f.hidden_field :category %>
-    <%= @comic.category %>
-  </div>
-
-  <div class="field">
-    <%= f.label :出展日 %>
-    <%= f.hidden_field :day %>
-    <%= @comic.day %>
-  </div>
-
-  <div class="field">
-    <%= f.label :元ネタ名 %>
-    <%= f.hidden_field :origin_title %>
-    <%= @comic.origin_title %>
-  </div>
-
- <div class="actions">
-    <%= f.submit '上記の内容で出展する' %>
+  <div class="actions">
+    <%= f.submit '上記の内容で出展する', class: :submit_action %>
   </div>
   <div class="actions">
-    <%= f.submit '投稿画面に戻る', name: 'back' %>
+    <%= f.submit '投稿画面に戻る', name: 'back', class: :back_action %>
   </div>
 <% end %>
+</div>

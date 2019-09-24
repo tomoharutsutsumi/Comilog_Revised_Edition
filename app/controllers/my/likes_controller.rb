@@ -6,8 +6,5 @@ class My::LikesController < ApplicationController
 
     @sum_of_my_liked_comics_price = @my_liked_comics.sum_price
   end
-
-
-
 end
 

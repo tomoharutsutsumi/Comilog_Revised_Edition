@@ -13,7 +13,7 @@
 
   <body>
     <header>
-      <%= link_to image_tag('comilog.png'), root_path, class: "logo_pic" %>
+      <%= link_to image_tag('comilog_logo_revised.png'), root_path, class: "logo_pic" %>
       <nav>
         <% if user_signed_in? %>
           <%= link_to 'プロフィール変更', edit_user_registration_path, method: :get, class: "header_button" %>
@@ -22,16 +22,12 @@
              <%= text_field_tag :keyword, '', class: "header_search_box", placeholder: "サークル名や著者名"%>
              <%= image_submit_tag ("glass.png"), class: "search_glass" %>
            <% end %>
-        <% else %>
-          <%= link_to 'サインアップ', new_user_registration_path, method: :get, class: "header_button" %>
-          <%= link_to 'ログイン', new_user_session_path, method: :get, class: "header_button" %>
         <% end %>
       </nav>
     </header>
     <%# deviseログイン フラッシュメッセージ %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <div class="background">
+     <p class="alert"><%= alert %></p>
      <%= yield %>
     </div>
   </body>

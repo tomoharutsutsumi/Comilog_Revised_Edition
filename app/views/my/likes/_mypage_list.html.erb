@@ -1,0 +1,36 @@
+<div class="mypage_list">
+  <div class="title_list">
+    <%= image_tag img %>
+    <div class="title">
+      <%= title %>
+    </div>
+    <div class="price">
+      合計金額<%= price %>円
+    </div>
+  </div>
+  <div class="list">
+    <% comics.each do |comic| %>
+      <div class="one_comic">
+        <%= link_to comic_path(comic) do %>
+            <%= image_tag comic.front_cover.to_s %>
+        <% end %>
+        <div class="title">
+          <%= comic.title %>
+        </div>
+        <div class="marks">
+            <div class="buy_count">
+              <%= image_tag "bag.png" %>
+              <%= comic.likes.count %>
+            </div>
+            <div class="want_count">
+              <%= image_tag "tag.png" %>
+              <%= comic.wants.count %>
+            </div>
+        </div>
+        <div class="delete_button">
+          <%= link_to "削除する", unlike_comic_path(comic), class: :button %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

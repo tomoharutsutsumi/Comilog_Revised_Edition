@@ -1,0 +1,34 @@
+<div class="my_posted_comics_page">
+  <div class="upper_box">
+    <%= link_to '出展作品を登録する', new_comic_path, class: :move_to_post_button %>
+  </div>
+  <div class="page_title">
+    <%= @authorname%>さんの出展作品
+  </div>
+  <div class="list">
+    <% @my_posted_comics.each do |comic| %>
+      <div class="my_posted_comic">
+          <%= link_to comic_path(comic) do %>
+            <%= image_tag comic.front_cover.to_s %>
+          <% end %>
+          <div class="title">
+            <%= comic.title %>
+          </div>
+          <div class="marks">
+            <div class="buy_count">
+              <%= image_tag "bag.png" %>
+              <%= comic.likes.count %>
+            </div>
+            <div class="want_count">
+              <%= image_tag "tag.png" %>
+              <%= comic.wants.count %>
+            </div>
+          </div>
+          <div class="buttons">
+            <%= button_to '編集する', edit_comic_path(comic), method: :get, class: :edit_button %>
+            <%= button_to '削除する', comic_path(comic), method: :delete, data: { confirm: '本当に削除しますか?' }, class: :delete_button %>
+          </div>
+      </div>
+    <% end %>
+  </div>
+</div>

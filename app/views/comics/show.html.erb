@@ -1,54 +1,104 @@
 <p id="notice"><%= notice %></p>
 
-<div class="show_upper">
-  <div class="frontcover_and_likes_count">
-    <%= image_tag @comic.front_cover.to_s %>
-    <div class="likes_count">
-      <%= image_tag 'likedstar.png', class: :show_likedstar %>
-      <%= @comic.likes_count %>
+<div class="comic_show_box">
+  <div class="left_box">
+    <div class="images">
+      <div class="front_cover">
+        <%= image_tag @comic.front_cover.to_s %>
+      </div>
+      <div class="sub_pic">
+        <div class="first">
+          <%= safe_image_tag(@comic.content_first.to_s) %>
+        </div>
+        <div class="second">
+          <%= safe_image_tag(@comic.content_second.to_s) %>
+        </div>
+        <div class="third">
+          <%= safe_image_tag(@comic.content_third.to_s) %>
+        </div>
+      </div>
+    </div>
+    <div class="author">
+      作者情報
+      <div class="name">
+        <%= @comic.user.username%>
+      </div>
+      作者アカウント
+      <div class="url">
+        <%= @comic.sns_first %>
+        <%= @comic.sns_second %>
+      </div>
     </div>
   </div>
-
-  <div class="contents_picture">
-    <%= safe_image_tag(@comic.content_first.to_s) %>
-    <%= safe_image_tag(@comic.content_second.to_s) %>
-    <%= safe_image_tag(@comic.content_third.to_s) %>
-    <%= safe_image_tag(@comic.content_fourth.to_s) %>
+  <div class="right_box">
+    <div class="right_box_upper">
+      <div class="title">
+        <%= @comic.title %>
+      </div>
+      <div class="marks">
+        <div class="comic_want">
+          <%= image_tag 'bag.png' %>
+          <%= @comic.wants.count %>
+        </div>
+        <div class="comic_like">
+          <%= image_tag 'tag.png' %>
+          <%= @comic.likes.count %>
+        </div>
+      </div>
+      <div class="buttons">
+        <div class="want_button">
+          <%= image_tag 'bag.png'%>
+          <% if @comic.wanted?(current_user.id) %>
+            <%= link_to '買わない', not_want_comic_path(@comic), method: :post, class: :show_want_button %>
+          <% else %>
+            <%= link_to '買う！', want_comic_path(@comic), method: :post, class: :show_want_button %>
+          <% end %>
+        </div>
+        <div class="like_button">
+          <%= image_tag 'tag.png' %>
+          <% if @comic.liked?(current_user.id) %>
+            <%= link_to "あんまり。。", unlike_comic_path(@comic), method: :post, class: :show_like_button %>
+          <% else %>
+            <%= link_to "気になる", like_comic_path(@comic), method: :post, class: :show_like_button %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="right_box_lower">
+      <div class="price">
+        <h3>価格</h3>
+        <div class="contents">
+          <%= @comic.price %>円
+        </div>
+      </div>
+      <div class="category">
+        <h3>カテゴリー</h3>
+        <div class="contents">
+          <%= @comic.category %>
+        </div>
+      </div>
+      <div class="day">
+        <h3>出展日</h3>
+        <div class="contents">
+          <%= @comic.day %>日目
+        </div>
+      </div>
+      <div class="origin_title">
+        <h3>元ネタ</h3>
+        <div class="contents">
+          <%= @comic.origin_title %>
+        </div>
+      </div>
+      <div class="introduction">
+        <h3>作品説明</h3>
+        <div class="contents">
+          <%= @comic.introduction %>
+        </div>
+      </div>
+    </div>
   </div>
-
-
-  <div class="introduction">
-    <strong>作品説明</strong>
-    <%= @comic.introduction %>
-  </div>
 </div>
 
-
-
-<div class="buy_or_notbuy_button">
-  <% if @comic.liked?(current_user.id) %>
-    <%= link_to 'いいかもリストから外す', unlike_comic_path(@comic), method: :post, class: :show_like_button %>
-  <% else %>
-    <%= link_to like_comic_path(@comic), method: :post, class: :show_like_button do %>
-      <%= image_tag 'likedstar.png', class: :show_like_button_likedstar %>
-      <%= 'いいかもリストに追加する' %>
-    <% end %>
-  <% end %>
-</div>
-
-<%= link_to '欲しいかもリストに追加する', want_comic_path(@comic), method: :post %>
-
-
-
-<div class="show_lower">
-    <p><strong>タイトル</strong><%= @comic.title %></p>
-    <p><strong>価格</strong><%= @comic.price %>円</p>
-    <p><strong>SNSリンク１</strong><%= @comic.sns_first %></p>
-    <p><strong>SNSリンク２</strong><%= @comic.sns_second %></p>
-    <p><strong>カテゴリー</strong><%= @comic.category %></p>
-    <p><strong>出展日</strong><%= @comic.day %>日目</p>
-    <p><strong>元ネタ</strong><%= @comic.origin_title %></p>
-</div>
 
 
 
